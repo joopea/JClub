@@ -1,0 +1,8 @@
+<div class="block image-text-container image-{{ content.position }}-container"> {# text-picture-large #}
+    <div class="image-{{ content.position }}">
+        <img class="image" src="{{ content.image.url }}" alt="{{ content.alt_text }}">
+    </div>
+    <div class="text">
+        {{ content.text|safe }}
+    </div>
+</div>

@@ -1,0 +1,12 @@
+A User can see all Users he/she Follows in a list
+A User can see all Communities he/she Follows in a list
+A User can Follow a Community
+A User can UnFollow a Community
+
+A User can Follow another User
+A User can UnFollow another User
+Deleting a Community will trigger an UnFollow for all Users Following it
+A User can Follow another User, even when he/she is Blocked by that User
+A User receives a Notification if another User Follows him/her
+A User Following another User sees posts Shared by that User on his/her Wall
+If a User Follows a Community, all of that Community's Posts appear on that User's Wall

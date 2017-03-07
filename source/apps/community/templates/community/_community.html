@@ -1,0 +1,13 @@
+{% load thumbnail %}
+<a class="link-no-decoration" href="{% url 'wall:community' pk=community.pk %}">
+    <span class="communitystamp">
+        {{ community.name }}
+        <i class="community-icon"><img src="{{ community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
+    </span>
+</a>
+<div class="image-container">
+    <img src="{{ community.image|thumbnail_url:'community_normal' }}">
+</div>
+<div class="community-description">
+	{{ community.description }}
+</div>

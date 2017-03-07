@@ -1,0 +1,23 @@
+A User can Save a Post, this will add that Post to that User's SavedPosts list on his/her Wall
+A User can Delete his/her own Post
+A User can view a Post on his/her Wall
+A User can Create a Comment on a Post
+A User can Read Comments on a Post
+A User can Delete his/her own Comment on a Post
+The System can show a User the Hottest Posts
+A User can view the Promoted Posts
+A User can Follow a Community, and that Community's Posts will be added to that User's Wall
+A User cannot Create a Post on a Community if that User is Blocked on that Community
+A User can Like a Post
+A User can Report a Post to a Moderator
+A User can Create a Post on a Community
+A User can Create a Post on his/her Wall
+A User can Create a Post on another User's Wall
+A User can Share a Post on his/her Wall
+A User can Share another User's Post on his/her Wall				a simple solution: Can mention himself in that post maybe?
+A User receives a Notification if his/her Post is Shared by another User
+A User recieves a Notification if another User Comments on that User's Post
+A User reveives a Notification if a Followed User Shares a Post
+A User receives the Post on his/her Wall if a Followed User Shared a Post
+A User can see a Post on his/her Wall of a User he/she is Following
+A User can Delete a Post from his/her Wall, if that Post is that User's own Post it will be Deleted

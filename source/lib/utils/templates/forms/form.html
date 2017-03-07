@@ -1,0 +1,8 @@
+{# forms depend on django-widget-tweaks and django-form-utils (BetterForms) #}
+{% load utils i18n %}
+<form method="{{ method|default:"post" }}" class="{{ form_css_class|default:"default-form" }}" action="{{ form_action|default:"" }}">
+    {% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+    {% csrf_token %}
+    {{ form|render_form }}
+    <input class="btn-submit" type="submit" value="{% trans submit_name|default:"OK" %}" />
+</form>

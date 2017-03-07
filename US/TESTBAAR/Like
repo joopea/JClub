@@ -1,0 +1,22 @@
+A User receives a Notification if another User Likes his/her Post
+A User receives a Notification if another User Likes his/her Comment
+
+A User Blocked from a Community can not Like a Post in that Community
+A User Blocked from a Community can not Like a Comment in that Community
+
+A User that is Blocked by another User can not Like a Post on that User's Wall
+A User that is Blocked by another User can not Like a Comment on that User's Wall
+
+A User cannot Like a Post that is not Published
+A User cannot Like a Comment that is not Published
+
+If a Post is Deleted all its Likes are Deleted also
+A Like does not show the User that Liked it
+
+A User can Like a Post
+A User can Like a Comment
+
+A User receives a Notification if another User Likes his Comments
+A User will receive a Notification if another User Likes his/her Comment
+
+A User receives a Notification if another User Likes that User's Post

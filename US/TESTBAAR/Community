@@ -1,0 +1,20 @@
+Deleting a Community removes all its Posts
+Deleting a Community will UnFollow all its Followers
+
+A User can Save a Post from a Community
+a Community has a Wall
+A User can view Posts on a Community
+Unregistered-Users can view Posts on Communities
+A Community has an Image
+A User can create a Comment on a Post on a Community				if he is not blocked from that community
+
+A Community has a Perma-Link			A Cummunity has a description
+A Community has a Name
+A User can Share a Post from a Community
+
+A User's Wall Page contains the Followed Communities
+A User Blocked from a Community cannot interact with that Community other than View
+A User can follow a Community if tha tUser is Blocked from it
+A User can Follow a Community, all Posts on a Followed Community will be visible on that User's Wall, from that moment onwards
+
+A User can create a Post on a Community

@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+{% load i18n block_tags follow_tags %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    {% include "post/_featured_items.html" %}
+
+    <h1 class="page-title">{% block page_title %}{% trans "My own posts" %}{% endblock page_title %}</h1>
+
+    {% include 'wall/_wall.html' %}
+{% else %}
+    <h1>{% trans "You need to login to see this page" %}</h1>
+{% endif %}
+
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript">
+    var $container = $(".posts-container");
+    $container.infinitescroll(
+        {
+            navSelector: ".pagination",
+            nextSelector: ".next",
+            itemSelector: ".post",
+            loading: {
+                finishedMsg: "",
+                img: "{{ STATIC_URL }}img/ajax-loader.gif",
+                msg: null,
+                msgText: ""
+            }
+        },
+        function (elems) {
+            infinite_scroll_loaded(this, elems)
+        }
+    );
+
+    $(function () {
+        if ($('.post:visible').length == 0) {
+            $('.no-read-show-unread-suggestion').show();
+        }
+    });
+
+    </script>
+{% endblock javascript %}

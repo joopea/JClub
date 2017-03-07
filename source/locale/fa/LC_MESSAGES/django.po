@@ -1,0 +1,1971 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JoopeA Club v.01.00\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-05 13:18+0200\n"
+"PO-Revision-Date: 2016-12-30 15:44+0100\n"
+"Last-Translator: \n"
+"Language-Team: JoopeA <admin@joopea.com>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: apps/approval/admin.py:49 apps/comment/models.py:32
+msgid "Comment"
+msgstr "دیدگاه"
+
+#: apps/approval/admin.py:55 apps/approval/admin.py:131
+msgid "Author"
+msgstr "نویسنده"
+
+#: apps/approval/admin.py:61 apps/approval/admin.py:137
+#: lib/behaviours/models/withupdates.py:8
+msgid "Created"
+msgstr "نوشته‌شده در"
+
+#: apps/approval/admin.py:79 apps/approval/admin.py:93 apps/approval/admin.py:159
+#: apps/approval/admin.py:173 apps/report/admin.py:69
+msgid "Approve"
+msgstr "تایید"
+
+#: apps/approval/admin.py:87 apps/approval/admin.py:99 apps/approval/admin.py:167
+#: apps/approval/admin.py:179 apps/report/admin.py:75
+msgid "Disapprove"
+msgstr "رد"
+
+#: apps/approval/admin.py:105 apps/approval/admin.py:185
+#: apps/post/templates/post/popup/_new.html:47 lib/cms/content_types.py:67
+msgid "Image"
+msgstr "تصویر"
+
+#: apps/approval/admin.py:125 apps/comment/templates/comment/_create.html:27
+#: apps/post/models.py:38 apps/post/templates/post/popup/_new.html:61
+msgid "Post"
+msgstr "پست"
+
+#: apps/approval/models.py:12
+msgid "is approved"
+msgstr "تایید شده."
+
+#: apps/approval/models.py:15
+msgid "reason"
+msgstr "چون"
+
+#: apps/approval/models.py:52
+msgid "Post approval"
+msgstr "تایید پست"
+
+#: apps/approval/models.py:53
+msgid "Post approvals"
+msgstr "تایید پست‌ها"
+
+#: apps/approval/models.py:75
+msgid "Comment approval"
+msgstr "تایید دیدگاه"
+
+#: apps/approval/models.py:76
+msgid "Comment approvals"
+msgstr "تایید دیدگاه‌ها"
+
+#: apps/block/forms.py:26
+msgid "You've already blocked this user!"
+msgstr "این عضو رو قبلن مسدود کرده‌بودیش!"
+
+#: apps/block/models.py:15
+msgid "Block by user"
+msgstr "مسدود شده از طرف عضو"
+
+#: apps/block/models.py:16
+msgid "Blocked by users"
+msgstr "مسدود شده از طرف اعضا"
+
+#: apps/block/models.py:25
+msgid "Block by community"
+msgstr "بیرون‌افتاده از پاتوق "
+
+#: apps/block/models.py:26
+msgid "Blocked by communities"
+msgstr "بیرون‌افتاده از پاتوق‌های"
+
+#: apps/block/templates/block/_block_buttons.html:3
+msgid "Unblock user"
+msgstr "از بلاک خارج‌ش کن"
+
+#: apps/block/templates/block/_block_buttons.html:4
+msgid "Block user"
+msgstr "مسدودش کن"
+
+#: apps/cms/pages/content_types.py:23 lib/cms/content_types.py:41
+#: lib/cms/content_types.py:82
+msgid "Alternative Text"
+msgstr "متن جایگزین تصویر"
+
+#: apps/cms/pages/content_types.py:23 lib/cms/content_types.py:41
+#: lib/cms/content_types.py:82
+msgid "Description of the image"
+msgstr "شرح تصویر"
+
+#: apps/cms/pages/content_types.py:24 lib/cms/content_types.py:84
+msgid "Text"
+msgstr "نوشته"
+
+#: apps/cms/pages/content_types.py:45 lib/cms/content_types.py:109
+msgid "Rich text with image"
+msgstr "نوشته با تصویر"
+
+#: apps/cms/pages/content_types.py:46 lib/cms/content_types.py:110
+msgid "Rich texts with image"
+msgstr "نوشته‌های با تصویر"
+
+#: apps/cms/pages/models.py:17 apps/post/models.py:23
+msgid "Title"
+msgstr "عنوان"
+
+#: apps/cms/pages/models.py:18
+msgid "URL slug"
+msgstr "کد ادرس اینترنتی"
+
+#: apps/cms/pages/models.py:22
+msgid "Page"
+msgstr "صفحه"
+
+#: apps/cms/pages/models.py:23
+msgid "Pages"
+msgstr "صفحه‌ها"
+
+#: apps/comment/admin.py:19 apps/community/models.py:23
+#: apps/report/templates/report/admin/report_view_comment.html:26
+#: apps/report/templates/report/admin/report_view_comment.html:50
+#: apps/report/templates/report/admin/report_view_followers.html:20
+#: apps/report/templates/report/admin/report_view_like.html:60
+#: apps/report/templates/report/admin/report_view_like.html:84
+#: apps/report/templates/report/admin/report_view_post.html:26
+#: apps/report/templates/report/admin/report_view_post.html:50
+#: apps/report/templates/report/admin/report_view_share.html:50
+#: apps/report/templates/report/admin/report_view_share.html:118
+msgid "Community"
+msgstr "پاتوق"
+
+#: apps/comment/forms.py:89
+msgid "Are you sure you want to delete this?"
+msgstr "واقعن می‌خوای حذفش کنی؟"
+
+#: apps/comment/models.py:33 apps/custom_admin/templates/admin/index.html:61
+#: apps/post/templates/post/_post_footer.html:24
+#: apps/search/templates/search/_results.html:24
+#: apps/search/templates/search/results.html:17 lib/behaviours/models/commentable.py:6
+msgid "Comments"
+msgstr "نظرها"
+
+#: apps/comment/templates/comment/_comment.html:26
+msgid "Delete"
+msgstr "حذف‌کن"
+
+#: apps/comment/templates/comment/_comment.html:29 apps/report/models.py:76
+#: apps/report/templates/report/admin/report_view_comment.html:13
+#: apps/report/templates/report/admin/report_view_followers.html:13
+#: apps/report/templates/report/admin/report_view_like.html:13
+#: apps/report/templates/report/admin/report_view_post.html:13
+#: apps/report/templates/report/admin/report_view_share.html:13
+#: apps/report/templates/report/admin/report_view_user.html:13
+#: apps/report/templates/report/popup/_new_post.html:13
+msgid "Report"
+msgstr "گزارش تخلف"
+
+#: apps/comment/templates/comment/_comment.html:34
+#: apps/post/templates/post/_post_footer.html:16
+msgid "Unlike"
+msgstr "خوشم نمیاد"
+
+#: apps/comment/templates/comment/_comment.html:37 apps/like/models.py:21
+#: apps/like/models.py:35 apps/post/templates/post/_post_footer.html:19
+msgid "Like"
+msgstr "خوشم اومد"
+
+#: apps/comment/templates/comment/_create.html:7
+msgid "Type a comment"
+msgstr "نظرت رو بنویس"
+
+#: apps/comment/templates/comment/_create.html:13
+msgid ""
+"If you want to add an image to your comment you can enter a URL or select one from your "
+"pc."
+msgstr ""
+"اگر دوست داری عکس اضافه کنی می‌تونی نشانی اینترنتی‌اش رو بدی یا از کامپیوترت بارگذاریش کنی"
+
+#: apps/comment/templates/comment/_create.html:17
+#: apps/post/templates/post/popup/_new.html:52
+msgid "Select image from PC"
+msgstr "از کامپیوتر بردارش"
+
+#: apps/comment/templates/comment/_create.html:21
+#: apps/post/templates/post/popup/_new.html:56
+msgid "Upload image from URL"
+msgstr "از نشانی اینترنتی بردارش"
+
+#: apps/comment/templates/comment/_create.html:22
+msgid "Image url"
+msgstr "نشانی تصویر"
+
+#: apps/comment/templates/comment/_first_last.html:7
+#: apps/comment/templates/comment/list.html:7
+msgid "Load more comments"
+msgstr "بقیه نظرها رو نشان بده"
+
+#: apps/comment/templates/comment/_first_last.html:7
+#: apps/comment/templates/comment/list.html:7
+msgid "of"
+msgstr "از"
+
+#: apps/comment/templates/comment/popup/_delete.html:6
+msgid "Delete comment"
+msgstr "این دیدگاه رو پاکش کن"
+
+#: apps/comment/views.py:48
+#, python-format
+msgid "This comment is sent for approval because: %s. A preview is visible only to you"
+msgstr "نظری که نوشتی باید تایید بشه چون %s. اما پیش‌نمایشش رو خودت می‌تونی ببینی."
+
+#: apps/community/admin.py:15
+msgid "Post Count"
+msgstr "تعداد پست‌ها"
+
+#: apps/community/models.py:12
+msgid "Name"
+msgstr "اسم"
+
+#: apps/community/models.py:13
+msgid "Description"
+msgstr "شرح"
+
+#: apps/community/models.py:24 apps/community/templates/community/list.html:6
+#: apps/search/templates/search/_results.html:42
+#: apps/search/templates/search/results.html:31
+msgid "Communities"
+msgstr "پاتوق‌ها"
+
+#: apps/core/templates/core/base.html:42
+#: apps/suggestions/templates/suggestions/detail.html:4
+#: apps/suggestions/templates/suggestions/detail.html:8
+msgid "JoopeA; The Free World"
+msgstr "ژوپی‌آ؛ دنیای آزاد"
+
+#: apps/core/templates/core/base.html:187
+msgid "The Free World"
+msgstr "دنیای آزاد"
+
+#: apps/core/templates/core/base.html:246
+msgid "JoopeA Club"
+msgstr "کلوپ ژوپی‌آ"
+
+#: apps/core/templates/core/base.html:263
+msgid "An server error occured!"
+msgstr "یک خطایی توی سایت پیش اومد!"
+
+#: apps/core/templates/core/base.html:277
+msgid "Username not found."
+msgstr "شناسه پیدا نشد."
+
+#: apps/core/templates/core/base.html:655 apps/core/templates/core/base.html:666
+msgid "Thank you for reporting."
+msgstr "مرسی از اینکه برای گزارش‌کردن تخلف وقت‌گذاشتی"
+
+#: apps/core/templates/core/dump.html:3 apps/core/templates/core/home.html:3
+#: apps/custom_admin/templates/custom_admin/change_form.html:18
+#: apps/report/templates/report/admin/report_view_post.html:6
+#: apps/report/templates/report/admin/report_view_share.html:6
+#: apps/report/templates/report/admin/report_view_user.html:6
+msgid "Home"
+msgstr "خونه"
+
+#: apps/core/templates/core/dump.html:29
+msgid "SUBMIT"
+msgstr "بفرست"
+
+#: apps/custom_admin/templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:31
+#: apps/custom_admin/templates/custom_admin/change_form.html:21
+msgid "Add"
+msgstr "اضافه‌کن"
+
+#: apps/custom_admin/templates/admin/index.html:37
+msgid "Change"
+msgstr "تغییر بده"
+
+#: apps/custom_admin/templates/admin/index.html:47
+msgid "You don't have permission to edit anything."
+msgstr "اجازه نداری هیچ چیزی رو تغییر بدی"
+
+#: apps/custom_admin/templates/admin/index.html:55 apps/report/models.py:77
+msgid "Reports"
+msgstr "گزارش‌ها"
+
+#: apps/custom_admin/templates/admin/index.html:58
+msgid "Users"
+msgstr "عضوها"
+
+#: apps/custom_admin/templates/admin/index.html:59 apps/share/models.py:18
+#: lib/behaviours/models/shareable.py:6
+msgid "Shares"
+msgstr "اشتراک‌گذاری‌ها"
+
+#: apps/custom_admin/templates/admin/index.html:60 apps/like/models.py:22
+#: apps/like/models.py:36 apps/like/models.py:43
+msgid "Likes"
+msgstr "پسندها"
+
+#: apps/custom_admin/templates/admin/index.html:62 apps/post/models.py:39
+#: apps/search/templates/search/_results.html:4
+#: apps/search/templates/search/results.html:10
+msgid "Posts"
+msgstr "نوشته‌ها"
+
+#: apps/custom_admin/templates/admin/index.html:63
+#: apps/users/templates/users/user_details.html:18
+msgid "Followers"
+msgstr "دنبال‌کننده‌ها"
+
+#: apps/custom_admin/templates/admin/index.html:64 apps/users/admin.py:68
+msgid "Alerts"
+msgstr "اخطارها"
+
+#: apps/custom_admin/templates/admin/index.html:69
+msgid "Recent Actions"
+msgstr "تغییرات اخیر"
+
+#: apps/custom_admin/templates/admin/index.html:70
+msgid "My Actions"
+msgstr "تغییرات من"
+
+#: apps/custom_admin/templates/admin/index.html:74
+msgid "None available"
+msgstr "هیچی دم‌دست نیست"
+
+#: apps/custom_admin/templates/admin/index.html:88
+msgid "Unknown content"
+msgstr "محتوای نامعلوم"
+
+#: apps/custom_admin/templates/admin/login.html:6
+#: apps/custom_admin/templates/admin/login.html:9 apps/menu/templates/menu/_user.html:150
+#: apps/users/templates/users/login.html:3 lib/users/templates/users/login.html:6
+#: lib/users/templates/users/login.html:13
+msgid "Login"
+msgstr "ورود"
+
+#: apps/custom_admin/templates/admin/login.html:23
+#: apps/custom_admin/templates/custom_admin/change_form.html:50
+msgid "Please correct the error below."
+msgstr "خطای پیش‌اومده رو درست کن لطفن"
+
+#: apps/custom_admin/templates/admin/login.html:23
+#: apps/custom_admin/templates/custom_admin/change_form.html:50
+msgid "Please correct the errors below."
+msgstr "خطاهای زیر رو تصحیح کن لطفن"
+
+#: apps/custom_admin/templates/admin/login.html:49
+msgid "Forgotten your password or username?"
+msgstr "اسم یا رمز‌عبورت رو فراموش کردی؟"
+
+#: apps/custom_admin/templates/admin/login.html:53
+msgid "Log in"
+msgstr "ورود"
+
+#: apps/custom_admin/templates/custom_admin/change_form.html:36
+msgid "History"
+msgstr "تاریخچه"
+
+#: apps/custom_admin/templates/custom_admin/change_form.html:38
+msgid "View on site"
+msgstr "روی سایت اصلی ببین"
+
+#: apps/follow/models.py:16
+msgid "Follow community"
+msgstr "می‌خوام عضو این پاتوق بشم"
+
+#: apps/follow/models.py:17
+msgid "Follow communities"
+msgstr "پاتوق‌هایی که عضوشون هستم"
+
+#: apps/follow/models.py:28
+msgid "Follow user"
+msgstr "می‌خواهم این عضو رو دنبال کنم"
+
+#: apps/follow/models.py:29
+msgid "Follow users"
+msgstr "اعضایی که دنبال می‌کنم"
+
+#: apps/follow/templates/follow/_follow_buttons.html:3
+#: apps/post/templates/post/_post_footer.html:34
+msgid "Unfollow"
+msgstr "دیگه دنبال نکن"
+
+#: apps/follow/templates/follow/_follow_buttons.html:4
+#: apps/post/templates/post/_post_footer.html:35
+msgid "Follow"
+msgstr "می‌خوام دنبال‌کنم"
+
+#: apps/follow/templates/follow/list.html:6 apps/menu/templates/menu/_user.html:92
+msgid "People following"
+msgstr "عضوهایی که دنبال می‌کنم"
+
+#: apps/like/forms.py:23
+#, python-brace-format
+msgid "You cannot like this {0}, since you are the creator of this {1}"
+msgstr "چون خودت {1} رو ایجاد کردی نمی‌تونی {0} رو بپسندی!"
+
+#: apps/like/forms.py:59
+msgid "You already liked this post!"
+msgstr "قبلن این پست رو پسندیده‌بودی!"
+
+#: apps/like/forms.py:80
+msgid "You already liked this comment"
+msgstr "قبلن این دیدگاه رو پسندیده‌بودی!"
+
+#: apps/mention/forms.py:37
+msgid "You've already mentioned this user!"
+msgstr "قبلن یک‌بار این عضو رو صدا کردی!"
+
+#: apps/mention/forms.py:69
+#, python-format
+msgid "You have mentioned a non-existing user (%s)"
+msgstr "یک عضوی که وجود‌نداشته رو صدا کردی (%s)"
+
+#: apps/mention/forms.py:80
+#, python-format
+msgid "You are blocked by the user you've mentioned (%s)"
+msgstr "توسط یکی از عضوهایی که صدا کردی مسدود شدی (%s)"
+
+#: apps/mention/models.py:21 apps/mention/models.py:22 apps/report/models.py:10
+#: apps/report/models.py:11
+msgid "Choose either a post or comment to report"
+msgstr "پست یا نظری که می‌خوای گزارش‌کنی رو انتخاب کن."
+
+#: apps/mention/models.py:25
+#, python-brace-format
+msgid "{0} Mentioned {1}"
+msgstr "{0} رو {1} صدازده"
+
+#: apps/mention/models.py:65
+msgid "Mention"
+msgstr "صدابزن"
+
+#: apps/mention/models.py:66
+msgid "Mentions"
+msgstr "صدازدن‌ها"
+
+#: apps/menu/templates/menu/_user.html:8 apps/menu/templates/menu/_user.html:13
+msgid "My wall"
+msgstr "اتاق من"
+
+#: apps/menu/templates/menu/_user.html:18
+msgid "Own posts"
+msgstr "نوشته‌های خود من"
+
+#: apps/menu/templates/menu/_user.html:23
+msgid "My settings"
+msgstr "تنظیمات پروفایل من"
+
+#: apps/menu/templates/menu/_user.html:28 apps/menu/templates/menu/_user.html:125
+msgid "Log Out"
+msgstr "می‌خوام برم بیرون"
+
+#: apps/menu/templates/menu/_user.html:36
+msgid "New Post"
+msgstr "پست جدید"
+
+#: apps/menu/templates/menu/_user.html:44 apps/notifications/models.py:113
+msgid "Notifications"
+msgstr "زنگ‌ها"
+
+#: apps/menu/templates/menu/_user.html:53
+#: apps/menu/templates/menu/ajax/_notifications.html:8
+msgid "All notifications"
+msgstr "همه‌ی زنگ‌ها"
+
+#: apps/menu/templates/menu/_user.html:58
+#: apps/menu/templates/menu/ajax/_notifications.html:13
+msgid "There are no new notifications"
+msgstr "زنگ جدیدی نیست"
+
+#: apps/menu/templates/menu/_user.html:64 apps/save/templates/save/list.html:5
+msgid "Saved Posts"
+msgstr "پست‌های توی گنجه"
+
+#: apps/menu/templates/menu/_user.html:66
+#: apps/suggestions/templates/suggestions/detail.html:9
+msgid "Suggestions"
+msgstr "پیشنهادها"
+
+#: apps/menu/templates/menu/_user.html:72
+msgid "Communities following"
+msgstr "پاتوق‌هایی که عضوشونم"
+
+#: apps/menu/templates/menu/_user.html:81 apps/menu/templates/menu/ajax/_communities.html:8
+msgid "You are not following any communties"
+msgstr "توی هیچ پاتوقی عضو نیستی"
+
+#: apps/menu/templates/menu/_user.html:85
+#: apps/menu/templates/menu/ajax/_communities.html:12
+msgid "Show all communities"
+msgstr "فهرست تمام پاتوق‌ها"
+
+#: apps/menu/templates/menu/_user.html:105 apps/menu/templates/menu/ajax/_following.html:12
+msgid "All followers"
+msgstr "همه‌ی دنبال‌کننده‌ها"
+
+#: apps/menu/templates/menu/_user.html:110 apps/menu/templates/menu/ajax/_following.html:17
+msgid "You are not following any people!"
+msgstr "هیچ عضوی رو دنبال نمی‌کنی"
+
+#: apps/menu/templates/menu/_user.html:118 apps/menu/templates/menu/_user.html:161
+msgid "More information"
+msgstr "اطلاعات بیشتر"
+
+#: apps/menu/templates/menu/_user.html:135
+msgid "Why JoopeA Club"
+msgstr "کلوپ ژوپی‌آ؟ چرا؟"
+
+#: apps/menu/templates/menu/_user.html:137
+msgid "Why choose JoopeA Long Desc"
+msgstr ""
+"برای این‌که آزاد و امن بنویسیم، جایی برای پیدا کردن هم داشته باشیم، دست‌های هم رو بگیریم و "
+"از خودمون، شادی‌ها، غم‌ها و دغدغه‌هامون بنویسیم و بدونیم که در کنار هم و با هم، تنها "
+"نیستیم. ژوپی‌آ به همه‌ی ما تعلق داره."
+
+#: apps/menu/templates/menu/_user.html:142
+msgid "Login / Signup"
+msgstr "ورود"
+
+#: apps/menu/templates/menu/_user.html:149
+msgid "Sign Up"
+msgstr "ثبت‌نام"
+
+#: apps/menu/templates/menu/_user.html:168
+msgid "List of all communities"
+msgstr "فهرست همه‌ی پاتوق‌ها"
+
+#: apps/notifications/admin.py:24 apps/notifications/models.py:68 apps/report/models.py:12
+#: lib/behaviours/models/withrichtextcontent.py:8
+msgid "Message"
+msgstr "پیام"
+
+#: apps/notifications/models.py:33
+msgid "liked your post"
+msgstr "پستت رو پسندید"
+
+#: apps/notifications/models.py:34
+msgid "liked your comment in post"
+msgstr "نظرت زیر این پست رو پسندید"
+
+#: apps/notifications/models.py:35
+msgid "mentioned you in"
+msgstr "تو رو صدا زد تو:"
+
+#: apps/notifications/models.py:36
+msgid "mentioned you in a comment at"
+msgstr "تو رو توی این دیدگاه صدا زد "
+
+#: apps/notifications/models.py:37
+msgid "is now following you"
+msgstr "تو رو دنبال می‌کنه"
+
+#: apps/notifications/models.py:38
+msgid "commented on"
+msgstr "تو این بحث نظر داد"
+
+#: apps/notifications/models.py:39
+msgid "shared a post with you"
+msgstr "این پست رو با تو به اشتراک گذاشت:"
+
+#: apps/notifications/models.py:40
+msgid "commented on a post you commented on"
+msgstr "زیر نظر تو در یک پست نظر نوشت"
+
+#: apps/notifications/models.py:43
+msgid "shared your post"
+msgstr "پست تو رو به اشتراک‌گذاشت"
+
+#: apps/notifications/models.py:44
+msgid "dissaproved your post"
+msgstr "پست تو رو برای انتشار تایید نکرد"
+
+#: apps/notifications/models.py:45
+msgid "dissaproved your comment"
+msgstr "دیدگاه تو رو برای انتشار تایید نکرد"
+
+#: apps/notifications/models.py:46
+msgid "reported and removed your post"
+msgstr "این پست تو رو گزارش‌داد و حذف کرد"
+
+#: apps/notifications/models.py:47
+msgid "disapproved your report on"
+msgstr "گزارش تخلف تو برای این پست رو تایید نکرد"
+
+#: apps/notifications/models.py:48
+msgid "reported and removed your comment"
+msgstr "این دیدگاه تو رو گزارش‌داد و حذف کرد"
+
+#: apps/notifications/models.py:49
+msgid "disapproved your report on a comment at"
+msgstr "گزارش تخلف تو روی این نظر رو تایید نکرد"
+
+#: apps/notifications/models.py:50
+msgid "deleted your comment"
+msgstr "این دیدگاه تو رو پاک‌کرد"
+
+#: apps/notifications/models.py:51
+msgid "deleted your post"
+msgstr "این پست تو رو حذف کرد"
+
+#: apps/notifications/models.py:52
+msgid "warning"
+msgstr "مراقب باش"
+
+#: apps/notifications/models.py:61
+msgid "The user getting the notification"
+msgstr "عضو زنگ رو دریافت می‌کنه"
+
+#: apps/notifications/models.py:64
+msgid "The notification subject"
+msgstr "عنوان زنگ"
+
+#: apps/notifications/models.py:66
+msgid "Relation (pk) to the notified object, leave 0 if not used"
+msgstr ""
+
+#: apps/notifications/models.py:112
+msgid "Notification"
+msgstr "زنگ"
+
+#: apps/notifications/templates/notifications/includes/notification.html:7
+msgid "I have no idea what"
+msgstr "هیچ ایده‌ایی ندارم که چی"
+
+#: apps/notifications/templates/notifications/includes/notification.html:7
+msgid "did :-P"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_deleted_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_deleted_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_disapproved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_disapproved_reported_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_dissaproved_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_dissaproved_post.html:6
+msgid "A moderator"
+msgstr "یکی از دبیرهای سایت"
+
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_post.html:6
+msgid "because"
+msgstr "چون"
+
+#: apps/notifications/templates/notifications/includes/notification_deleted_comment.html:6
+msgid "on post"
+msgstr "روی یک پست"
+
+#: apps/notifications/templates/notifications/includes/notification_warning.html:6
+msgid "You have been warned because"
+msgstr "یک اخطار گرفتی چون"
+
+#: apps/post/models.py:24
+msgid "Meta"
+msgstr "فراداده"
+
+#: apps/post/templates/post/_featured_items.html:4 apps/suggestions/models.py:52
+#: apps/suggestions/templates/suggestions/detail.html:13
+msgid "Hottest Community"
+msgstr "پرطرفدارترین پاتوق"
+
+#: apps/post/templates/post/_featured_items.html:13
+msgid "There is no Hottest Community at the moment"
+msgstr "هیچ پاتوق پرطرفداری در این لحظه وجود نداره"
+
+#: apps/post/templates/post/_featured_items.html:18 apps/suggestions/models.py:23
+#: apps/suggestions/templates/suggestions/detail.html:23
+msgid "Hottest Post"
+msgstr "نوشته جذاب"
+
+#: apps/post/templates/post/_featured_items.html:22
+msgid "There is no hottest post at the moment"
+msgstr "هیچ پست داغی در این لحظه نیست"
+
+#: apps/post/templates/post/_featured_items.html:27 apps/suggestions/models.py:34
+#: apps/suggestions/templates/suggestions/detail.html:30
+msgid "Promoted Post"
+msgstr "یک پست خوب برای خوندن"
+
+#: apps/post/templates/post/_featured_items.html:31
+msgid "There is no promoted post at the moment"
+msgstr "الان پست پیشنهادی نداریم"
+
+#: apps/post/templates/post/_post_comments.html:4
+msgid "Load more comments (NUMBER HERE)"
+msgstr "بقیه نظرها رو نشون بده (NUMBER HERE)"
+
+#: apps/post/templates/post/_post_footer.html:6 apps/share/models.py:17
+#: apps/share/templates/share/popup/_new.html:6
+msgid "Share"
+msgstr "به اشتراک بزار"
+
+#: apps/post/templates/post/_post_footer.html:9
+msgid "Shared"
+msgstr "مشترک‌شد"
+
+#: apps/post/templates/post/_post_footer.html:41
+msgid "Shared on"
+msgstr "مشترک شد روی"
+
+#: apps/post/templates/post/_post_header.html:4
+msgid "Add to favorites"
+msgstr "بزار توی گنجه"
+
+#: apps/post/templates/post/_post_header.html:20
+msgid "Remove this post"
+msgstr "این پست رو پاک کن"
+
+#: apps/post/templates/post/_post_header.html:28
+msgid "Report this post"
+msgstr "این پست تخلف کرده"
+
+#: apps/post/templates/post/popup/_delete.html:5
+msgid "Delete post"
+msgstr "پست رو پاک کن"
+
+#: apps/post/templates/post/popup/_new.html:4
+msgid "Create a post"
+msgstr "یک پست جدید بساز"
+
+#: apps/post/templates/post/popup/_new.html:5
+msgid "Socially connect with the other people"
+msgstr "دنیای مجازی خودمون رو بسازیم"
+
+#: apps/post/templates/post/popup/_new.html:8
+msgid "Where do you want to post?"
+msgstr "پست رو کجا می‌خوای بفرستی؟"
+
+#: apps/post/templates/post/popup/_new.html:10
+msgid "My own wall"
+msgstr "توی اتاق خودم"
+
+#: apps/post/templates/post/popup/_new.html:11
+msgid "Community wall"
+msgstr "توی پاتوق"
+
+#: apps/post/templates/post/popup/_new.html:12
+msgid "Other users wall"
+msgstr "توی اتاق یک عضو دیگه"
+
+#: apps/post/templates/post/popup/_new.html:16
+msgid "Select community"
+msgstr "کدوم پاتوق"
+
+#: apps/post/templates/post/popup/_new.html:21
+msgid "Type in the name of the member"
+msgstr "اسم عضو مورد نظر رو بنویس"
+
+#: apps/post/templates/post/popup/_new.html:30
+msgid "Post title"
+msgstr "عنوان"
+
+#: apps/post/templates/post/popup/_new.html:31
+msgid "The title can contain 160 characters"
+msgstr "عنوان می‌تونه ۱۶۰ حرف داشته باشه"
+
+#: apps/post/templates/post/popup/_new.html:38
+msgid "Post message"
+msgstr "نوشته"
+
+#: apps/post/templates/post/popup/_new.html:41
+msgid ""
+"To @mention another member you have to add @ infront of their ID. E.g. if you want to "
+"mention Aban-11 you have to write '@Aban-11'."
+msgstr ""
+"برای اینکه کسی رو توی متن صدا بزنی باید علامت @ رو اول اسمش بیاری مثلن اگه عضو آبان-11 "
+"رو می‌خوای صدا بزنی باید توی متن بنویسی «@آبان-11»"
+
+#: apps/post/templates/post/popup/_new.html:48
+msgid ""
+"If you want to add an image to your post you can enter a URL or select one from your pc."
+msgstr ""
+"اگر دوست داری عکس اضافه کنی می‌تونی نشانی اینترنتی‌اش رو بدی یا از کامپیوترت بارگذاریش کنی"
+
+#: apps/post/templates/post/post_detail.html:8 apps/wall/templates/wall/own.html:12
+#: apps/wall/templates/wall/wall.html:26
+msgid "You need to login to see this page"
+msgstr "باید اول وارد سایت شده‌باشی تا بتونی این صفحه رو ببینی"
+
+#: apps/post/views.py:48
+#, python-brace-format
+msgid "This post is sent for approval because: {0}"
+msgstr "پست تو در انتظار تاییده چون: {0}"
+
+#: apps/post/views.py:101
+msgid "Are you sure you want to delete this post?"
+msgstr "واقعن می‌خواهی حذفش کنی؟"
+
+#: apps/report/admin.py:40
+msgid "Reported"
+msgstr "زیرآبش خورده"
+
+#: apps/report/admin.py:45
+msgid "Comment/ Post"
+msgstr "نوشته‌ها"
+
+#: apps/report/admin.py:54
+msgid "Approve this Report"
+msgstr "خلافکاره"
+
+#: apps/report/admin.py:63
+msgid "Disapprove this Report"
+msgstr "بی‌گناهه"
+
+#: apps/report/forms.py:16
+msgid "Why do you want to report this post?"
+msgstr "چه تخلفی در این پست هست که می‌خوای گزارش‌بدی؟"
+
+#: apps/report/forms.py:36
+msgid "Why do you want to report this comment/ post?"
+msgstr "تخلف این مطلب چیه که می‌خوای گزارش‌بدی؟"
+
+#: apps/report/models.py:12
+msgid "This message will be sent to the user, if this report is approved"
+msgstr "اگه گزارش تخلف تایید بشه،‌ این نوشته‌ات برای عضو متخلف فرستاده می‌شه"
+
+#: apps/report/templates/report/admin/report_view_comment.html:15
+#: apps/report/templates/report/admin/report_view_comment.html:30
+#: apps/report/templates/report/admin/report_view_like.html:29
+#: apps/report/templates/report/admin/report_view_post.html:15
+#: apps/report/templates/report/admin/report_view_post.html:30
+#: apps/report/templates/report/admin/report_view_share.html:15
+#: apps/report/templates/report/admin/report_view_share.html:54
+#: apps/report/templates/report/admin/report_view_user.html:15
+msgid "Number"
+msgstr "شماره"
+
+#: apps/report/templates/report/admin/report_view_comment.html:18
+#: apps/report/templates/report/admin/report_view_post.html:18
+#: apps/report/templates/report/admin/report_view_share.html:18
+#: apps/report/templates/report/admin/report_view_user.html:18
+msgid "Growth per day"
+msgstr "نرخ رشد روزانه"
+
+#: apps/report/templates/report/admin/report_view_comment.html:21
+#: apps/report/templates/report/admin/report_view_like.html:53
+#: apps/report/templates/report/admin/report_view_post.html:21
+msgid "Number per community"
+msgstr "شماره در هر پاتوق"
+
+#: apps/report/templates/report/admin/report_view_comment.html:45
+#: apps/report/templates/report/admin/report_view_post.html:45
+msgid "Rate of growth per community (last 30 days)"
+msgstr "نرخ رشد هر پاتوق (در ۳۰ روز گذشته)"
+
+#: apps/report/templates/report/admin/report_view_comment.html:54
+#: apps/report/templates/report/admin/report_view_followers.html:24
+#: apps/report/templates/report/admin/report_view_post.html:54
+msgid "Growth Rate"
+msgstr "نرخ رشد"
+
+#: apps/report/templates/report/admin/report_view_followers.html:15
+msgid "Growth rate by community"
+msgstr "نرخ‌رشد در هر پاتوق"
+
+#: apps/report/templates/report/admin/report_view_like.html:20
+msgid "Like Comment"
+msgstr "این نظر رو دوست‌دارم"
+
+#: apps/report/templates/report/admin/report_view_like.html:23
+msgid "Like Post"
+msgstr "این نوشته رو دوست‌دارم"
+
+#: apps/report/templates/report/admin/report_view_like.html:41
+msgid "Growth rate per day (last 30 days)"
+msgstr "نرخ رشد روزانه (۳۰ روز گذشته)"
+
+#: apps/report/templates/report/admin/report_view_like.html:64
+#: apps/report/templates/report/admin/report_view_like.html:88
+msgid "# new Likes"
+msgstr "تعداد پسندهای جدید"
+
+#: apps/report/templates/report/admin/report_view_like.html:107
+msgid "Growth rate per community (last 30 days)"
+msgstr "نرخ رشد هر پاتوق (۳۰ روز گذشته)"
+
+#: apps/report/templates/report/admin/report_view_like.html:114
+#: apps/report/templates/report/admin/report_view_like.html:138
+msgid "community"
+msgstr "پاتوق"
+
+#: apps/report/templates/report/admin/report_view_like.html:118
+#: apps/report/templates/report/admin/report_view_like.html:142
+msgid "growth rate"
+msgstr "نرخ رشد"
+
+#: apps/report/templates/report/admin/report_view_like.html:161
+#: apps/report/templates/report/admin/report_view_share.html:21
+#: apps/report/templates/report/admin/report_view_user.html:21
+msgid "New by day (last 30 days)"
+msgstr "تعداد اعضای جدید (۳۰ روز گذشته)"
+
+#: apps/report/templates/report/admin/report_view_like.html:168
+#: apps/report/templates/report/admin/report_view_like.html:192
+#: apps/report/templates/report/admin/report_view_share.html:26
+#: apps/report/templates/report/admin/report_view_share.html:89
+#: apps/report/templates/report/admin/report_view_user.html:26
+msgid "Day"
+msgstr "روز"
+
+#: apps/report/templates/report/admin/report_view_like.html:172
+msgid "# new Comment Likes"
+msgstr "تعداد پسند‌های جدید دیدگاه"
+
+#: apps/report/templates/report/admin/report_view_like.html:196
+msgid "# new Post Likes"
+msgstr "تعداد پسندهای جدید روی پست"
+
+#: apps/report/templates/report/admin/report_view_share.html:30
+#: apps/report/templates/report/admin/report_view_share.html:93
+#: apps/report/templates/report/admin/report_view_user.html:30
+msgid "# new"
+msgstr "تعداد جدید"
+
+#: apps/report/templates/report/admin/report_view_share.html:45
+msgid "Number by community"
+msgstr "شماره در هر پاتوق"
+
+#: apps/report/templates/report/admin/report_view_share.html:69
+msgid "New by day per community (last 30 days)"
+msgstr "جدید در هر پاتوق (۳۰ روز گذشته)"
+
+#: apps/report/templates/report/admin/report_view_share.html:113
+msgid "Growth per day per community"
+msgstr "نرخ رشد روزانه در هر پاتوق"
+
+#: apps/report/templates/report/admin/report_view_share.html:122
+msgid "Growth"
+msgstr "نرخ رشد"
+
+#: apps/report/templates/report/popup/_new_comment.html:6
+msgid "Report comment"
+msgstr "این دیدگاه تخلف کرده"
+
+#: apps/report/templates/report/popup/_new_post.html:7
+msgid "Report post"
+msgstr "این پست تخلف کرده"
+
+#: apps/report/templates/report/popup/_new_post.html:12
+#: apps/share/templates/share/popup/_new.html:5
+msgid "Cancel"
+msgstr "بیخیال"
+
+#: apps/save/forms.py:16
+msgid "You've already saved this post!"
+msgstr "قبلن این نوشته رو تو گنجه گذاشته بودی"
+
+#: apps/save/models.py:16 apps/users/templates/users/user_details.html:91
+#: apps/users/views.py:108
+msgid "Save"
+msgstr "ذخیره"
+
+#: apps/save/models.py:17 lib/behaviours/models/saveable.py:6
+msgid "Saves"
+msgstr "توی گنجه"
+
+#: apps/save/templates/save/list.html:14
+msgid "There are no saved posts."
+msgstr "هیچ پستی توی گنجه نیست"
+
+#: apps/save/templates/save/list.html:14
+msgid "Click here"
+msgstr "اینجا کلیک کن"
+
+#: apps/save/templates/save/list.html:14
+msgid "to go to your wall."
+msgstr "تا برگردی توی اتاقت."
+
+#: apps/search/templates/search/_results.html:2 apps/search/templates/search/results.html:8
+msgid "Searching for"
+msgstr "بگرد دنبال"
+
+#: apps/search/templates/search/_results.html:51
+msgid "Oops! No results found"
+msgstr "عجب! هیچی پیدا نشد."
+
+#: apps/search/templates/search/_searchbar.html:7
+msgid "Search name, post etc"
+msgstr "بگرد دنبال اسم، نوشته، نظر و ..."
+
+#: apps/search/templates/search/_searchbar.html:9
+msgid "Search"
+msgstr "جستجو"
+
+#: apps/search/templates/search/_searchbar.html:13
+msgid "Search on this wall"
+msgstr "فقط توی این اتاق رو بگرد"
+
+#: apps/search/templates/search/results.html:40
+msgid "Opps! No results found"
+msgstr "عجب! هیچی پیدا نشد."
+
+#: apps/share/models.py:14
+#, python-brace-format
+msgid "{0} shared {1}"
+msgstr "{0} {1} رو مشترک کرد"
+
+#: apps/suggestions/models.py:12 apps/suggestions/models.py:40
+msgid "Interval in days"
+msgstr "دوره (روز)"
+
+#: apps/suggestions/models.py:14 apps/suggestions/models.py:42
+msgid "Multiplier for like-count"
+msgstr "ضریب برای تعداد پسندیدن‌ها"
+
+#: apps/suggestions/models.py:15 apps/suggestions/models.py:43
+msgid "Multiplier for share-count"
+msgstr "ضریب برای تعداد اشتراک‌ها"
+
+#: apps/suggestions/models.py:16 apps/suggestions/models.py:44
+msgid "Multiplier for comment-count"
+msgstr "ضریب برای تعداد دیدگاه‌ها"
+
+#: apps/suggestions/models.py:45
+msgid "Multiplier for post-count"
+msgstr "ضریب برای تعداد پست‌ها"
+
+#: apps/suggestions/models.py:53
+msgid "Hottest Communities"
+msgstr "پرطرفدارترین پاتوق‌ها"
+
+#: apps/suggestions/templates/suggestions/detail.html:18
+msgid "List all communities"
+msgstr "فهرست همه‌ی پاتوق‌ها"
+
+#: apps/users/forms.py:56 apps/users/models.py:76 apps/users/models.py:89
+msgid "username"
+msgstr "اسم (شناسه عضویت)"
+
+#: apps/users/forms.py:56
+msgid "Select a username"
+msgstr "یک اسم انتخاب کن"
+
+#: apps/users/forms.py:57
+msgid "username postfix"
+msgstr "پسوند"
+
+#: apps/users/forms.py:59 apps/users/forms.py:135
+#: apps/users/templates/users/register.html:34
+#: apps/users/templates/users/user_details.html:46
+msgid "Security question 1"
+msgstr "یادآور ۱"
+
+#: apps/users/forms.py:60 apps/users/forms.py:136
+#: apps/users/templates/users/register.html:45
+#: apps/users/templates/users/user_details.html:57
+msgid "Security question 2"
+msgstr "یادآور ۲"
+
+#: apps/users/forms.py:62 apps/users/forms.py:138
+#: apps/users/templates/users/register.html:39
+#: apps/users/templates/users/user_details.html:51
+msgid "Security answer 1"
+msgstr "پاسخ ۱"
+
+#: apps/users/forms.py:63 apps/users/forms.py:139
+#: apps/users/templates/users/register.html:49
+#: apps/users/templates/users/user_details.html:61
+msgid "Security answer 2"
+msgstr "پاسخ ۲"
+
+#: apps/users/forms.py:65
+msgid "Privacy policy"
+msgstr "حریم خصوصی رو رعایت می‌کنم"
+
+#: apps/users/forms.py:66
+msgid "Terms of use"
+msgstr "شرایط استفاده رو قبول می‌کنم"
+
+#: apps/users/forms.py:131
+msgid "new password"
+msgstr "رمز عبور جدید"
+
+#: apps/users/forms.py:131
+msgid "Specify a new password if you want to change it."
+msgstr "اگر می‌خوای رمز عبور رو تغییر بدی، رمز عبور جدید رو وارد کن."
+
+#: apps/users/forms.py:132
+msgid "confirm new password"
+msgstr "دوباره رمز عبور جدید رو وارد کن"
+
+#: apps/users/forms.py:132
+msgid "Confirm your new password."
+msgstr "دوباره رمز عبور جدید رو وارد کن"
+
+#: apps/users/forms.py:133 apps/users/forms.py:334
+msgid "current password"
+msgstr "رمز عبور فعلی"
+
+#: apps/users/forms.py:133 apps/users/forms.py:334
+msgid "Enter your current password."
+msgstr "رمز عبور فعلی رو وارد کن"
+
+#: apps/users/forms.py:252
+msgid "Reset your current security questions by setting new ones."
+msgstr "اگر یادآور جدیدی رو انتخاب کنید، یادأورهای قدیمی پاک می‌شن"
+
+#: apps/users/forms.py:296
+msgid "Your username"
+msgstr "اسم شما"
+
+#: apps/users/forms.py:310
+msgid "Answer"
+msgstr "پاسخ"
+
+#: apps/users/models.py:20 apps/users/templates/users/register.html:11
+msgid "Username"
+msgstr "اسم (شناسه عضویت)"
+
+#: apps/users/models.py:21 apps/users/templates/users/register.html:24
+#: apps/users/templates/users/user_details.html:31
+msgid "Profile Color"
+msgstr "رنگ تو"
+
+#: apps/users/models.py:22
+msgid "Language"
+msgstr "زبان"
+
+#: apps/users/models.py:24
+msgid "security question 1"
+msgstr "یادآور ۱"
+
+#: apps/users/models.py:24
+msgid ""
+"Recovering your password is only possible with a security question. Make sure to "
+"remember your answer."
+msgstr "بازیابی رمزعبور فقط با یادآورها امکان‌پذیره. مطمئن باش که پاسخ‌ها رو به‌خاطر می‌سپری."
+
+#: apps/users/models.py:25
+msgid "security question 2"
+msgstr "یادآور ۲"
+
+#: apps/users/models.py:27
+msgid "security answer 1"
+msgstr "پاسخ ۱"
+
+#: apps/users/models.py:28
+msgid "security answer 2"
+msgstr "پاسخ ۲"
+
+#: apps/users/models.py:71 lib/users/base_models.py:26 lib/users/base_models.py:73
+#: lib/users/base_models.py:89 lib/users/models.py:15
+msgid "user"
+msgstr "عضو"
+
+#: apps/users/models.py:72 lib/users/base_models.py:27 lib/users/base_models.py:74
+#: lib/users/base_models.py:90 lib/users/models.py:16
+msgid "users"
+msgstr "عضوها"
+
+#: apps/users/models.py:77 lib/users/base_models.py:46
+msgid "active"
+msgstr "فعال"
+
+#: apps/users/models.py:77
+msgid "max of 100 active usernames allowed"
+msgstr "حداکثر میزان مجاز ۱۰۰ اسم تعلق گرفته است"
+
+#: apps/users/models.py:90
+msgid "usernames"
+msgstr "اسم‌ها"
+
+#: apps/users/models.py:96
+msgid "Username variation"
+msgstr "طیف اسم‌ها"
+
+#: apps/users/models.py:97
+msgid "Username variation number"
+msgstr "طیف پسوندها"
+
+#: apps/users/models.py:103
+msgid "username variation"
+msgstr "طیف اسم‌ها"
+
+#: apps/users/models.py:104
+msgid "username variations"
+msgstr "طیف اسم‌ها"
+
+#: apps/users/models.py:109
+msgid "question"
+msgstr "سوال"
+
+#: apps/users/templates/users/delete.html:3 apps/users/templates/users/pw_reset.html:3
+msgid "Password Reset"
+msgstr "بازیابی رمزعبور"
+
+#: apps/users/templates/users/delete.html:6
+msgid "Delete Account"
+msgstr "حذف پروفایل"
+
+#: apps/users/templates/users/delete.html:8
+msgid ""
+"If you do delete your profile, all of the following will be deleted:\n"
+"\n"
+"    - your personal wall\n"
+"    - your posts\n"
+"    - your comments, likes and shares on other users walls\n"
+"\n"
+"    * your posts and comments in communities will be remain under the name of 'unknown'\n"
+"    "
+msgstr ""
+"اگر پروفایلت رو پاک کنی همه‌ی اینها پاک می‌شوند:\n"
+"\n"
+"   - اتاقت\n"
+"   - پست‌هایت\n"
+"   - نظرها، پسندها، اشتراک‌ها و گنجه\n"
+"\n"
+"   * پست‌هایی که در گروه‌ها گذاشتی تحت اسم «ناشناس» باقی‌می‌مونه"
+
+#: apps/users/templates/users/delete.html:18
+msgid "Are you sure you want to delete your account? We would hate to see you leave!"
+msgstr "مطمئنی که می‌خوای از پیش ما بری؟ ما از رفتنت خیلی ناراحت می‌شیم!"
+
+#: apps/users/templates/users/login.html:7
+msgid "Welcome to JoopeA"
+msgstr "به کلوپ ژوپی‌آ خوش اومدی"
+
+#: apps/users/templates/users/login.html:9
+msgid "Did your perhaps"
+msgstr "ممکنه که"
+
+#: apps/users/templates/users/login.html:9
+msgid "forgot your password?"
+msgstr "رمز عبورت رو فراموش کردی؟"
+
+#: apps/users/templates/users/pw_reset.html:7
+#, python-format
+msgid "Step %(wizard.steps.step1)s of %(wizard.steps.count)s"
+msgstr "مرحله %(wizard.steps.step1)s از %(wizard.steps.count)s"
+
+#: apps/users/templates/users/pw_reset.html:23
+msgid "first step"
+msgstr "قدم اول"
+
+#: apps/users/templates/users/pw_reset.html:25
+msgid "prev step"
+msgstr "مرحله قبلی"
+
+#: apps/users/templates/users/pw_reset.html:27
+#: lib/users/templates/users/password_reset.html:13
+msgid "Next"
+msgstr "بعدی"
+
+#: apps/users/templates/users/register.html:5
+msgid "Sign up"
+msgstr "ثبت‌نام"
+
+#: apps/users/templates/users/register.html:6
+msgid "Socially connect with other people"
+msgstr "دنیای مجازی خودمون رو بسازیم"
+
+#: apps/users/templates/users/register.html:12
+msgid "Pick a pre-defined username and a number."
+msgstr "یک اسم پیش‌فرض و یک شماره انتخاب کن"
+
+#: apps/users/templates/users/register.html:25
+#: apps/users/templates/users/user_details.html:32
+msgid "You can select a color for your profile icon."
+msgstr "می‌تونی برای اتاقت یک رنگ انتخاب کنی"
+
+#: apps/users/templates/users/register.html:30
+#: apps/users/templates/users/user_details.html:41
+msgid "Security Questions"
+msgstr "یادآورها"
+
+#: apps/users/templates/users/register.html:31
+msgid "To secure your account please answer two pre-defined security questions."
+msgstr ""
+"برای محافظت از رمز عبورت به دو سوال «یادآور» پاسخ بده - پاسخ‌ها به حروف بزرگ و کوچیک حساس "
+"هستند و باید با حروف لاتین پاسخ داده بشن."
+
+#: apps/users/templates/users/register.html:55 apps/users/templates/users/register.html:58
+#: apps/users/templates/users/user_details.html:67 lib/users/forms.py:109
+msgid "Password"
+msgstr "رمز عبور"
+
+#: apps/users/templates/users/register.html:56
+#: apps/users/templates/users/user_details.html:68
+msgid ""
+"Please use a secure password (a combination of upper and lowercase letters and numbers)"
+msgstr ""
+"لطفن یک رمز امن انتخاب کن که شامل حرف بزرگ، حرف کوچک، عدد و یک علامت ( - ـ ! @ # $ % & ) "
+"باشه"
+
+#: apps/users/templates/users/register.html:64
+msgid "Confirm password"
+msgstr "رمز عبور رو دوباره وارد کن"
+
+#: apps/users/templates/users/register.html:70
+msgid "Privacy policy and terms of use"
+msgstr "شرایط استفاده"
+
+#: apps/users/templates/users/register.html:74 apps/users/templates/users/register.html:80
+msgid "I accept the"
+msgstr " "
+
+#: apps/users/templates/users/register.html:74
+msgid "privacy policy"
+msgstr "حریم خصوصی رو رعایت می‌کنم"
+
+#: apps/users/templates/users/register.html:80
+msgid "terms of use"
+msgstr "شرایط استفاده رو قبول می‌کنم"
+
+#: apps/users/templates/users/register.html:86
+msgid "We hope you enjoy your stay at JoopeA! <br> Your username will be:"
+msgstr "از اینکه با ما همراه شدی خیلی خوشحالیم.<br>اسم شما خواهد بود:"
+
+#: apps/users/templates/users/register.html:87
+msgid "Register"
+msgstr "ثبت‌نام"
+
+#: apps/users/templates/users/register.html:160
+msgid "Please use a more secure password."
+msgstr "یک رمز عبور ایمن‌تر انتخاب کن"
+
+#: apps/users/templates/users/register.html:161
+msgid "Please pick a username."
+msgstr "یک شناسه انتخاب کن"
+
+#: apps/users/templates/users/register.html:162
+#: apps/users/templates/users/register.html:163
+msgid "This number is taken."
+msgstr "این شماره رو قبلن یک عضو انتخاب کرده"
+
+#: apps/users/templates/users/register.html:244
+msgid "Choose a new number or pick a suggestion below"
+msgstr "یک شماره جدید بنویس یا یکی از شماره‌های پیشنهادی رو انتخاب کن"
+
+#: apps/users/templates/users/user_details.html:4
+#: apps/users/templates/users/user_details.html:10
+msgid "Account Settings"
+msgstr "تنظیمات حساب"
+
+#: apps/users/templates/users/user_details.html:12
+msgid "Back to my wall!"
+msgstr "برگرد به اتاقم!"
+
+#: apps/users/templates/users/user_details.html:17
+msgid "Profile Settings"
+msgstr "تنظیمات پروفایل"
+
+#: apps/users/templates/users/user_details.html:19
+msgid "Following"
+msgstr "کاربرهایی که دنبال می‌کنم"
+
+#: apps/users/templates/users/user_details.html:20
+#: apps/users/templates/users/user_details.html:125
+msgid "Blocked users"
+msgstr "عضوهایی که بلاک‌کردم"
+
+#: apps/users/templates/users/user_details.html:25
+msgid "Your Account"
+msgstr "حساب من"
+
+#: apps/users/templates/users/user_details.html:42
+msgid "Your currect security questions are"
+msgstr "یادآورهای شما در حال حاضر:"
+
+#: apps/users/templates/users/user_details.html:42
+msgid "and"
+msgstr "و"
+
+#: apps/users/templates/users/user_details.html:43
+msgid ""
+"To reset your security question, please answer two pre-defined security questions below."
+msgstr "برای بازیابی رمز عبورت به دو یادآور زیر پاسخ بده"
+
+#: apps/users/templates/users/user_details.html:75
+msgid "Current password"
+msgstr "رمز عبور فعلی رو وارد کن"
+
+#: apps/users/templates/users/user_details.html:80 lib/users/forms.py:148
+msgid "New password"
+msgstr "رمز عبور جدید"
+
+#: apps/users/templates/users/user_details.html:86
+msgid "Confirm new password"
+msgstr "رمز عبور جدید رو دوباره وارد کن"
+
+#: apps/users/templates/users/user_details.html:94
+msgid "Some text about removing your account, deleting everything etc"
+msgstr ""
+"مطمئنی که می‌خوای حق عضویت رو لغو کنی؟ اینطوری تمامی پست‌ها و تاریخچه‌ی فعالیت شما در سایت "
+"از بین می‌ره."
+
+#: apps/users/templates/users/user_details.html:95
+msgid "Delete Profile"
+msgstr "حذف پروفایل"
+
+#: apps/users/templates/users/user_details.html:101
+msgid "Your followers"
+msgstr "عضایی که من رو دنبال می‌کنند"
+
+#: apps/users/templates/users/user_details.html:108
+#: apps/users/templates/users/user_details.html:120
+#: apps/users/templates/users/user_details.html:132
+msgid "Update"
+msgstr "به‌روزرسانی"
+
+#: apps/users/templates/users/user_details.html:113
+msgid "Users you are following"
+msgstr "اعضایی که دنبال می‌کنم"
+
+#: apps/users/views.py:137
+msgid "Your profile is updated."
+msgstr "پروفایلت به‌روز شد."
+
+#: apps/users/views.py:196
+msgid ""
+"Please specify your new password. You will be directed to the homepage after "
+"successfully setting the new password."
+msgstr "لطفن رمز عبور جدید رو وارد کن. اگر همه چیز خوب پیش‌رفت، خودبه‌خود به صفحه اول می‌ری."
+
+#: apps/wall/models.py:18 apps/wall/models.py:19
+msgid "Wall"
+msgstr "اتاق"
+
+#: apps/wall/models.py:32
+msgid "Community Wall"
+msgstr "پاتوق"
+
+#: apps/wall/models.py:33
+msgid "Community Walls"
+msgstr "پاتوق‌ها"
+
+#: apps/wall/templates/wall/community_wall.html:7
+msgid "Wall of"
+msgstr "اتاق"
+
+#: apps/wall/templates/wall/community_wall.html:16 apps/wall/templates/wall/wall.html:12
+msgid "Expand all posts"
+msgstr "بازکردن همه‌ی پست‌ها"
+
+#: apps/wall/templates/wall/community_wall.html:19
+msgid "Unfollow Community"
+msgstr "نمی‌خواهم دیگه عضو پاتوق باشم"
+
+#: apps/wall/templates/wall/community_wall.html:20
+msgid "Follow Community"
+msgstr "می‌خوام عضو این پاتوق بشم"
+
+#: apps/wall/templates/wall/own.html:8
+msgid "My own posts"
+msgstr "نوشته‌های خود من"
+
+#: apps/wall/templates/wall/wall.html:8
+msgid "Posts on my wall"
+msgstr "پست‌های اتاق من"
+
+#: apps/wall/templates/wall/wall.html:8
+#, python-format
+msgid "Posts on %(target_user.username)s's wall"
+msgstr "پست‌های اتاق %(target_user.username)s"
+
+#: apps/wall/templates/wall/wall.html:15
+msgid "Show read posts"
+msgstr "پست‌هایی که قبلن خوندم رو نشان بده"
+
+#: apps/wall/templates/wall/wall.html:16
+msgid "Show unread posts"
+msgstr "پست‌های نخونده رو نشان بده"
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "There are no unread posts,"
+msgstr "هیچ پست خونده‌نشده‌ایی نداری"
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "click here"
+msgstr "اینجا کلیک کن"
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "to show read posts"
+msgstr "تا پست‌هایی که قبلن خوندی رو ببینی"
+
+#: lib/behaviours/models/publishable.py:8
+msgid "Published"
+msgstr "منتشرشده در"
+
+#: lib/behaviours/models/publishable.py:9
+msgid "Publish date"
+msgstr "تاریخ انتشار"
+
+#: lib/behaviours/models/withupdates.py:9
+msgid "Modified"
+msgstr "ویرایش‌شده در"
+
+#: lib/cms/content_types.py:27
+msgid "Rich text"
+msgstr "متن"
+
+#: lib/cms/content_types.py:28
+msgid "Rich texts"
+msgstr "متن‌ها"
+
+#: lib/cms/content_types.py:59
+msgid "position"
+msgstr "موقعیت"
+
+#: lib/cms/content_types.py:68
+msgid "Images"
+msgstr "تصویرها"
+
+#: lib/cms/content_types.py:74
+msgid "Center"
+msgstr "وسط"
+
+#: lib/cms/content_types.py:75
+msgid "Left"
+msgstr "چپ"
+
+#: lib/cms/content_types.py:76
+msgid "Right"
+msgstr "راست"
+
+#: lib/cms/content_types.py:119
+msgid "Standard"
+msgstr "استاندار"
+
+#: lib/cms/content_types.py:124
+msgid "URL"
+msgstr "نشانی URL"
+
+#: lib/cms/content_types.py:126
+msgid ""
+"Enter the URL of the content that needs to be embedded, example: http://www.youtube.com/"
+"watch?v=Nd-vBFJN_2E"
+msgstr ""
+"لطفن آدرس اینترنتی (URL) محتوایی که می‌خواهید در متن اضافه شود رو وارد کنید. مثال: http://"
+"www.youtube.com/watch?v=Nd-vBFJN_2E"
+
+#: lib/cms/content_types.py:174
+#, python-format
+msgid "I don't know how to embed %s."
+msgstr "نمی‌دونم که چطوری %s رو به متن پیوند کنم."
+
+#: lib/cms/content_types.py:189 lib/cms/content_types.py:190
+msgid "Embedded content"
+msgstr "محتوای افزوده شده"
+
+#: lib/users/base_admin.py:27
+msgid "Personal data"
+msgstr "اطلاعات شخصی"
+
+#: lib/users/base_models.py:9
+msgid "first name"
+msgstr "اسم"
+
+#: lib/users/base_models.py:10
+msgid "last name"
+msgstr "فامیل"
+
+#: lib/users/base_models.py:45
+msgid "staff status"
+msgstr "دبیر کلوپ"
+
+#: lib/users/base_models.py:45
+msgid "Designates whether the user can log into this admin site."
+msgstr "تعیین می‌کنه که عضو قابلیت ورود به بخش مدیریت رو داره یا نه"
+
+#: lib/users/base_models.py:46
+msgid ""
+"Designates whether this user should be treated as active. Unselect this instead of "
+"deleting accounts."
+msgstr "تعیین می‌کنه که عضو «فعال» هست یا نه. اگر خاموش باشه شبیه پروفایل حذف شده‌می‌شه"
+
+#: lib/users/base_models.py:47
+msgid "date joined"
+msgstr "تاریخ عضویت"
+
+#: lib/users/base_models.py:86 lib/users/models.py:12
+msgid "e-mail"
+msgstr "ایمیل"
+
+#: lib/users/emails.py:35
+#, python-brace-format
+msgid "Password reset request for {0}"
+msgstr "درخواست تغییر رمز ورود برای {0}"
+
+#: lib/users/emails.py:54
+msgid "Thank you for registering"
+msgstr "از اینکه ثبت‌نام کردی خوشحالیم"
+
+#: lib/users/forms.py:22
+msgid "This user already exists."
+msgstr "این اسم قبلن وجود داشت."
+
+#: lib/users/forms.py:23 lib/users/forms.py:146
+msgid "The two password fields didn't match."
+msgstr "رمز عبور و تکرار اون با هم مطابقت نداره."
+
+#: lib/users/forms.py:26
+msgid "password"
+msgstr "رمز عبور"
+
+#: lib/users/forms.py:27
+msgid "confirm password"
+msgstr "رمز عبور رو دوباره وارد کن"
+
+#: lib/users/forms.py:110
+msgid "The password can be changed via <a href=\"password/\">this form.</a>"
+msgstr "می‌تونید رمز عبور خودتون رو از طریق <a href=\"password/\">این لینک</a> تغییر بدید."
+
+#: lib/users/forms.py:125
+msgid "Email"
+msgstr "ایمیل"
+
+#: lib/users/forms.py:150
+msgid "New password confirmation"
+msgstr "رمزعبور جدید رو دوباره وارد کن"
+
+#: lib/users/mixins.py:38
+msgid "Inloggen"
+msgstr "ورود"
+
+#: lib/users/mixins.py:71
+msgid "login"
+msgstr "ورود"
+
+#: lib/users/templates/users/password_reset.html:6
+msgid "Forgot Password"
+msgstr "رمز عبور رو فراموش کردم"
+
+#: lib/utils/helpers.py:20
+msgid "One column"
+msgstr "یک ستون"
+
+#: lib/utils/helpers.py:21
+msgid "Two columns"
+msgstr "دوستون"
+
+#: lib/utils/helpers.py:22
+msgid "Three columns"
+msgstr "سه‌ستون"
+
+#: settings/defaults.py:111
+msgid "English"
+msgstr "English"
+
+#: settings/defaults.py:112
+msgid "Persian"
+msgstr "فارسی"
+
+#~ msgid "Yes, delete comments"
+#~ msgstr "آره! حذفش کن"
+
+#~ msgid "No"
+#~ msgstr "نه! بزار بمونه"
+
+#~ msgid "Credentials"
+#~ msgstr "اطلاعات لازم برای ورود"
+
+#~ msgid "Enter a valid password"
+#~ msgstr "یک رمز عبور معتبر وارد کن"
+
+#~ msgid "security questions"
+#~ msgstr "یادآورها"
+
+#~ msgid "Please select a number."
+#~ msgstr "یک شماره انتخاب کن"
+
+#~ msgid "Choose new number or pick suggestion below:"
+#~ msgstr "یک شماره جدید وارد کن یا یکی از شماره‌های پیشنهادی زیر رو انتخاب کن:"
+
+#~ msgid ""
+#~ "When resetting your security questions, both the answer and question must be given."
+#~ msgstr "برای تغییر یادآورها هم باید سوال و هم جواب رو واردکنی"
+
+#~ msgid "Both security questions must be given"
+#~ msgstr "هر دو سوال یادآور رو باید پاسخ بدی"
+
+#~ msgid "You've exceeded the max number of 100 active usernames"
+#~ msgstr "شما به حداکثر ظرفیت مجاز ۱۰۰ شناسه رسیدی"
+
+#~ msgid "That username does not exist."
+#~ msgstr "اسم انتخابی وجود نداره"
+
+#~ msgid "That's an incorrect answer!"
+#~ msgstr "جوابت اشتباه بود!"
+
+#~ msgid "You cannot follow yourself."
+#~ msgstr "نمی‌تونی خودت رو دنبال‌کنی."
+
+#~ msgid "You're already following this user!"
+#~ msgstr "همین‌الان هم این عضو رو دنبال می‌کنی!"
+
+#~ msgid "You're already following this community!"
+#~ msgstr "همین‌الان هم عضو این پاتوق هستی!"
+
+#~ msgid "Only jpg, gif and png images are allowed."
+#~ msgstr "فقط این فرمت‌ها قبول هستند و نه بقیه: jpg, gif, png"
+
+#~ msgid "blockee: {0} blocker: {1}"
+#~ msgstr "مسدود شده: {0} مسدود کننده: {1}"
+
+#~ msgid "blockee: {0} community: {1}"
+#~ msgstr "مسدود شده: {0} پاتوق:‌{1}"
+
+#~ msgid "Mention cannot have both post and comment id's"
+#~ msgstr "صداکردن نمی‌تونه هم پست و هم دیدگاه باشه!"
+
+#~ msgid "next"
+#~ msgstr "بعدی"
+
+#~ msgid "Image attached"
+#~ msgstr "تصویر داشت"
+
+#~ msgid "You are blocked by the community this item belogs to"
+#~ msgstr "شما از این پاتوق افتادید بیرون!"
+
+#~ msgid "Main"
+#~ msgstr "اصلی"
+
+#~ msgid "You are not allowed to take this action on a resource created by yourself."
+#~ msgstr "نمی‌تونی با چیزی که مال خودت هست این کار رو بکنی!"
+
+#~ msgid "You are blocked by this user."
+#~ msgstr "این عضو در اتاقش رو به روی شما بسته"
+
+#~ msgid "You are blocked form this wall."
+#~ msgstr "در این اتاق به روی شما قفل شده!"
+
+#~ msgid "Een kolom"
+#~ msgstr "یک ستون"
+
+#~ msgid "Twee kolommen"
+#~ msgstr "دو ستون"
+
+#~ msgid "Drie kolommen"
+#~ msgstr "سه ستون"
+
+#~ msgid ""
+#~ "follower: {0}\n"
+#~ "community: {1}"
+#~ msgstr ""
+#~ "دنبال‌کننده: {0}\n"
+#~ "پاتوق: {1}"
+
+#~ msgid ""
+#~ "follower: {0}\n"
+#~ "followee: {1}"
+#~ msgstr ""
+#~ "دنبال‌کننده: {0}\n"
+#~ "دنبال‌شونده: {1}"
+
+#~ msgid "Notification {0} from {1} to: {2}"
+#~ msgstr "زنگ {0} از {1} به {2}"
+
+#~ msgid "Post not found"
+#~ msgstr "نوشته‌ایی که دنبالش هستی پیدا نمی‌شه"
+
+#~ msgid "User could not be found"
+#~ msgstr "عضو پیدا نمی‌شه"
+
+#~ msgid "You are blocked by this user"
+#~ msgstr "این عضو در اتاقش رو به روی شما بسته"
+
+#~ msgid "You are blocked from posting on this community"
+#~ msgstr "شما نمی‌تونی توی این پاتوق پست‌کنی"
+
+#~ msgid "Community: {0} - {1}"
+#~ msgstr "پاتوق: {0} - {1}"
+
+#~ msgid "Yes, delete post"
+#~ msgstr "پاکش‌کن بره"
+
+#~ msgid "Both Post and Comment are not permitted"
+#~ msgstr "هم دیدگاه و هم پست مجاز نیستند"
+
+#~ msgid "Provide either a post or comment to report about"
+#~ msgstr "یک پست یا دیدگاه رو برای گزارش تخلف انتخاب کن"
+
+#~ msgid "community wall of %s"
+#~ msgstr "توی پاتوق %s"
+
+#~ msgid "Messages"
+#~ msgstr "پیام‌ها"
+
+#~ msgid "Site Maps"
+#~ msgstr "نقشه سایت"
+
+#~ msgid "No file was submitted."
+#~ msgstr "هیچ فایلی فرستاده‌نشده بود!"
+
+#~ msgid "The submitted file is empty."
+#~ msgstr "فایل فرستاده‌شده خالی بود!"
+
+#~ msgid ""
+#~ "Upload a valid image. The file you uploaded was either not an image or a corrupted "
+#~ "image."
+#~ msgstr ""
+#~ "یک تصویر بارگزاری‌کن. فایلی که بارگزاری‌شده بود یا خراب بود یا فرمت قابل‌قبولی نداشت."
+
+#~ msgid "Please correct the duplicate values below."
+#~ msgstr "لطفن داده‌های تکراری واردشده رو تصحیح کن"
+
+#~ msgid "Currently"
+#~ msgstr "در حال حاضر"
+
+#~ msgid "Unknown"
+#~ msgstr "ناشناخته"
+
+#~ msgid "Yes"
+#~ msgstr "بله"
+
+#~ msgid "yes,no,maybe"
+#~ msgstr "بله,نخیر,شاید"
+
+#~ msgid "p.m."
+#~ msgstr "عصر"
+
+#~ msgid "a.m."
+#~ msgstr "صبح"
+
+#~ msgid "PM"
+#~ msgstr "عصر"
+
+#~ msgid "AM"
+#~ msgstr "صبح"
+
+#~ msgid "midnight"
+#~ msgstr "نیمه‌شب"
+
+#~ msgid "noon"
+#~ msgstr "ظهر"
+
+#~ msgid "Monday"
+#~ msgstr "دوشنبه"
+
+#~ msgid "Tuesday"
+#~ msgstr "سه‌شنبه"
+
+#~ msgid "Wednesday"
+#~ msgstr "چهارشنبه"
+
+#~ msgid "Thursday"
+#~ msgstr "پنج‌شنبه"
+
+#~ msgid "Friday"
+#~ msgstr "جمعه"
+
+#~ msgid "Saturday"
+#~ msgstr "شنبه"
+
+#~ msgid "Sunday"
+#~ msgstr "بک‌شنبه"
+
+#~ msgid "Mon"
+#~ msgstr "دوشنبه"
+
+#~ msgid "Tue"
+#~ msgstr "سه‌شنبه"
+
+#~ msgid "Wed"
+#~ msgstr "چهارشنبه"
+
+#~ msgid "Thu"
+#~ msgstr "پنج‌شنبه"
+
+#~ msgid "Fri"
+#~ msgstr "جمعه"
+
+#~ msgid "Sat"
+#~ msgstr "شنبه"
+
+#~ msgid "Sun"
+#~ msgstr "یک‌شنبه"
+
+#~ msgid "January"
+#~ msgstr "ژانویه"
+
+#~ msgid "February"
+#~ msgstr "فوریه"
+
+#~ msgid "March"
+#~ msgstr "مارس"
+
+#~ msgid "April"
+#~ msgstr "آپریل"
+
+#~ msgid "May"
+#~ msgstr "می"
+
+#~ msgid "June"
+#~ msgstr "ژوئیه"
+
+#~ msgid "July"
+#~ msgstr "ژوئن"
+
+#~ msgid "August"
+#~ msgstr "اگوست"
+
+#~ msgid "September"
+#~ msgstr "سپتامبر"
+
+#~ msgid "October"
+#~ msgstr "اکتبر"
+
+#~ msgid "November"
+#~ msgstr "نوامبر"
+
+#~ msgid "December"
+#~ msgstr "دسامبر"
+
+#~ msgid "jan"
+#~ msgstr "ژانویه"
+
+#~ msgid "feb"
+#~ msgstr "فوریه"
+
+#~ msgid "mar"
+#~ msgstr "مارچ"
+
+#~ msgid "apr"
+#~ msgstr "آپریل"
+
+#~ msgid "may"
+#~ msgstr "می"
+
+#~ msgid "jun"
+#~ msgstr "ژوئن"
+
+#~ msgid "jul"
+#~ msgstr "ژوئیه"
+
+#~ msgid "aug"
+#~ msgstr "اگوست"
+
+#~ msgid "sep"
+#~ msgstr "سپتامبر"
+
+#~ msgid "oct"
+#~ msgstr "اکتبر"
+
+#~ msgid "nov"
+#~ msgstr "نوامبر"
+
+#~ msgid "dec"
+#~ msgstr "دسامبر"
+
+#~ msgid "Delete?"
+#~ msgstr "مطمئنی حذف بشه؟"
+
+#~ msgid "Remove"
+#~ msgstr "پاکش‌کن"

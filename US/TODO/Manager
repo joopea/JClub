@@ -1,0 +1,41 @@
+A Manager can Delete a User
+A Manager can Delete a User with too many Alerts
+
+A Manager can Delete an Alert
+
+A Community is created byt a Manager
+A Manager can create a Community
+A Manager can delete a Community
+One Community can be the Hottest Community
+
+A Manager receives a Notification if an User has more than <N> Alerts
+A Manager is member ot the Moderators group
+
+
+
+A Manager can View a Report of the Rate of Growth of Users
+A Manager can View a Report of the Rate of Growth of Posts
+A Manager can View a Report of the Rate of Growth of Shares
+A Manager can View a Report of the Rate of Growth of Comments
+A Manager can View a Report of the Rate of Growth of Likes
+
+A Manager can View a Report of the Rate of Growth of Posts per Community
+A Manager can View a Report of the Rate of Growth of Shares per Community
+A Manager can View a Report of the Rate of Growth of Comments per Community
+A Manager can View a Report of the Rate of Growth of Likes per Community
+A Manager can View a Report of the Rate of Growth of Followers per Community
+
+the Rate of Growth is defined as an increment in a given time-period
+	define time-periods
+
+A Manager can view Reports of number of Users
+A Manager can view Reports of number of Users in Communities
+A Manager can view Reports of growth of number of Users in Communities
+
+A Manager can view Reports of number of Activities (post, share, comment, like) in Communties
+A Manager can view Reports of growth of number of Activities (post, share, comment, like) in Communties
+A Manager can view a Report about the number/rate of Shared in Communities
+A Manager can view a Report about the Rate/Count of Likes in a Community
+A Manager can view a Report on number of Activities (post, share, comment, like) per Community
+A Manager can view a Report on rate of growth of number of Activities (post, share, comment, like) per Community
+A Manager can view a Report about Post Trends/Counts

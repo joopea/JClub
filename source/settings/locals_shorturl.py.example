@@ -1,0 +1,18 @@
+from .locals import *
+
+INSTANCE_TYPE = 'shorturl'
+
+INSTALLED_APPS = [
+    'apps.shorturl',
+]
+
+
+MIDDLEWARE_CLASSES = [
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.http.ConditionalGetMiddleware',
+    'djangosecure.middleware.SecurityMiddleware',
+]
+
+# SESSION_EXCLUDED_URLS = [r'^_monitor/$']
+
+# LOGGING['formatters']['verbose']['format'] ='TENA: (%(levelname)s:%(name)s) %(message)s'

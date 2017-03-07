@@ -1,0 +1,219 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  MMenu Sidebar 		   			 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+#menu {
+	border-right: 2px solid #e5e5e5;
+	display: none;
+
+	&.mm-menu {
+		display: none;
+
+		&.mm-opened { display: block; }
+	}
+
+	// All (font-awesome) icons
+	.icon-menu-item {
+		width: 20px;
+
+		text-align: center;
+	}
+
+	.menu-link {
+		@include font-size(1.6);
+
+		.icon-menu-item { color: $joopea-blue; }
+		.icon-paperclip {
+			display: block;
+			position: absolute;
+			height: 32px;
+			width: 13px;
+			top: -10px;
+			left: 5px;
+
+			background: url(../img/paperclip-icon@2x.png);
+			background-repeat: no-repeat;
+			background-size: 13px 32px;
+		}
+
+		.new-notification {
+			display: none;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			right: 2px;
+			top: 2px;
+
+			background: #b00b13;
+
+			@include border-radius(33px);
+		}
+
+		.fa-bell { position: relative; }
+
+		.community-icon { margin-right: 10px; }
+
+		&.notification-alert .new-notification { display: block; }
+	} // .menu-link
+
+	.notification-item {
+		margin: 15px 0;
+		padding: 0 15px;
+	}
+
+	.menu-list-item {
+
+		// Communities item has a 'featured' background color
+		&.community-menu-item { background: #e3f8ff; }
+		&.notification-item:hover {
+			background: none;
+
+			color: rgba(0, 0, 0, 0.6);
+		}
+
+		&:hover,
+		&.is-active,
+		&:hover .icon-menu-item {
+			background: $joopea-blue;
+
+			color: #fff;
+		}
+
+		&:hover,
+		&.is-active {
+			.mm-next:after { border-color: #fff; }
+		}
+	} // .menu-list-item
+
+	.menu-detail-link {
+		margin-top: 15px;
+
+		border-top: 1px solid #eee;
+
+		font-weight: bold;
+		text-align: left;
+		text-decoration: underline;
+	}
+} // #menu
+
+// Hide the timestamp when the notification is in the sidebar
+.mm-listview .notification-item .post-timestamp { display: none; }
+
+.notification-item {
+	position: relative;
+	margin: 15px 0;
+
+	list-style-type: none;
+
+	a {
+		display: inline-block;
+		text-decoration: underline;
+	}
+
+	&.is-read { opacity: .5; }
+
+	.notification-type {
+		position: absolute;
+		width: 45px;
+		height: 100%;
+		padding: 10px;
+
+		background: $turquoise;
+
+		text-align: center;
+		color: #fff;
+		@include font-size(1.8);
+
+		overflow: hidden;
+
+		&.post_comment .fa:before { content: "\f0e6"; }
+		&.comment_after_comment .fa:before { content: "\f0e6"; }
+
+		&.like_comment .fa:before,
+		&.like_post .fa:before { content: "\f004"; }
+
+		&.mention_post .fa:before,
+		&.mention_comment .fa:before { content: "@"; }
+
+		&.follow_user .fa:before { content: "\f234"; }
+
+	  	&.followee_share_post .fa:before { content: "\f064"; }
+	    &.share_post_fix .fa:before { content: "\f064"; }
+
+		&.warning {
+			background: #bf203c;
+
+			.fa:before { content: "\f071"; }
+		}
+
+		&.attention {
+			background: #ff7440;
+
+			.fa:before { content: "\f071"; }
+		}
+	} // .notification-type
+
+	.notification-content {
+		display: block;
+		padding: 10px 10px 10px 62px;
+
+		border: 1px solid #E5E5E5;
+
+		text-overflow: inherit;
+		white-space: normal;
+
+		overflow: hidden;
+	}
+
+	.post-timestamp,
+	.reason {
+		display: block;
+		width: 100%;
+		margin-top: 10px;
+
+		@include font-size(1.2);
+		color: #7B7B7B;
+	}
+
+	.post-timestamp { float: left; }
+} // .notification-item
+
+.logo-container {
+	display: block;
+	margin: 30px 0;
+}
+
+.logo {
+	height: 96px;
+	width: 186px;
+	margin: 0 auto;
+
+	background: url(../img/jclub-logo.png);
+	background-repeat: no-repeat;
+	background-size: 186px 86px;
+
+	text-indent: -9999px;
+}
+
+/* Override the mmenu-styles */
+.mm-menu .mm-panel { top: 160px; }
+
+.mm-menu .mm-navbar {
+	top: 120px;
+
+	.mm-title {
+		@include font-size(1.6);
+	}
+} // .mm-menu .mm-navbar
+
+.mm-listview .mm-next { width: 90px; }
+.mm-header .mm-title { @include font-size(1.6) }
+.mm-listview > li > a, .mm-listview > li > span { padding: 12px 10px 12px 20px;}
+.mm-listview > li:not(.mm-divider):after { border: none; }
+
+.body_fa .mm-menu p {
+	direction: rtl;
+}

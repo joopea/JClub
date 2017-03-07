@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+
+    <h1 class="page-title">{% block page_title %}Notifications{% endblock page_title %}</h1>
+    <ul class="notifications">
+        {% for notification in object_list %}
+            {% include "notifications/_notification_list_item.html" %}
+        {% endfor %}
+    </ul>
+
+    {% include "core/_pagination.html" %}
+
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript">
+    var $container = $(".notifications");
+    $container.infinitescroll({
+        navSelector: ".pagination",
+        nextSelector: ".next",
+        itemSelector: ".notification-item",
+        loading: {
+            finishedMsg: "",
+            img: "{{ STATIC_URL }}img/ajax-loader.gif",
+            msg: null,
+            msgText: ""
+        }
+    });
+    </script>
+{% endblock javascript %}

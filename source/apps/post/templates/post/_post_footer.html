@@ -1,0 +1,49 @@
+{% load rules i18n %}{% rules user=request.user community=community comment=comment post=post wall=wall as rules %}
+<div class="post-footer">
+    {% if rules.can_share %}
+    <span data-share-post="{{ post.id }}" class="{% if rules.has_shared_post %}is-active{% endif %}">
+        <a href="#" class="inactive footer-button share-post-button share fleft">
+            <i class="fa fa-share"></i> {% trans "Share" %} (<span class="count">{{ post.share_count }}</span>)
+        </a>
+        <span class="active footer-button fleft">
+            <i class="fa fa-check is-shared"></i> {% trans "Shared" %} (<span class="count">{{ post.share_count }}</span>)
+        </span>
+    </span>
+    {% endif %}
+    {% if rules.can_like %}
+        <a data-like-post="{{ post.id }}" href="#" class="footer-button like-post-button fleft{% if rules.has_liked_post %} is-active{% endif %}">
+            <span class="active">
+                <i class="fa fa-heart is-liked"></i> {% trans "Unlike" %} (<span class="count">{{ post.like_count }}</span>)
+            </span>
+            <span class="inactive">
+               <i class="fa fa-heart"></i> {% trans "Like" %} (<span class="count">{{ post.like_count }}</span>)
+            </span>
+        </a>
+    {% else %}
+            <span class="inactive">
+               <i class="fa fa-heart"></i> {% trans "Like" %} (<span class="count">{{ post.like_count }}</span>)
+            </span>
+    {% endif %}
+    <a href="#" data-comments-toggle="{{ post.id }}" class="footer-button comment-post-button comment fleft">
+        <i class="fa fa-comments"></i> {% trans "Comments" %} (<span class="count">{{ post.comment_count }}</span>)
+    </a>
+
+    {% ifequal post.author.username 'deleted' %}
+        <span class="fright">{{ post.author.username }}</span>
+    {% else %}
+        <a class="author-link fright" href="{% url 'wall:detail' post.author.id %}">{{ post.author.username }}</a>
+    {% endifequal %}
+    {% if rules.can_follow %}
+        <span data-follow-user="{{ post.author.id }}" class="account-button footer-button follow fright{% if rules.following_author %} is-active{% endif %}">
+            <span class="active" style="display: none;"><i class="fa fa-user-times"></i> {% trans "Unfollow" %}&nbsp;</span>
+            <span class="inactive"><i class="fa fa-user-plus"></i> {% trans "Follow" %}&nbsp;</span>
+        </span>
+    {% endif %}
+
+    {% if post.share_source %}
+        <span class="share_source footer-button fright">
+            <i class="fa fa-share"></i> {% trans "Shared on" %} <a class="author-link" href="{% url 'wall:detail' post.share_source.id %}">{{ post.share_source.username }}</a>
+        </span>
+    {% endif %}
+
+</div>

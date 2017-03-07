@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  Fonts  					  //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// /* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"B Yekan";src:url("../fonts/yekan/BYekan.eot?") format("eot"),url("../fonts/yekan/BYekan.woff") format("woff"),url("../fonts/yekan/BYekan.ttf") format("truetype"),url("../fonts/yekan/BYekan.svg#BYekan") format("svg");font-weight:normal;font-style:normal;}
+
+// /* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"B Yekan";src:url("../fonts/yekan/yekan-webfont.eot?") format("eot"),url("../fonts/yekan/yekan-webfont.woff") format("woff"),url("../fonts/yekan/yekan-webfont.ttf") format("truetype"),url("../fonts/yekan/yekan-webfont.svg#yekan-webfont") format("svg");font-weight:normal;font-style:normal;}
+// /* @font-face kit by Fonts2u (http://www.fonts2u.com) */ @font-face {font-family:"B Mitra Bold";src:url("../fonts/mirta/mirta-webfont.eot?") format("eot"),url("../fonts/mirta/mirta-webfont.woff") format("woff"),url("../fonts/mirta/mirta-webfont.ttf") format("truetype"),url("../fonts/mirta/mirta-webfont.svg#mirta-webfont") format("svg");font-weight:normal;font-style:normal;}
+
+
+@font-face {
+	font-family: 'BMitra';
+	src: url('../fonts/bmitra/BMitra.eot?#') format('eot'),
+	url('../fonts/bmitra/BMitra.ttf') format('truetype'),
+	url('../fonts/bmitra/BMitra.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'weblogmayekan';
+    src: url('../fonts/yekan2/Weblogma_Yekan.eot');
+    src: url('../fonts/yekan2/Weblogma_Yekan.eot#iefix') format('embedded-opentype'),
+         url('../fonts/yekan2/Weblogma_Yekan.woff') format('woff'),
+         url('../fonts/yekan2/Weblogma_Yekan.ttf') format('truetype'),
+         url('../fonts/yekan2/Weblogma_Yekan.svg#CartoGothicStdBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

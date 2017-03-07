@@ -1,0 +1,92 @@
+////////////////////////////////////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+//  Base element styling 	  //////////////////////////////////////////////////
+//                            //////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+	font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: $main-font;
+    font-weight: 300;
+	color: $txt-color;
+	line-height: 1.4;
+    @include font-size (1.4);
+    min-width: 700px;
+}
+
+a {
+    text-decoration: underline;
+    outline: none;
+    @include font-size (1.4);
+    // color: $link-color;
+
+    &:hover,
+    &:focus {
+        // color: $link-color;
+        text-decoration:none;
+    }
+} //a
+
+p {
+	margin: 0 0 1em 0;
+	padding: 0;
+	line-height: 1.7;
+	// max-width: 44em; //to keep things readable
+    @include font-size (1.4);
+} //p
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 1em 0;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1.1;
+} // h1,h2,h3,h4,h5,h6
+
+h1 {
+    @include font-size(2.0);
+
+    &.page-title { text-align: right; } 
+}
+h2 { @include font-size(1.8); }
+h3 { @include font-size(1.6); }
+h4 { @include font-size(1.6); }
+h5 { @include font-size(1.6); }
+h6 { @include font-size(1.6); }
+
+img {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+em {
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong {
+    font-weight: bold;
+    line-height: inherit;
+}
+
+b, i { 
+	// Use these as pure semantic elements
+    font-weight: normal;
+    font-style: normal;
+}
+
+a {
+    color: #333;
+    cursor: pointer;
+}

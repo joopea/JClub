@@ -1,0 +1,39 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">Home</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+
+        <h2>{{ subject }} {% trans "Report" %}</h2>
+
+        <h3>{% trans "Growth rate by community" %}</h3>
+        <table id="">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="text">{% trans "Community" %}</div>
+                        <div class="clear"></div>
+                    </th>
+                    <th scope="col">
+                        <div class="text">{% trans "Growth Rate" %}</div>
+                        <div class="clear"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in growth_rate_by_community %}
+                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                    <td>{{ row.community }}</td>
+                    <td>{{ row.growth_rate }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

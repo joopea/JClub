@@ -1,0 +1,34 @@
+{% load thumbnail i18n %}
+<div class="featured-items">
+    <div class="featured-item community">
+        <h3 class="title">{% trans "Hottest Community" %}</h3>
+        {% if suggestions.hottest_community %}
+        <a href="{% url 'wall:community' pk=suggestions.hottest_community.pk %}">
+            <span class="communitystamp">
+                {{ suggestions.hottest_community.name }}
+                <i class="community-icon"><img src="{{ suggestions.hottest_community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
+            </span>
+        </a>
+        {% else %}
+            {% trans "There is no Hottest Community at the moment" %}
+        {% endif %}
+    </div>
+
+    <div class="featured-item">
+        <h3 class="title">{% trans "Hottest Post" %} <i class="fa fa-fire"></i></h3>
+        {% if suggestions.hottest_post %}
+            <a href="{{ suggestions.hottest_post.get_absolute_url }}">{{ suggestions.hottest_post.title }}</a>
+        {% else %}
+            {% trans "There is no hottest post at the moment" %}
+        {% endif %}
+    </div>
+
+    <div class="featured-item">
+        <h3 class="title">{% trans "Promoted Post" %} <i class="fa fa-bookmark"></i></h3>
+        {% if suggestions.promoted_post %}
+            <a href="{{ suggestions.promoted_post.get_absolute_url }}">{{ suggestions.promoted_post.title }}</a>
+        {% else %}
+            {% trans "There is no promoted post at the moment" %}
+        {% endif %}
+    </div>
+</div>

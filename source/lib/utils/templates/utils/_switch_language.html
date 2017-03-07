@@ -1,0 +1,9 @@
+{% load i18n static %}
+{% for current_url, lang_code, description in languages %}
+
+    {% with 'img/language/'|add:lang_code|add:'.png' as image_path %}
+        <a class="language-flag" href="{{ current_url }}"><img src="{% static image_path %}" alt="{% trans description %}" title="{% trans description %}" /></a>
+    {% endwith %}
+
+{% endfor %}
+

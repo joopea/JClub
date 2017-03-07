@@ -1,0 +1,30 @@
+{% load rules i18n %}{% rules user=request.user community=community comment=comment post=post as rules %}
+{% if rules.can_comment %}
+<form class="form-container" method="post" action="{% url 'comment:create' pk=post.id %}">
+    <span class="user-avatar" style="background: {{ profile.user.profile_colour }}"></span>
+    <div class="textarea-container">
+        {{ form.message }}
+        <textarea class="comment-field-textarea" name="message" placeholder='{% trans "Type a comment" %}'></textarea>
+        <span class="speechbubble"></span>
+    </div>
+
+    <div class="form-field image-upload">
+        <!-- label class="form-label">Image</label> -->
+        <span class="tooltip">{% trans "If you want to add an image to your comment you can enter a URL or select one from your pc." %}</span>
+        <input type="hidden" name="image" />
+        <div id="image_container" class="mutually-exclusive-widget" style="display:inline-block">
+            <div class="file-select">
+                <input checked="" name="image_radio" id="image_radio_file" type="radio"> <label for="image_radio_file" class="image-label">{% trans "Select image from PC" %}</label>
+                <input id="id_image_0" name="image_0" type="file">
+            </div>
+            <div class="file-upload-url">
+                <input name="image_radio" id="image_radio_url" type="radio"> <label for="image_radio_url" class="image-label">{% trans "Upload image from URL" %}</label>
+                <input id="id_image_1" name="image_1" type="url" placeholder='{% trans "Image url" %}'>
+            </div>
+        </div>
+    </div>
+
+    <input class="btn comment-submit" type="submit" value='{% trans "Post" %}' required="" data-comment>
+    {% csrf_token %}
+</form>
+{% endif %}

@@ -1,0 +1,5 @@
+{% load i18n %}
+<a data-follow-user="{{ target.id }}" class="btn btn-follow {% if is_active %}is-active{% endif %}">
+    <span class="active"><i class="fa fa-user-times"></i> {% trans "Unfollow" %}</span>
+    <span class="inactive"><i class="fa fa-user-plus"></i> {% trans "Follow" %}</span>
+</a>

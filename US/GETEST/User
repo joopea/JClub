@@ -1,0 +1,19 @@
+An Unregistered User cannot view Walls
+
+An User can create a Post in his/her Wall
+An User can create a Post on a Community
+An User can create a Post on another User's wall
+
+An User can see a list of Following Users
+
+An User can Delete his/her Profile
+An User can see a list of Blocked Users
+
+An User can see a list of his/her Followers
+
+An User can Post to his/her Wall
+
+If a User is Deleted all his/her Likes on Post on Walls are removed
+If a User is Deleted all his/her Likes on Post on Communities remain
+If a User is Deleted all his/her Likes on Comments on Walls are removed
+If a User is Deleted all his/her Likes on Comments on Communities remain

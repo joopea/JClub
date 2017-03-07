@@ -1,0 +1,12 @@
+Moderators receive Posts matched for [telephone/real name/email] for Approval						images also
+Moderators receive Comments matched for [telephone/real name/email] for Approval						images also
+
+A Moderator can Approve a Post, this will Puslish it
+A Moderator can Dis-Approve a Post, this will send an Alert to that User
+
+A Moderator can Approve a Comment, this will Puslish it
+A Moderator can Dis-Approve a Comment, this will send an Alert to that User
+
+Moderators receive Posts that are Reported for Approval				post dis-aproval will send an Alert to that Post Owener and Reporter, Post will be down | Approval will only send an Alert to reporter user that his report is not approved and this alert will not count as an Alert
+Moderators receive Comments that are Reported for Approval				Commnet dis-aproval will send an Alert to that Commnet Owener and Reporter, Commnet will be down | Approval will only send an Alert to reporter user that his report is not approved and this alert will not count as an Alert
+

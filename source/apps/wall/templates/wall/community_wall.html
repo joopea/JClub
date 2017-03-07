@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+{% load i18n thumbnail rules %}
+
+{% block content %}
+{% rules user=request.user community=community comment=comment post=post as rules %}
+
+    <h1 class="page-title">{% block page_title %}{% trans "Wall of" %} {{ community.name }}{% endblock page_title %}</h1>
+
+    {% if not community.following %}
+        <div class="hottest-community">
+            {% include "community/_community.html" %}
+        </div>
+    {% endif %}
+
+    <div class="wall-options">
+        <a class="btn show-all-btn fright"><i class="fa fa-angle-down"></i> {% trans "Expand all posts" %}</a>
+        <a href="#" data-follow-community="{{ community.pk }}"
+           class="btn follow fright{% if community.following %} is-active{% endif %}">
+            <span class="active"><i class="fa fa-user-times"></i> {% trans "Unfollow Community" %}</span>
+            <span class="inactive"><i class="fa fa-user-plus"></i> {% trans "Follow Community" %}</span>
+        </a>
+    </div>
+
+    {% include 'wall/_wall.html' %}
+
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript">
+    var $container = $(".posts-container");
+    $container.infinitescroll({
+        navSelector: ".pagination",
+        nextSelector: ".next",
+        itemSelector: ".post",
+        loading: {
+            finishedMsg: "",
+            img: "{{ STATIC_URL }}img/ajax-loader.gif",
+            msg: null,
+            msgText: ""
+        }
+    }, function (elems) {infinite_scroll_loaded(this, elems)}
+    );
+    </script>
+{% endblock javascript %}

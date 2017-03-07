@@ -1,0 +1,35 @@
+{% load i18n rules %}{% rules user=request.user community=community comment=comment post=post wall=wall as rules %}
+{% if rules.can_save %}
+
+<a title="{% trans "Add to favorites"%}" data-star-post="{{ post.id }}" class="star-post-button post-button{% if rules.has_saved_post %} is-active{% endif %}">
+    <span class="active">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-star fa-stack-1x fa-inverse is-starred"></i>
+        </span>
+    </span>
+    <span class="inactive">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+        </span>
+    </span>
+</a>
+{% endif %}
+{% if rules.can_remove %}
+    <a title='{% trans "Remove this post" %}' data-remove-post="{{ post.id }}" class="remove-post-button post-button">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+{% endif %}
+{% if rules.can_report %}
+    <a title="{% trans "Report this post" %}" data-report-post="{{ post.id }}" class="report-post-button post-button">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+{% endif %}
+<a href="{% url 'post:detail' pk=post.pk %}"><h2 class="post-title"><bdi>{{ post.title }}</bdi></h2></a>

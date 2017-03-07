@@ -1,0 +1,8 @@
+{% load paginator %}
+
+<div class="posts-container"{% if own_wall %} data-own-wall="true"{% endif %}>
+    {% for post in object_list %}
+        {% include "post/_post.html" %}
+    {% endfor %}
+</div> <!-- END post-container -->
+{% paginator %}

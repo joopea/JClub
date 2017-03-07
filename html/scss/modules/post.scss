@@ -1,0 +1,281 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Post-Styles 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.posts-container { overflow: hidden; }
+
+.post {
+	margin-bottom: 40px;
+
+	&.is-expanded .post-comments { 
+		display: block; 
+		padding: 20px;
+		max-height: 2000px;
+		@include transition(all .2s ease-in-out);
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	&:first-child { padding-top: 20px; }
+	&:last-child { margin-bottom: 80px; }
+
+	.post-header {
+		padding: 10px 20px 10px 10px;
+
+		background: $joopea-blue;
+		@include border-radius(5px 5px 0 0);
+		overflow: hidden;
+
+
+		.fa-circle { color: #008cba; }
+		.post-title { 
+			width: 80%;
+			float: right; 
+			margin: 0;
+			max-height: 38px;
+			overflow: hidden;
+
+			text-align: right;
+			color: #fff;
+			@include font-size(1.7);
+			line-height: 19px;
+		}
+
+		.post-button { 
+			text-decoration: none;
+			@include font-size(1.2);
+
+
+			&:hover .fa-circle { color: #007ba4; }
+			&.star-post-button.is-starred .fa-star { color: #f7e017; }
+		}
+
+	} // .post-header
+
+	.post-content {
+		padding: 10px 20px 20px 20px;
+		border-left: 1px solid #e5e5e5;
+		border-right: 1px solid #e5e5e5;
+
+
+		.post-details { 
+			margin-bottom: 15px;
+			overflow: hidden; 
+		}
+
+		.post-timestamp,
+		.communitystamp { display: inline-block; }
+
+		.communitystamp {
+			float: right;
+			margin-left: 10px;
+
+			.community-icon { background: $joopea-orange; }
+		}
+		p {  text-align: right; } 
+	} // .communitystamp 
+
+	.post-footer {
+		background: #e9faff;
+
+		overflow: hidden;
+		padding: 10px;
+
+		a { text-decoration: none; }
+	} // .post-footer 
+
+	.footer-button {
+		margin-right: 20px;
+
+		// Transition color on all the icons in front of the buttons
+		i { @include transition(color .2s ease-in-out); }
+
+		&.like:hover i,
+		&.is-liked i { 
+			color: #de180f; 
+		}
+
+		&.comment:hover i,
+		&.share:hover i,
+		&.follow:hover i { 
+			color: #007ba4; 
+		}
+
+		&.account {
+			margin-right: 0;
+
+		 	&:hover { text-decoration: underline; } 
+		}
+	} // .footer-button
+
+	.post-comments {
+		@include transition(all .2s ease-in-out);
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 20px;
+		border-left: 1px solid #e5e5e5;
+		border-right: 1px solid #e5e5e5;
+
+		.comment {
+			margin-top: 20px;
+
+			&:last-child { margin-bottom: 0; }
+		}
+		
+		.comment-content {
+			padding: 10px;
+			background: #fbfbfb;
+			border: 1px solid #e5e5e5;
+			border-bottom: none;
+
+			p { text-align: right; }
+		}
+
+		.comment-details { 
+			overflow: hidden;
+			margin-bottom: 10px;
+		} 
+
+		.comment-timestamp { 
+			float: right;
+			margin: 3px 10px 0 0;
+			@include font-size(1.2); 
+		}
+
+		.comment-username { 
+			float: right;
+			font-weight: bold;
+
+			// Link to user wall, no link styling
+			a { text-decoration: none; } 
+			
+			// Circle icon, background color is set in the HTML
+			.avatar-icon {
+				display: inline-block;
+				height: 25px;
+				width: 25px;
+				margin-left: 10px;
+				@include border-radius(33px);
+				vertical-align: middle;
+			}
+		} // .comment-username
+
+		.comment-footer {
+			padding: 10px;
+
+			background: #fbfbfb;
+			border: 1px solid #e5e5e5;
+			border-top: none;
+
+			overflow: hidden;
+
+			.delete-button,
+			.report-button,
+			.footer-button {
+				display: inline-block;
+				text-decoration: none;
+
+				&:hover { text-decoration: underline; } 
+			}
+			
+			.report-button {  margin-right: 15px; }
+		} // .comment-footer
+	} // .post-comments
+} // .post
+
+.comment-form {
+	overflow: hidden;
+
+	.user-avatar {
+		display: block;
+		width: 50px;
+		height: 50px;
+		float: left;
+
+		background: red;
+		@include border-radius(33px);
+	}
+
+	.comment-field-textarea {
+		position: relative;
+		float: right;
+		width: 99%;
+		padding: 20px;
+		min-height: 100px;
+
+		border: 1px solid #e5e5e5;
+		background: #fbfbfb;
+		outline: none;
+	} // .comment-field-textarea
+
+	.comment-submit {
+		float: right;
+		width: 20%;
+		margin-top: 20px;
+		clear: both;
+	}
+
+	.textarea-container {
+		position: relative;
+		width: 90%;
+		float: right;
+		padding-left: 25px;
+
+		.speechbubble {
+			position: absolute;
+
+			&:before {
+				content: '';
+				display: block;
+				border: 1em solid transparent;
+				border-right-color: rgba(229, 229, 229, 1);
+				position: absolute;
+				left: -16px;
+				top: 10px;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				border: 1em solid transparent;
+				border-right-color: #fbfbfb;
+				position: absolute;
+				left: -15px;
+				top: 10px;
+				z-index: 5;
+			}
+		} // .speechbubble
+	} // .textarea-container 
+} // .comment-form
+
+// Styles for the Community stamp/tag
+.communitystamp { 
+	vertical-align: middle;
+	font-weight: bold;
+
+	.community-icon {
+		display: inline-block;
+		height: 33px;
+		width: 33px;
+		@include border-radius(33px);
+		background: $joopea-orange;
+		text-align: center;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em; //adjusts for spacing (CHECK IT THO, can be situational)
+		}
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 4px;
+		}
+	} // .community-icon
+} // .communitystamp
+
+.fadeInBlock { opacity: 0 ; }

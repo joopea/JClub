@@ -1,0 +1,10 @@
+<li
+    class="notification-item {% if notification.read %}is-read {% else %} not-read {% endif %}"
+    {% if notification.read %}
+        data-is-read-notification="{{ notification.id }}"
+    {% else %}
+        data-is-not-read-notification="{{ notification.id }}"
+    {% endif %}
+>
+    {{ notification.render }}
+</li>

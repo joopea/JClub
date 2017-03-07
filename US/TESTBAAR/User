@@ -1,0 +1,58 @@
+A User can Report a Post
+A User can Report a Comment
+A User can Delete his/her Comment
+A User can Delete his/her Post
+A User can Save a Post from a Community/Wall
+A User can create a Comment on a Post if not Blocked from the Post source (User's Wall / Community )
+A User can Follow another User
+A User can Un-Follow another User
+A User cannot interact with a Community other than view if Banned form it
+A User cannot Follow a Community if Banned from that Community						this issue is raised at community and ban also			The users can
+A User is a visitor that is Logged-In
+An Unregistered User can view Communities
+A User can see a list of Followed Users
+A User can see another User's Posts in that User's Wall
+Any Unregistered User can become a User trough Signing-up
+A User is known by an ID
+A User is known by a Color
+A User can Follow a Community
+A User can Un-Follow a Community
+A User can see the suggestion for Hottest Community
+A User can see the suggestion for Hottest Post
+A User can see the Poromoted Posts
+A User can change his/her Color
+A User can change his/her password / security questions / security question awnsers
+A User chooses an ID on Signup
+A User's ID consists of a name from a pre-defined list
+A User's ID consists of a random-number post-fix 						the pdf mentions an unique number, is there a specific reason for this? i presume the whole user's ID should be unique and that the number is not important
+A User will see his/her Wall after Login
+A User can see the Followed Communities on his/her Wall
+A User cna see the Followed Users on his/her Wall
+A User chooses a Color on Signup						"That's right. The general ID should be unique, the number itself can be repeated.
+A User can Share a Post from a Community
+A User can Share a Post from a Wall
+
+A Deleted User's Posts and Comments remain, but the Username changes to "unknown"
+Deleting a User Profile will delete that User's Wall
+Deleting a User Profile will delete that User's Likes on his/her Wall
+Deleting a User Profile will delete that User's Shares on his/her Wall
+Deleting a User Profile will delete that User's Shares on other User's Wall
+An Unregistered User cannot view Walls
+
+An User can create a Post in his/her Wall
+An User can create a Post on a Community
+An User can create a Post on another User's wall
+
+An User can see a list of Following Users
+
+An User can Delete his/her Profile
+An User can see a list of Blocked Users
+
+An User can see a list of his/her Followers
+
+An User can Post to his/her Wall
+
+If a User is Deleted all his/her Likes on Post on Walls are removed
+If a User is Deleted all his/her Likes on Post on Communities remain
+If a User is Deleted all his/her Likes on Comments on Walls are removed
+If a User is Deleted all his/her Likes on Comments on Communities remain

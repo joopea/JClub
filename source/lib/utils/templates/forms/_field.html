@@ -1,0 +1,16 @@
+{% load widget_tweaks %}
+{# Look at https://github.com/kmike/django-widget-tweaks#filter-chaining to see how to override CSS Classes #}
+{# for example, you can do this {% include "inc/field.html" with field=form.description|attr:"foo:non_default_foo" %} #}
+
+{% if field.is_hidden %}
+    <div {{ field.row_attrs }}>
+        {{ field }}
+    </div>
+{% else %}
+    <div class="form-field {{ field|field_type }} {{ field|widget_type }} {{ field.html_name }}{% if field.errors %} error{% endif %}" {{ field.row_attrs }}>
+        <label class="form-label" for="{{ field.id_for_label }}">{{ field.label|capfirst }} {% if field.field.required %}*{% endif %}</label>
+        {{ field.errors }}
+        {{ field|attr:"class:form-input" }}
+        {{ field.help_text }}
+    </div>
+{% endif %}

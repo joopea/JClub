@@ -1,0 +1,313 @@
+{% load i18n %}
+<div>
+
+	<div class="container clearfix form-container register-form">
+		<h2 class="form-title">{% trans "Sign up" %}</h2>
+        <h4 class="form-subtitle">{% trans "Socially connect with other people" %}</h4>
+	    <form method="post" action="/en/account/register/">
+
+            {% csrf_token %}
+            <div class="username-fields">
+                <h2 class="section-title">{% trans "Username" %}</h2>
+                <span class="tooltip">{% trans "Pick a pre-defined username and a number." %}</span>
+                <div class="form-field" style="float:right">
+                    <input type="hidden" name="username_postfix" id="id_username_postfix" value=""/>
+                    <input type="text" name="username_postfix_input" id="id_username_postfix_input" maxlength="3" minlength="1" value=""/>
+                </div>
+                <div class="form-field modelchoicefield select username">
+                    {{ form.username }}
+                </div>
+                <div class="suggestions"></div>
+            </div>
+
+            <div class="form-field charfield textinput profile_colour">
+                <h2 class="section-title">{% trans "Profile Color" %}</h2>
+                <span class="tooltip">{% trans "You can select a color for your profile icon." %}</span>
+                {{ form.profile_colour }}
+                <div class="colorwheel"></div>
+            </div>
+            <div class="question-fields">
+                <h2 class="section-title">{% trans "Security Questions" %}</h2>
+                <span class="tooltip">{% trans "To secure your account please answer two pre-defined security questions." %}</span>
+                <div class="form-question1">
+                    <div class="form-field modelchoicefield select security_question_1">
+                        <label class="form-label" for="id_security_question_1">{% trans "Security question 1" %}</label>
+                        {{ form.security_question_1 }}
+                    </div>
+
+                    <div class="form-field charfield textinput security_answer_1">
+                        <label class="form-label" for="id_security_answer_1">{% trans "Security answer 1" %}</label>
+                        {{ form.security_answer_1 }}
+                    </div>
+                </div>
+                <div class="form-question2">
+                    <div class="form-field modelchoicefield select security_question_2">
+                        <label class="form-label" for="id_security_question_2">{% trans "Security question 2" %}</label>
+                        {{ form.security_question_2 }}
+                    </div>
+                    <div class="form-field charfield textinput security_answer_2">
+                        <label class="form-label" for="id_security_answer_2">{% trans "Security answer 2" %}</label>
+                        {{ form.security_answer_2}}
+                    </div>
+                </div>
+            </div>
+            <div class="password-fields">
+                <h2 class="section-title">{% trans "Password" %}</h2>
+                <span class="tooltip">{% trans "Please use a secure password (a combination of upper and lowercase letters and numbers)" %}</span>
+                <div class="form-field charfield passwordinput password1">
+                    <label class="form-label" for="id_password1">{% trans "Password" %}</label>
+
+                    {{ form.password1 }}
+                    <div class="pwstrength_viewport_progress"></div>
+                </div>
+                <div class="form-field charfield passwordinput password2">
+                    <label class="form-label" for="id_password2">{% trans "Confirm password" %}</label>
+                    {{ form.password2 }}
+                </div>
+            </div>
+            <div class="terms-fiels">
+                <h2 class="selection-title">
+                    {% trans "Privacy policy and terms of use" %}
+                </h2>
+                <div class="form-field booleanfield privacy_policy">
+                    <label class="form-label privacy_policy-label" for="id_privacy_policy">
+                        {% trans "I accept the" %} <a href="/privacy-policy/">{% trans "privacy policy" %}</a>
+                    </label>
+                    {{ form.privacy_policy }}
+                </div>
+                <div class="form-field booleanfield terms_of_use">
+                    <label class="form-label terms_of_use-label" for="id_terms_of_use">
+                        {% trans "I accept the" %} <a href="/terms-of-use/">{% trans "terms of use" %}</a>
+                    </label>
+                    {{ form.terms_of_use }}
+                </div>
+            </div>
+            <div class="form-footer">
+                <span class="tooltip">{% trans "We hope you enjoy your stay at JoopeA! <br> Your username will be:" %} <span class="username-selected" id="username-selected"></span><span class="username-selected" id="username-number-selected"></span></span>
+                <input id="btn-register" class="btn-submit" type="submit" value='{% trans "Register" %}'>
+            </div>
+        </form>
+	</div>
+
+    <script type="text/javascript" src="/static/js/pwstrength.js"></script>
+    <script src="/static/widgets/colorpicker/colorwheel.js" type="text/javascript"></script>
+    {# See https://github.com/jweir/colorwheel #}
+
+    <script>
+        //colorwheel
+        $('.profile_colour').append('<div class=colorwheel></div>');
+        var cw = Raphael.colorwheel($(".colorwheel")[0], 150);
+        cw.input($("#id_profile_colour")[0]);
+        cw.color('#ff7440');
+    </script>
+
+    <script>
+        //passwordstrength
+        function FormPassword () {
+            var cbs = [];
+            var state = false;
+            this.onChange = function (cb) {
+                cbs.push(cb);
+            };
+            this.notify = function () {
+                cbs.forEach(function (cb) {
+                    cb(state);
+                });
+            };
+            this.setState = function (newState) {
+                state = newState;
+                this.notify();
+            }
+        }
+        var form_password_valid = new FormPassword();
+
+        var $id_password1 = $('#id_password1');
+        jQuery(function () {
+            "use strict";
+            var options = {};
+            options.ui = {
+                showVerdictsInsideProgressBar: true,
+                viewports: {
+                    progress: ".pwstrength_viewport_progress"
+                }
+            };
+            options.common = {
+                onLoad: function () {
+                    $('#messages').text('Start typing password');
+                },
+                onKeyUp: function (ev, data) {
+                    console.log(ev, data, data.verdictLevel >= 3);
+                    form_password_valid.setState(data.verdictLevel >= 3);
+                }
+            };
+            $('#id_password1').pwstrength(options);
+        });
+
+    </script>
+
+    <script>
+        function Form () {
+            var self = this;
+            this.$el = {
+                button: $('#btn-register'),                     //submit button
+                username: $('#id_username'),                    //select box for usernames
+                userNumber: $('#id_username_postfix_input'),    //user number input
+                usernamePostfix: $('#id_username_postfix'),     //actual modelform select number field  => id_username_postfix
+                userNumberSuggestions: $('.suggestions')        //user number suggestions on invalid number
+            };
+            this.errors = {};
+            this.errorMessages = {
+                password1: '{% trans "Please use a more secure password." %}',
+                username: '{% trans "Please pick a username." %}',
+                user_number_input: '{% trans "This number is taken." %}',
+                username_postfix: '{% trans "This number is taken." %}'
+            };
+            this.hasErrors = false;
+            this.setSubmit = function (status) {
+                self.$el.button.prop('disabled', !status);
+            };
+            this.updateErrorStatus = function () {
+                self.setSubmit(!self.hasError);
+            };
+            this.addError = function (field, error) {
+                self.errors[field] = error;
+                self.hasErrors = true;
+                $.validator.addError(field, [{message: error}]);
+                self.updateErrorStatus();
+            };
+            this.removeError = function (field) {
+                delete self.errors[field];
+                self.hasErrors = Object.keys(self.errors).length !== 0;
+                $.validator.removeError(field);
+                self.updateErrorStatus();
+            };
+            this.setError = function (field, status) {
+                if (status) {
+                    self.removeError(field);
+                } else {
+                    self.addError(field, self.errorMessages[field]);
+                }
+            };
+            this.passwordStateChange = function (state) {
+                //state is true when it is valid
+                self.setError('password1', state);
+            };
+            this.checkButton = function (ev) {
+                if (self.hasErrors) {
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    self.setSubmit(false);
+                } else {
+
+                }
+            };
+            this.userNameChange = function (ev) {
+                var selected = self.$el.username.val();
+                self.setError('username', !!selected);
+                //get numbers for this username
+                $.get('{% url "users:user-variants" %}', {username_id: selected}, function (data) {
+                    /* [{pk: <id>, model: <string>, fields: { username_variation_no: <id> }},  ...] */
+
+                    var numbers_kv = {};
+                    var numbers_vk = {};
+                    var number_list = [];
+                    var value, key;
+
+                    data.forEach(function (item) {
+                        value = ((item||{}).fields||{}).username_variation_no;
+                        key = (item||{}).pk;
+                        numbers_vk[value] = key;
+                        numbers_kv[key] = value;
+                        number_list.push({key: key, value: value});
+                    });
+
+                    self.$el.usernamePostfix.data({
+                        choices_kv: numbers_kv,
+                        choices_vk: numbers_vk,
+                        choices_list: number_list
+                    });
+
+                    //trigger change on user-number-input if it has a value
+                    if (self.$el.userNumber.val()) self.$el.userNumber.trigger('change');
+
+                });
+            };
+            this.inputMask = function (choices) {
+                return function (ev) {
+                    if (choices.indexOf(ev.which) === -1) return false;
+                }
+            };
+            this.showUserNumberAlternatives = function (status) {
+                if (!status) {
+                    var options = self.$el.usernamePostfix.data('choices_list');
+                    var counter = 0;
+                    var html = '<p style="clear:both">{% trans "Choose a new number or pick a suggestion below" %}</p><div>';
+                    var option;
+                    var rnd = 0;
+                    while (counter < 3 && options.length) {
+                        counter ++;
+                        rnd = Math.floor(Math.random() * options.length);
+                        option = options.splice(rnd, 1)[0];
+                        html += '<input type="radio" name="suggestion_group" value="' + option.key + '">' + option.value + '</'+' input>';
+                    }
+                    html += '</div>';
+                    self.$el.userNumberSuggestions.html(html).show();
+                } else {
+                    self.$el.userNumberSuggestions.hide();
+                }
+            };
+            this.userNumberChange = function (ev) {
+                if (!self.$el.username.val()) return false;
+                var val = self.$el.userNumber.val();
+                var valid = (self.$el.usernamePostfix.data('choices_vk')||[])[val];
+                self.$el.usernamePostfix.val(valid);
+                self.setError('username_postfix', valid);
+                self.showUserNumberAlternatives(valid);
+            };
+            this.suggestionPick = function (ev) {
+                var key = parseInt($(ev.target).val(), 10);
+                var value = self.$el.usernamePostfix.data('choices_kv')[key];
+                self.$el.userNumber.val(value).trigger('change');
+            };
+            this.setup = function () {
+                //add listeners
+
+                //button
+                this.$el.button.click(this.checkButton);
+
+                //username change
+                this.$el.username.change(this.userNameChange);
+
+                //usernumber change
+                this.$el.userNumber.change(this.userNumberChange);
+                this.$el.userNumber.keydown(this.inputMask([8, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57]));   //backspace, 0-9
+
+                //suggestions pick
+                $('form').on('change', '[name="suggestion_group"]', this.suggestionPick);
+
+            }
+        }
+
+        var form = new Form();
+        form.setup();
+        form_password_valid.onChange(form.passwordStateChange);
+
+    </script>
+
+    <script>
+        var $id_username = $('#id_username');
+        var $id_username_postfix_input = $('#id_username_postfix_input');
+        var $user_number_input = $('#user_number_input');
+
+        //username preview updater
+        $id_username.on('change', function() {
+            var username = $(this).find(":selected").text();
+            $('#username-selected').html(username);
+        });
+        $id_username_postfix_input.on('change', function() {
+            var usernameNumber = $id_username_postfix_input.val();
+            $('#username-number-selected').html('-'+usernameNumber);
+        });
+    </script>
+
+</div>

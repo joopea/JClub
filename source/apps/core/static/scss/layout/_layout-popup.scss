@@ -1,0 +1,75 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Popup-Styles 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.new-post-popup{
+	text-align: right;
+	
+	padding: 0 15px;
+
+	.title { margin-bottom: 0px; }
+	
+	.form-field {
+		float: right;
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+
+	.form-label {
+		display: block;
+		font-weight: bold;
+		@include font-size(1.6);
+	}
+
+	.django-ckeditor-widget { float: right; }
+
+	.post-title-field {
+		input[type=text] {
+			width: 50%;
+		}
+	}
+} // .new-post-popup
+
+.image-upload {
+	width: 100%;
+	float: right;
+
+	overflow: hidden;
+}
+
+// This is the image-upload field, thanks for the classname Joep
+.mutually-exclusive-widget { 
+	direction: rtl;
+
+	.file-select,
+	.file-upload-url{
+		margin-bottom: 1em;
+
+		.image-label { 
+			width: 200px;
+			display: inline-block; 
+		}
+	}
+} // .mutually-exclusive-widget 
+
+.report-popup-container,
+.delete-popup {
+	text-align: right;
+
+	label { 
+		display: block;
+		margin-bottom: 1em;
+	}
+} // .report-popup-container
+
+.delete-popup {
+	input#id_yes_no {
+		margin-left: 1em;
+		
+		background: green;
+	}
+
+	input#id_yes_yes { background: #b00b13; }
+}

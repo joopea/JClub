@@ -1,0 +1,15 @@
+{% load i18n %}
+{% for notification in notifications.items %}
+    {% include "notifications/_notification_list_item.html" %}
+{% endfor %}
+
+{% if notifications.items %}
+    <li>
+        <a class="menu-detail-link" href="{% url 'notifications:list' %}">{% trans 'All notifications' %}</a>
+    </li>
+
+{% else %}
+    <li>
+        <p class="empty-state">{% trans "There are no new notifications" %}</p>
+    </li>
+{% endif %}

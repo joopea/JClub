@@ -1,0 +1,46 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans "Home" %}</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+
+        <h2>{{ subject }} {% trans "Report" %}</h2>
+
+        <h3>{% trans "Number" %}</h3>
+        <span>{{ count }}</span>
+
+        <h3>{% trans "Growth per day" %}</h3>
+        <span>{{ growth_rate_per_day }}</span>
+
+        <h3>{% trans "New by day (last 30 days)" %}</h3>
+        <table id="result_list">
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <div class="text">{% trans "Day" %}</div>
+                        <div class="clear"></div>
+                    </th>
+                    <th scope="col">
+                        <div class="text">{% trans "# new" %} {{ subject }}</div>
+                        <div class="clear"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in growth_by_day %}
+                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                    <td>{{ item.date_joined }}</td>
+                    <td>{{ item.created_count }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load i18n %}
+{% for followee in following %}
+    <li class="menu-list-item">
+        <a class="menu-link" href="{% url 'wall:detail' pk=followee.target.id %}">
+            <i class="fa fa-circle" style="color: {{ followee.target.profile_colour }}"></i> {{ followee.target.username }}
+        </a>
+    </li>
+{% endfor %}
+
+{% if following %}
+    <li>
+        <a class="menu-detail-link" href="{% url 'users:user-details' %}#tab3">{% trans 'All followers' %}</a>
+    </li>
+
+{% else %}
+    <li>
+        <p class="empty-state">{% trans 'You are not following any people!' %}"</p>
+    </li>
+{% endif %}

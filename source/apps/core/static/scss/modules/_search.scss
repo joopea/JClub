@@ -1,0 +1,147 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Search-Styles 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.searchbar-wrapper {
+	position: fixed;
+	bottom: 0;
+	left: 25%; // Sidebar width
+	right: 0;
+	min-width: 700px;
+
+	z-index: 5;
+
+	@media #{$tablet} { left: 0; }
+}
+
+.searchbar {
+	padding: 15px 30px;
+
+	background: rgba(232, 232, 232, 0.66);
+
+	overflow: hidden;
+
+	.search-input {
+		float: left;
+		width: 70%;
+		padding: 10px;
+
+		background: #fff;
+
+		border: none;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		@include font-size(1.4);
+		color: #333;
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+		cursor: text;
+
+		@media #{$desktop} { width: 75%; }
+		@media #{$desktop-large} { width: 80%; }
+
+	}
+
+	.search-submit {
+		float: left;
+		width: 30%;
+		padding: 10px;
+
+		border: none;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		background: $turquoise;
+
+		@include font-size(1.4);
+		font-family: FontAwesome;
+		color: #fff;
+
+		-webkit-appearance: none;
+		cursor: pointer;
+		@include transition(background .2s ease-in-out);
+
+		@media #{$desktop} { width: 25%; }
+		@media #{$desktop-large} { width: 20%; }
+
+		&:hover {
+			background: $turquoise-hover;
+
+			@include transition(background .2s ease-in-out);
+		}
+	} // .search-submit
+} // .searchbar
+
+#search_suggestions { overflow: hidden; }
+
+.searchresult-wrapper {
+	margin: 0 30px;
+
+	background: #F0F0F0;
+
+	text-align: right;
+
+	a {
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+
+	.searchresult-content{
+		height: 25px;
+
+		text-overflow: ellipsis;
+
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.search-title { display: none; }
+
+	.searchresult-title {
+		margin: 0;
+
+		text-decoration: none;
+	}
+
+	.search-section-title {
+		margin: 15px;
+
+		@include font-size(1.5);
+	}
+	.search-comment,
+	.search-post {
+		margin: 1px 15px;
+		padding: 15px;
+
+		background: #fff;
+
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+		p { margin: 0; }
+
+		&:last-child { margin-bottom: 15px; }
+	}
+
+	.searchresult-date,
+	.searchresult-author {
+		@include font-size(1);
+	}
+
+	.no-results {
+		padding: 10px;
+		margin: 0;
+	}
+} // .searchresult-wrapper
+
+.searchkey {
+	font-weight: bold;
+	color: #ff7440;
+}

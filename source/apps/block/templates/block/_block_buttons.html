@@ -1,0 +1,5 @@
+{% load i18n %}
+<a data-block-user="{{ target.id }}" class="btn btn-block {% if is_active %}is-active{% endif %}">
+    <span class="active"><i class="fa fa-unlock"></i> {% trans "Unblock user" %}</span>
+    <span class="inactive"><i class="fa fa-lock"></i> {% trans "Block user" %}</span>
+</a>

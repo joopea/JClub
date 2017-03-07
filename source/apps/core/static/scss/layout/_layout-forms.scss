@@ -1,0 +1,123 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Layout Register: ;   			 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.register-form {
+  padding: 0 20px;
+
+    .privacy_policy-label, .terms_of_use-label {
+  	    display: inline-block !important;
+    }
+}
+
+.form-container {
+	text-align: right;
+
+	.form-title {
+		margin-bottom: -.5em;
+
+		@include font-size(2.0);
+	}
+	
+	.form-subtitle {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		
+		border-bottom: 1px solid #dedede;
+		
+		@include font-size(1.6);
+		font-weight: normal;
+		color: #999999;
+	}
+
+	.section-title { 
+		margin: 0; 
+		
+		@include font-size(1.6);
+	}
+
+	.form-label { display: block; } 
+
+	.tooltip {
+		display: block;
+		margin-bottom: .5em;
+		
+		color: #999;
+		@include font-size(1.2);
+	}
+
+	.username_postfix,
+	.select.username {
+		float: right;
+	}
+
+	.select.username { margin-right: 1em; }
+
+	.username-fields,
+	.profile_colour,
+	.password-fields,
+	.question-fields {
+		margin-top: 2em;
+		padding: 5px 0;
+		
+		overflow: hidden;
+	}
+
+	.profile_colour {
+		width: 100%;
+		
+		overflow: hidden;
+
+		// Just the input field
+		#id_profile_colour {
+			float: right;
+			width: 150px;
+			margin-bottom: 15px;
+		}
+
+		.colorwheel {
+			float: right;
+			
+			clear: both;
+		}
+	} // .profile-colour
+
+	.password-fields {
+		input[type="password"] { width: 200px; }
+
+		.pwstrength_viewport_progress {
+			float: right;
+			width: 100%;
+
+			.progress {
+				float: right;
+				width: 200px;
+			}
+		} // .pwstrength_viewport_progress
+
+		.password1,
+		.password2 { 
+			clear: both;
+		}
+		.current-password { margin-bottom: 20px; }
+	} // .password-fields
+
+	.form-question1 { margin-bottom: 2em; }
+
+	#id_security_question_1,
+	#id_security_question_2 {
+		margin-bottom: 1em;
+	}
+
+	.username-selected {
+		font-weight: bold;
+		@include font-size(1.4);
+		color: $turquoise;
+	}
+} // .form-container 
+
+.post-title-field {
+	.post-label { display: block; }
+} // .pody-title-field

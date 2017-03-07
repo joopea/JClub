@@ -1,0 +1,1695 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JoopeA Club v.01.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-05 13:18+0200\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: JoopeA <admin@joopea.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *README*\n"
+
+#: apps/approval/admin.py:49 apps/comment/models.py:32
+msgid "Comment"
+msgstr ""
+
+#: apps/approval/admin.py:55 apps/approval/admin.py:131
+msgid "Author"
+msgstr ""
+
+#: apps/approval/admin.py:61 apps/approval/admin.py:137
+#: lib/behaviours/models/withupdates.py:8
+msgid "Created"
+msgstr ""
+
+#: apps/approval/admin.py:79 apps/approval/admin.py:93
+#: apps/approval/admin.py:159 apps/approval/admin.py:173
+#: apps/report/admin.py:69
+msgid "Approve"
+msgstr ""
+
+#: apps/approval/admin.py:87 apps/approval/admin.py:99
+#: apps/approval/admin.py:167 apps/approval/admin.py:179
+#: apps/report/admin.py:75
+msgid "Disapprove"
+msgstr ""
+
+#: apps/approval/admin.py:105 apps/approval/admin.py:185
+#: apps/post/templates/post/popup/_new.html:47 lib/cms/content_types.py:67
+msgid "Image"
+msgstr ""
+
+#: apps/approval/admin.py:125 apps/comment/templates/comment/_create.html:27
+#: apps/post/models.py:38 apps/post/templates/post/popup/_new.html:61
+msgid "Post"
+msgstr ""
+
+#: apps/approval/models.py:12
+msgid "is approved"
+msgstr ""
+
+#: apps/approval/models.py:15
+msgid "reason"
+msgstr ""
+
+#: apps/approval/models.py:52
+msgid "Post approval"
+msgstr ""
+
+#: apps/approval/models.py:53
+msgid "Post approvals"
+msgstr ""
+
+#: apps/approval/models.py:75
+msgid "Comment approval"
+msgstr ""
+
+#: apps/approval/models.py:76
+msgid "Comment approvals"
+msgstr ""
+
+#: apps/block/forms.py:26
+msgid "You've already blocked this user!"
+msgstr ""
+
+#: apps/block/models.py:15
+msgid "Block by user"
+msgstr ""
+
+#: apps/block/models.py:16
+msgid "Blocked by users"
+msgstr ""
+
+#: apps/block/models.py:25
+msgid "Block by community"
+msgstr ""
+
+#: apps/block/models.py:26
+msgid "Blocked by communities"
+msgstr ""
+
+#: apps/block/templates/block/_block_buttons.html:3
+msgid "Unblock user"
+msgstr ""
+
+#: apps/block/templates/block/_block_buttons.html:4
+msgid "Block user"
+msgstr ""
+
+#: apps/cms/pages/content_types.py:23 lib/cms/content_types.py:41
+#: lib/cms/content_types.py:82
+msgid "Alternative Text"
+msgstr ""
+
+#: apps/cms/pages/content_types.py:23 lib/cms/content_types.py:41
+#: lib/cms/content_types.py:82
+msgid "Description of the image"
+msgstr ""
+
+#: apps/cms/pages/content_types.py:24 lib/cms/content_types.py:84
+msgid "Text"
+msgstr ""
+
+#: apps/cms/pages/content_types.py:45 lib/cms/content_types.py:109
+msgid "Rich text with image"
+msgstr ""
+
+#: apps/cms/pages/content_types.py:46 lib/cms/content_types.py:110
+msgid "Rich texts with image"
+msgstr ""
+
+#: apps/cms/pages/models.py:17 apps/post/models.py:23
+msgid "Title"
+msgstr ""
+
+#: apps/cms/pages/models.py:18
+msgid "URL slug"
+msgstr ""
+
+#: apps/cms/pages/models.py:22
+msgid "Page"
+msgstr ""
+
+#: apps/cms/pages/models.py:23
+msgid "Pages"
+msgstr ""
+
+#: apps/comment/admin.py:19 apps/community/models.py:23
+#: apps/report/templates/report/admin/report_view_comment.html:26
+#: apps/report/templates/report/admin/report_view_comment.html:50
+#: apps/report/templates/report/admin/report_view_followers.html:20
+#: apps/report/templates/report/admin/report_view_like.html:60
+#: apps/report/templates/report/admin/report_view_like.html:84
+#: apps/report/templates/report/admin/report_view_post.html:26
+#: apps/report/templates/report/admin/report_view_post.html:50
+#: apps/report/templates/report/admin/report_view_share.html:50
+#: apps/report/templates/report/admin/report_view_share.html:118
+msgid "Community"
+msgstr ""
+
+#: apps/comment/forms.py:89
+msgid "Are you sure you want to delete this?"
+msgstr ""
+
+#: apps/comment/models.py:33 apps/custom_admin/templates/admin/index.html:61
+#: apps/post/templates/post/_post_footer.html:24
+#: apps/search/templates/search/_results.html:24
+#: apps/search/templates/search/results.html:17
+#: lib/behaviours/models/commentable.py:6
+msgid "Comments"
+msgstr ""
+
+#: apps/comment/templates/comment/_comment.html:26
+msgid "Delete"
+msgstr ""
+
+#: apps/comment/templates/comment/_comment.html:29 apps/report/models.py:76
+#: apps/report/templates/report/admin/report_view_comment.html:13
+#: apps/report/templates/report/admin/report_view_followers.html:13
+#: apps/report/templates/report/admin/report_view_like.html:13
+#: apps/report/templates/report/admin/report_view_post.html:13
+#: apps/report/templates/report/admin/report_view_share.html:13
+#: apps/report/templates/report/admin/report_view_user.html:13
+#: apps/report/templates/report/popup/_new_post.html:13
+msgid "Report"
+msgstr ""
+
+#: apps/comment/templates/comment/_comment.html:34
+#: apps/post/templates/post/_post_footer.html:16
+msgid "Unlike"
+msgstr ""
+
+#: apps/comment/templates/comment/_comment.html:37 apps/like/models.py:21
+#: apps/like/models.py:35 apps/post/templates/post/_post_footer.html:19
+msgid "Like"
+msgstr ""
+
+#: apps/comment/templates/comment/_create.html:7
+msgid "Type a comment"
+msgstr ""
+
+#: apps/comment/templates/comment/_create.html:13
+msgid ""
+"If you want to add an image to your comment you can enter a URL or select "
+"one from your pc."
+msgstr ""
+
+#: apps/comment/templates/comment/_create.html:17
+#: apps/post/templates/post/popup/_new.html:52
+msgid "Select image from PC"
+msgstr ""
+
+#: apps/comment/templates/comment/_create.html:21
+#: apps/post/templates/post/popup/_new.html:56
+msgid "Upload image from URL"
+msgstr ""
+
+#: apps/comment/templates/comment/_create.html:22
+msgid "Image url"
+msgstr ""
+
+#: apps/comment/templates/comment/_first_last.html:7
+#: apps/comment/templates/comment/list.html:7
+msgid "Load more comments"
+msgstr ""
+
+#: apps/comment/templates/comment/_first_last.html:7
+#: apps/comment/templates/comment/list.html:7
+msgid "of"
+msgstr ""
+
+#: apps/comment/templates/comment/popup/_delete.html:6
+msgid "Delete comment"
+msgstr ""
+
+#: apps/comment/views.py:48
+#, python-format
+msgid ""
+"This comment is sent for approval because: %s. A preview is visible only to "
+"you"
+msgstr ""
+
+#: apps/community/admin.py:15
+msgid "Post Count"
+msgstr ""
+
+#: apps/community/models.py:12
+msgid "Name"
+msgstr ""
+
+#: apps/community/models.py:13
+msgid "Description"
+msgstr ""
+
+#: apps/community/models.py:24 apps/community/templates/community/list.html:6
+#: apps/search/templates/search/_results.html:42
+#: apps/search/templates/search/results.html:31
+msgid "Communities"
+msgstr ""
+
+#: apps/core/templates/core/base.html:42
+#: apps/suggestions/templates/suggestions/detail.html:4
+#: apps/suggestions/templates/suggestions/detail.html:8
+msgid "JoopeA; The Free World"
+msgstr ""
+
+#: apps/core/templates/core/base.html:187
+msgid "The Free World"
+msgstr ""
+
+#: apps/core/templates/core/base.html:246
+msgid "JoopeA Club"
+msgstr ""
+
+#: apps/core/templates/core/base.html:263
+msgid "An server error occured!"
+msgstr ""
+
+#: apps/core/templates/core/base.html:277
+msgid "Username not found."
+msgstr ""
+
+#: apps/core/templates/core/base.html:655
+#: apps/core/templates/core/base.html:666
+msgid "Thank you for reporting."
+msgstr ""
+
+#: apps/core/templates/core/dump.html:3 apps/core/templates/core/home.html:3
+#: apps/custom_admin/templates/custom_admin/change_form.html:18
+#: apps/report/templates/report/admin/report_view_post.html:6
+#: apps/report/templates/report/admin/report_view_share.html:6
+#: apps/report/templates/report/admin/report_view_user.html:6
+msgid "Home"
+msgstr ""
+
+#: apps/core/templates/core/dump.html:29
+msgid "SUBMIT"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:20
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:31
+#: apps/custom_admin/templates/custom_admin/change_form.html:21
+msgid "Add"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:37
+msgid "Change"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:47
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:55 apps/report/models.py:77
+msgid "Reports"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:58
+msgid "Users"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:59 apps/share/models.py:18
+#: lib/behaviours/models/shareable.py:6
+msgid "Shares"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:60 apps/like/models.py:22
+#: apps/like/models.py:36 apps/like/models.py:43
+msgid "Likes"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:62 apps/post/models.py:39
+#: apps/search/templates/search/_results.html:4
+#: apps/search/templates/search/results.html:10
+msgid "Posts"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:63
+#: apps/users/templates/users/user_details.html:18
+msgid "Followers"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:64 apps/users/admin.py:68
+msgid "Alerts"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:69
+msgid "Recent Actions"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:70
+msgid "My Actions"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:74
+msgid "None available"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/index.html:88
+msgid "Unknown content"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/login.html:6
+#: apps/custom_admin/templates/admin/login.html:9
+#: apps/menu/templates/menu/_user.html:150
+#: apps/users/templates/users/login.html:3
+#: lib/users/templates/users/login.html:6
+#: lib/users/templates/users/login.html:13
+msgid "Login"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/login.html:23
+#: apps/custom_admin/templates/custom_admin/change_form.html:50
+msgid "Please correct the error below."
+msgstr ""
+
+#: apps/custom_admin/templates/admin/login.html:23
+#: apps/custom_admin/templates/custom_admin/change_form.html:50
+msgid "Please correct the errors below."
+msgstr ""
+
+#: apps/custom_admin/templates/admin/login.html:49
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: apps/custom_admin/templates/admin/login.html:53
+msgid "Log in"
+msgstr ""
+
+#: apps/custom_admin/templates/custom_admin/change_form.html:36
+msgid "History"
+msgstr ""
+
+#: apps/custom_admin/templates/custom_admin/change_form.html:38
+msgid "View on site"
+msgstr ""
+
+#: apps/follow/models.py:16
+msgid "Follow community"
+msgstr ""
+
+#: apps/follow/models.py:17
+msgid "Follow communities"
+msgstr ""
+
+#: apps/follow/models.py:28
+msgid "Follow user"
+msgstr ""
+
+#: apps/follow/models.py:29
+msgid "Follow users"
+msgstr ""
+
+#: apps/follow/templates/follow/_follow_buttons.html:3
+#: apps/post/templates/post/_post_footer.html:34
+msgid "Unfollow"
+msgstr ""
+
+#: apps/follow/templates/follow/_follow_buttons.html:4
+#: apps/post/templates/post/_post_footer.html:35
+msgid "Follow"
+msgstr ""
+
+#: apps/follow/templates/follow/list.html:6
+#: apps/menu/templates/menu/_user.html:92
+msgid "People following"
+msgstr ""
+
+#: apps/like/forms.py:23
+#, python-brace-format
+msgid "You cannot like this {0}, since you are the creator of this {1}"
+msgstr ""
+
+#: apps/like/forms.py:59
+msgid "You already liked this post!"
+msgstr ""
+
+#: apps/like/forms.py:80
+msgid "You already liked this comment"
+msgstr ""
+
+#: apps/mention/forms.py:37
+msgid "You've already mentioned this user!"
+msgstr ""
+
+#: apps/mention/forms.py:69
+#, python-format
+msgid "You have mentioned a non-existing user (%s)"
+msgstr ""
+
+#: apps/mention/forms.py:80
+#, python-format
+msgid "You are blocked by the user you've mentioned (%s)"
+msgstr ""
+
+#: apps/mention/models.py:21 apps/mention/models.py:22 apps/report/models.py:10
+#: apps/report/models.py:11
+msgid "Choose either a post or comment to report"
+msgstr ""
+
+#: apps/mention/models.py:25
+#, python-brace-format
+msgid "{0} Mentioned {1}"
+msgstr ""
+
+#: apps/mention/models.py:65
+msgid "Mention"
+msgstr ""
+
+#: apps/mention/models.py:66
+msgid "Mentions"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:8 apps/menu/templates/menu/_user.html:13
+msgid "My wall"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:18
+msgid "Own posts"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:23
+msgid "My settings"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:28
+#: apps/menu/templates/menu/_user.html:125
+msgid "Log Out"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:36
+msgid "New Post"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:44 apps/notifications/models.py:113
+msgid "Notifications"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:53
+#: apps/menu/templates/menu/ajax/_notifications.html:8
+msgid "All notifications"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:58
+#: apps/menu/templates/menu/ajax/_notifications.html:13
+msgid "There are no new notifications"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:64 apps/save/templates/save/list.html:5
+msgid "Saved Posts"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:66
+#: apps/suggestions/templates/suggestions/detail.html:9
+msgid "Suggestions"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:72
+msgid "Communities following"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:81
+#: apps/menu/templates/menu/ajax/_communities.html:8
+msgid "You are not following any communties"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:85
+#: apps/menu/templates/menu/ajax/_communities.html:12
+msgid "Show all communities"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:105
+#: apps/menu/templates/menu/ajax/_following.html:12
+msgid "All followers"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:110
+#: apps/menu/templates/menu/ajax/_following.html:17
+msgid "You are not following any people!"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:118
+#: apps/menu/templates/menu/_user.html:161
+msgid "More information"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:135
+msgid "Why JoopeA Club"
+msgstr "Why Joining the Club?"
+
+#: apps/menu/templates/menu/_user.html:137
+msgid "Why choose JoopeA Long Desc"
+msgstr ""
+"To share our experiences, to join a community of our color, to have a secure "
+"place of ours and to be our true selves."
+
+#: apps/menu/templates/menu/_user.html:142
+msgid "Login / Signup"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:149
+msgid "Sign Up"
+msgstr ""
+
+#: apps/menu/templates/menu/_user.html:168
+msgid "List of all communities"
+msgstr ""
+
+#: apps/notifications/admin.py:24 apps/notifications/models.py:68
+#: apps/report/models.py:12 lib/behaviours/models/withrichtextcontent.py:8
+msgid "Message"
+msgstr ""
+
+#: apps/notifications/models.py:33
+msgid "liked your post"
+msgstr ""
+
+#: apps/notifications/models.py:34
+msgid "liked your comment in post"
+msgstr ""
+
+#: apps/notifications/models.py:35
+msgid "mentioned you in"
+msgstr ""
+
+#: apps/notifications/models.py:36
+msgid "mentioned you in a comment at"
+msgstr ""
+
+#: apps/notifications/models.py:37
+msgid "is now following you"
+msgstr ""
+
+#: apps/notifications/models.py:38
+msgid "commented on"
+msgstr ""
+
+#: apps/notifications/models.py:39
+msgid "shared a post with you"
+msgstr ""
+
+#: apps/notifications/models.py:40
+msgid "commented on a post you commented on"
+msgstr ""
+
+#: apps/notifications/models.py:43
+msgid "shared your post"
+msgstr ""
+
+#: apps/notifications/models.py:44
+msgid "dissaproved your post"
+msgstr ""
+
+#: apps/notifications/models.py:45
+msgid "dissaproved your comment"
+msgstr ""
+
+#: apps/notifications/models.py:46
+msgid "reported and removed your post"
+msgstr ""
+
+#: apps/notifications/models.py:47
+msgid "disapproved your report on"
+msgstr ""
+
+#: apps/notifications/models.py:48
+msgid "reported and removed your comment"
+msgstr ""
+
+#: apps/notifications/models.py:49
+msgid "disapproved your report on a comment at"
+msgstr ""
+
+#: apps/notifications/models.py:50
+msgid "deleted your comment"
+msgstr ""
+
+#: apps/notifications/models.py:51
+msgid "deleted your post"
+msgstr ""
+
+#: apps/notifications/models.py:52
+msgid "warning"
+msgstr ""
+
+#: apps/notifications/models.py:61
+msgid "The user getting the notification"
+msgstr ""
+
+#: apps/notifications/models.py:64
+msgid "The notification subject"
+msgstr ""
+
+#: apps/notifications/models.py:66
+msgid "Relation (pk) to the notified object, leave 0 if not used"
+msgstr ""
+
+#: apps/notifications/models.py:112
+msgid "Notification"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification.html:7
+msgid "I have no idea what"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification.html:7
+msgid "did :-P"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_deleted_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_deleted_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_disapproved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_disapproved_reported_post.html:6
+#: apps/notifications/templates/notifications/includes/notification_dissaproved_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_dissaproved_post.html:6
+msgid "A moderator"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_comment.html:6
+#: apps/notifications/templates/notifications/includes/notification_approved_reported_post.html:6
+msgid "because"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification_deleted_comment.html:6
+msgid "on post"
+msgstr ""
+
+#: apps/notifications/templates/notifications/includes/notification_warning.html:6
+msgid "You have been warned because"
+msgstr ""
+
+#: apps/post/models.py:24
+msgid "Meta"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:4
+#: apps/suggestions/models.py:52
+#: apps/suggestions/templates/suggestions/detail.html:13
+msgid "Hottest Community"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:13
+msgid "There is no Hottest Community at the moment"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:18
+#: apps/suggestions/models.py:23
+#: apps/suggestions/templates/suggestions/detail.html:23
+msgid "Hottest Post"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:22
+msgid "There is no hottest post at the moment"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:27
+#: apps/suggestions/models.py:34
+#: apps/suggestions/templates/suggestions/detail.html:30
+msgid "Promoted Post"
+msgstr ""
+
+#: apps/post/templates/post/_featured_items.html:31
+msgid "There is no promoted post at the moment"
+msgstr ""
+
+#: apps/post/templates/post/_post_comments.html:4
+msgid "Load more comments (NUMBER HERE)"
+msgstr ""
+
+#: apps/post/templates/post/_post_footer.html:6 apps/share/models.py:17
+#: apps/share/templates/share/popup/_new.html:6
+msgid "Share"
+msgstr ""
+
+#: apps/post/templates/post/_post_footer.html:9
+msgid "Shared"
+msgstr ""
+
+#: apps/post/templates/post/_post_footer.html:41
+msgid "Shared on"
+msgstr ""
+
+#: apps/post/templates/post/_post_header.html:4
+msgid "Add to favorites"
+msgstr ""
+
+#: apps/post/templates/post/_post_header.html:20
+msgid "Remove this post"
+msgstr ""
+
+#: apps/post/templates/post/_post_header.html:28
+msgid "Report this post"
+msgstr ""
+
+#: apps/post/templates/post/popup/_delete.html:5
+msgid "Delete post"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:4
+msgid "Create a post"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:5
+msgid "Socially connect with the other people"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:8
+msgid "Where do you want to post?"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:10
+msgid "My own wall"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:11
+msgid "Community wall"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:12
+msgid "Other users wall"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:16
+msgid "Select community"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:21
+msgid "Type in the name of the member"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:30
+msgid "Post title"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:31
+msgid "The title can contain 160 characters"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:38
+msgid "Post message"
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:41
+msgid ""
+"To @mention another member you have to add @ infront of their ID. E.g. if "
+"you want to mention Aban-11 you have to write '@Aban-11'."
+msgstr ""
+
+#: apps/post/templates/post/popup/_new.html:48
+msgid ""
+"If you want to add an image to your post you can enter a URL or select one "
+"from your pc."
+msgstr ""
+
+#: apps/post/templates/post/post_detail.html:8
+#: apps/wall/templates/wall/own.html:12 apps/wall/templates/wall/wall.html:26
+msgid "You need to login to see this page"
+msgstr ""
+
+#: apps/post/views.py:48
+#, python-brace-format
+msgid "This post is sent for approval because: {0}"
+msgstr ""
+
+#: apps/post/views.py:101
+msgid "Are you sure you want to delete this post?"
+msgstr ""
+
+#: apps/report/admin.py:40
+msgid "Reported"
+msgstr ""
+
+#: apps/report/admin.py:45
+msgid "Comment/ Post"
+msgstr ""
+
+#: apps/report/admin.py:54
+msgid "Approve this Report"
+msgstr ""
+
+#: apps/report/admin.py:63
+msgid "Disapprove this Report"
+msgstr ""
+
+#: apps/report/forms.py:16
+msgid "Why do you want to report this post?"
+msgstr ""
+
+#: apps/report/forms.py:36
+msgid "Why do you want to report this comment/ post?"
+msgstr ""
+
+#: apps/report/models.py:12
+msgid "This message will be sent to the user, if this report is approved"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_comment.html:15
+#: apps/report/templates/report/admin/report_view_comment.html:30
+#: apps/report/templates/report/admin/report_view_like.html:29
+#: apps/report/templates/report/admin/report_view_post.html:15
+#: apps/report/templates/report/admin/report_view_post.html:30
+#: apps/report/templates/report/admin/report_view_share.html:15
+#: apps/report/templates/report/admin/report_view_share.html:54
+#: apps/report/templates/report/admin/report_view_user.html:15
+msgid "Number"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_comment.html:18
+#: apps/report/templates/report/admin/report_view_post.html:18
+#: apps/report/templates/report/admin/report_view_share.html:18
+#: apps/report/templates/report/admin/report_view_user.html:18
+msgid "Growth per day"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_comment.html:21
+#: apps/report/templates/report/admin/report_view_like.html:53
+#: apps/report/templates/report/admin/report_view_post.html:21
+msgid "Number per community"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_comment.html:45
+#: apps/report/templates/report/admin/report_view_post.html:45
+msgid "Rate of growth per community (last 30 days)"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_comment.html:54
+#: apps/report/templates/report/admin/report_view_followers.html:24
+#: apps/report/templates/report/admin/report_view_post.html:54
+msgid "Growth Rate"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_followers.html:15
+msgid "Growth rate by community"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:20
+msgid "Like Comment"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:23
+msgid "Like Post"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:41
+msgid "Growth rate per day (last 30 days)"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:64
+#: apps/report/templates/report/admin/report_view_like.html:88
+msgid "# new Likes"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:107
+msgid "Growth rate per community (last 30 days)"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:114
+#: apps/report/templates/report/admin/report_view_like.html:138
+msgid "community"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:118
+#: apps/report/templates/report/admin/report_view_like.html:142
+msgid "growth rate"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:161
+#: apps/report/templates/report/admin/report_view_share.html:21
+#: apps/report/templates/report/admin/report_view_user.html:21
+msgid "New by day (last 30 days)"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:168
+#: apps/report/templates/report/admin/report_view_like.html:192
+#: apps/report/templates/report/admin/report_view_share.html:26
+#: apps/report/templates/report/admin/report_view_share.html:89
+#: apps/report/templates/report/admin/report_view_user.html:26
+msgid "Day"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:172
+msgid "# new Comment Likes"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_like.html:196
+msgid "# new Post Likes"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_share.html:30
+#: apps/report/templates/report/admin/report_view_share.html:93
+#: apps/report/templates/report/admin/report_view_user.html:30
+msgid "# new"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_share.html:45
+msgid "Number by community"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_share.html:69
+msgid "New by day per community (last 30 days)"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_share.html:113
+msgid "Growth per day per community"
+msgstr ""
+
+#: apps/report/templates/report/admin/report_view_share.html:122
+msgid "Growth"
+msgstr ""
+
+#: apps/report/templates/report/popup/_new_comment.html:6
+msgid "Report comment"
+msgstr ""
+
+#: apps/report/templates/report/popup/_new_post.html:7
+msgid "Report post"
+msgstr ""
+
+#: apps/report/templates/report/popup/_new_post.html:12
+#: apps/share/templates/share/popup/_new.html:5
+msgid "Cancel"
+msgstr ""
+
+#: apps/save/forms.py:16
+msgid "You've already saved this post!"
+msgstr ""
+
+#: apps/save/models.py:16 apps/users/templates/users/user_details.html:91
+#: apps/users/views.py:108
+msgid "Save"
+msgstr ""
+
+#: apps/save/models.py:17 lib/behaviours/models/saveable.py:6
+msgid "Saves"
+msgstr ""
+
+#: apps/save/templates/save/list.html:14
+msgid "There are no saved posts."
+msgstr ""
+
+#: apps/save/templates/save/list.html:14
+msgid "Click here"
+msgstr ""
+
+#: apps/save/templates/save/list.html:14
+msgid "to go to your wall."
+msgstr ""
+
+#: apps/search/templates/search/_results.html:2
+#: apps/search/templates/search/results.html:8
+msgid "Searching for"
+msgstr ""
+
+#: apps/search/templates/search/_results.html:51
+msgid "Oops! No results found"
+msgstr ""
+
+#: apps/search/templates/search/_searchbar.html:7
+msgid "Search name, post etc"
+msgstr ""
+
+#: apps/search/templates/search/_searchbar.html:9
+msgid "Search"
+msgstr ""
+
+#: apps/search/templates/search/_searchbar.html:13
+msgid "Search on this wall"
+msgstr ""
+
+#: apps/search/templates/search/results.html:40
+msgid "Opps! No results found"
+msgstr ""
+
+#: apps/share/models.py:14
+#, python-brace-format
+msgid "{0} shared {1}"
+msgstr ""
+
+#: apps/suggestions/models.py:12 apps/suggestions/models.py:40
+msgid "Interval in days"
+msgstr ""
+
+#: apps/suggestions/models.py:14 apps/suggestions/models.py:42
+msgid "Multiplier for like-count"
+msgstr ""
+
+#: apps/suggestions/models.py:15 apps/suggestions/models.py:43
+msgid "Multiplier for share-count"
+msgstr ""
+
+#: apps/suggestions/models.py:16 apps/suggestions/models.py:44
+msgid "Multiplier for comment-count"
+msgstr ""
+
+#: apps/suggestions/models.py:45
+msgid "Multiplier for post-count"
+msgstr ""
+
+#: apps/suggestions/models.py:53
+msgid "Hottest Communities"
+msgstr ""
+
+#: apps/suggestions/templates/suggestions/detail.html:18
+msgid "List all communities"
+msgstr ""
+
+#: apps/users/forms.py:56 apps/users/models.py:76 apps/users/models.py:89
+msgid "username"
+msgstr ""
+
+#: apps/users/forms.py:56
+msgid "Select a username"
+msgstr ""
+
+#: apps/users/forms.py:57
+msgid "username postfix"
+msgstr ""
+
+#: apps/users/forms.py:59 apps/users/forms.py:135
+#: apps/users/templates/users/register.html:34
+#: apps/users/templates/users/user_details.html:46
+msgid "Security question 1"
+msgstr ""
+
+#: apps/users/forms.py:60 apps/users/forms.py:136
+#: apps/users/templates/users/register.html:45
+#: apps/users/templates/users/user_details.html:57
+msgid "Security question 2"
+msgstr ""
+
+#: apps/users/forms.py:62 apps/users/forms.py:138
+#: apps/users/templates/users/register.html:39
+#: apps/users/templates/users/user_details.html:51
+msgid "Security answer 1"
+msgstr ""
+
+#: apps/users/forms.py:63 apps/users/forms.py:139
+#: apps/users/templates/users/register.html:49
+#: apps/users/templates/users/user_details.html:61
+msgid "Security answer 2"
+msgstr ""
+
+#: apps/users/forms.py:65
+msgid "Privacy policy"
+msgstr ""
+
+#: apps/users/forms.py:66
+msgid "Terms of use"
+msgstr ""
+
+#: apps/users/forms.py:131
+msgid "new password"
+msgstr ""
+
+#: apps/users/forms.py:131
+msgid "Specify a new password if you want to change it."
+msgstr ""
+
+#: apps/users/forms.py:132
+msgid "confirm new password"
+msgstr ""
+
+#: apps/users/forms.py:132
+msgid "Confirm your new password."
+msgstr ""
+
+#: apps/users/forms.py:133 apps/users/forms.py:334
+msgid "current password"
+msgstr ""
+
+#: apps/users/forms.py:133 apps/users/forms.py:334
+msgid "Enter your current password."
+msgstr ""
+
+#: apps/users/forms.py:252
+msgid "Reset your current security questions by setting new ones."
+msgstr ""
+
+#: apps/users/forms.py:296
+msgid "Your username"
+msgstr ""
+
+#: apps/users/forms.py:310
+msgid "Answer"
+msgstr ""
+
+#: apps/users/models.py:20 apps/users/templates/users/register.html:11
+msgid "Username"
+msgstr ""
+
+#: apps/users/models.py:21 apps/users/templates/users/register.html:24
+#: apps/users/templates/users/user_details.html:31
+msgid "Profile Color"
+msgstr ""
+
+#: apps/users/models.py:22
+msgid "Language"
+msgstr ""
+
+#: apps/users/models.py:24
+msgid "security question 1"
+msgstr ""
+
+#: apps/users/models.py:24
+msgid ""
+"Recovering your password is only possible with a security question. Make "
+"sure to remember your answer."
+msgstr ""
+
+#: apps/users/models.py:25
+msgid "security question 2"
+msgstr ""
+
+#: apps/users/models.py:27
+msgid "security answer 1"
+msgstr ""
+
+#: apps/users/models.py:28
+msgid "security answer 2"
+msgstr ""
+
+#: apps/users/models.py:71 lib/users/base_models.py:26
+#: lib/users/base_models.py:73 lib/users/base_models.py:89
+#: lib/users/models.py:15
+msgid "user"
+msgstr ""
+
+#: apps/users/models.py:72 lib/users/base_models.py:27
+#: lib/users/base_models.py:74 lib/users/base_models.py:90
+#: lib/users/models.py:16
+msgid "users"
+msgstr ""
+
+#: apps/users/models.py:77 lib/users/base_models.py:46
+msgid "active"
+msgstr ""
+
+#: apps/users/models.py:77
+msgid "max of 100 active usernames allowed"
+msgstr ""
+
+#: apps/users/models.py:90
+msgid "usernames"
+msgstr ""
+
+#: apps/users/models.py:96
+msgid "Username variation"
+msgstr ""
+
+#: apps/users/models.py:97
+msgid "Username variation number"
+msgstr ""
+
+#: apps/users/models.py:103
+msgid "username variation"
+msgstr ""
+
+#: apps/users/models.py:104
+msgid "username variations"
+msgstr ""
+
+#: apps/users/models.py:109
+msgid "question"
+msgstr ""
+
+#: apps/users/templates/users/delete.html:3
+#: apps/users/templates/users/pw_reset.html:3
+msgid "Password Reset"
+msgstr ""
+
+#: apps/users/templates/users/delete.html:6
+msgid "Delete Account"
+msgstr ""
+
+#: apps/users/templates/users/delete.html:8
+msgid ""
+"If you do delete your profile, all of the following will be deleted:\n"
+"\n"
+"    - your personal wall\n"
+"    - your posts\n"
+"    - your comments, likes and shares on other users walls\n"
+"\n"
+"    * your posts and comments in communities will be remain under the name "
+"of 'unknown'\n"
+"    "
+msgstr ""
+
+#: apps/users/templates/users/delete.html:18
+msgid ""
+"Are you sure you want to delete your account? We would hate to see you leave!"
+msgstr ""
+
+#: apps/users/templates/users/login.html:7
+msgid "Welcome to JoopeA"
+msgstr ""
+
+#: apps/users/templates/users/login.html:9
+msgid "Did your perhaps"
+msgstr ""
+
+#: apps/users/templates/users/login.html:9
+msgid "forgot your password?"
+msgstr ""
+
+#: apps/users/templates/users/pw_reset.html:7
+#, python-format
+msgid "Step %(wizard.steps.step1)s of %(wizard.steps.count)s"
+msgstr ""
+
+#: apps/users/templates/users/pw_reset.html:23
+msgid "first step"
+msgstr ""
+
+#: apps/users/templates/users/pw_reset.html:25
+msgid "prev step"
+msgstr ""
+
+#: apps/users/templates/users/pw_reset.html:27
+#: lib/users/templates/users/password_reset.html:13
+msgid "Next"
+msgstr ""
+
+#: apps/users/templates/users/register.html:5
+msgid "Sign up"
+msgstr ""
+
+#: apps/users/templates/users/register.html:6
+msgid "Socially connect with other people"
+msgstr ""
+
+#: apps/users/templates/users/register.html:12
+msgid "Pick a pre-defined username and a number."
+msgstr ""
+
+#: apps/users/templates/users/register.html:25
+#: apps/users/templates/users/user_details.html:32
+msgid "You can select a color for your profile icon."
+msgstr ""
+
+#: apps/users/templates/users/register.html:30
+#: apps/users/templates/users/user_details.html:41
+msgid "Security Questions"
+msgstr ""
+
+#: apps/users/templates/users/register.html:31
+msgid ""
+"To secure your account please answer two pre-defined security questions."
+msgstr ""
+
+#: apps/users/templates/users/register.html:55
+#: apps/users/templates/users/register.html:58
+#: apps/users/templates/users/user_details.html:67 lib/users/forms.py:109
+msgid "Password"
+msgstr ""
+
+#: apps/users/templates/users/register.html:56
+#: apps/users/templates/users/user_details.html:68
+msgid ""
+"Please use a secure password (a combination of upper and lowercase letters "
+"and numbers)"
+msgstr ""
+
+#: apps/users/templates/users/register.html:64
+msgid "Confirm password"
+msgstr ""
+
+#: apps/users/templates/users/register.html:70
+msgid "Privacy policy and terms of use"
+msgstr ""
+
+#: apps/users/templates/users/register.html:74
+#: apps/users/templates/users/register.html:80
+msgid "I accept the"
+msgstr ""
+
+#: apps/users/templates/users/register.html:74
+msgid "privacy policy"
+msgstr ""
+
+#: apps/users/templates/users/register.html:80
+msgid "terms of use"
+msgstr ""
+
+#: apps/users/templates/users/register.html:86
+msgid "We hope you enjoy your stay at JoopeA! <br> Your username will be:"
+msgstr ""
+
+#: apps/users/templates/users/register.html:87
+msgid "Register"
+msgstr ""
+
+#: apps/users/templates/users/register.html:160
+msgid "Please use a more secure password."
+msgstr ""
+
+#: apps/users/templates/users/register.html:161
+msgid "Please pick a username."
+msgstr ""
+
+#: apps/users/templates/users/register.html:162
+#: apps/users/templates/users/register.html:163
+msgid "This number is taken."
+msgstr ""
+
+#: apps/users/templates/users/register.html:244
+msgid "Choose a new number or pick a suggestion below"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:4
+#: apps/users/templates/users/user_details.html:10
+msgid "Account Settings"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:12
+msgid "Back to my wall!"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:17
+msgid "Profile Settings"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:19
+msgid "Following"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:20
+#: apps/users/templates/users/user_details.html:125
+msgid "Blocked users"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:25
+msgid "Your Account"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:42
+msgid "Your currect security questions are"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:42
+msgid "and"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:43
+msgid ""
+"To reset your security question, please answer two pre-defined security "
+"questions below."
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:75
+msgid "Current password"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:80 lib/users/forms.py:148
+msgid "New password"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:86
+msgid "Confirm new password"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:94
+msgid "Some text about removing your account, deleting everything etc"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:95
+msgid "Delete Profile"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:101
+msgid "Your followers"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:108
+#: apps/users/templates/users/user_details.html:120
+#: apps/users/templates/users/user_details.html:132
+msgid "Update"
+msgstr ""
+
+#: apps/users/templates/users/user_details.html:113
+msgid "Users you are following"
+msgstr ""
+
+#: apps/users/views.py:137
+msgid "Your profile is updated."
+msgstr ""
+
+#: apps/users/views.py:196
+msgid ""
+"Please specify your new password. You will be directed to the homepage after "
+"successfully setting the new password."
+msgstr ""
+
+#: apps/wall/models.py:18 apps/wall/models.py:19
+msgid "Wall"
+msgstr ""
+
+#: apps/wall/models.py:32
+msgid "Community Wall"
+msgstr ""
+
+#: apps/wall/models.py:33
+msgid "Community Walls"
+msgstr ""
+
+#: apps/wall/templates/wall/community_wall.html:7
+msgid "Wall of"
+msgstr ""
+
+#: apps/wall/templates/wall/community_wall.html:16
+#: apps/wall/templates/wall/wall.html:12
+msgid "Expand all posts"
+msgstr ""
+
+#: apps/wall/templates/wall/community_wall.html:19
+msgid "Unfollow Community"
+msgstr ""
+
+#: apps/wall/templates/wall/community_wall.html:20
+msgid "Follow Community"
+msgstr ""
+
+#: apps/wall/templates/wall/own.html:8
+msgid "My own posts"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:8
+msgid "Posts on my wall"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:8
+#, python-format
+msgid "Posts on %(target_user.username)s's wall"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:15
+msgid "Show read posts"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:16
+msgid "Show unread posts"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "There are no unread posts,"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "click here"
+msgstr ""
+
+#: apps/wall/templates/wall/wall.html:22
+msgid "to show read posts"
+msgstr ""
+
+#: lib/behaviours/models/publishable.py:8
+msgid "Published"
+msgstr ""
+
+#: lib/behaviours/models/publishable.py:9
+msgid "Publish date"
+msgstr ""
+
+#: lib/behaviours/models/withupdates.py:9
+msgid "Modified"
+msgstr ""
+
+#: lib/cms/content_types.py:27
+msgid "Rich text"
+msgstr ""
+
+#: lib/cms/content_types.py:28
+msgid "Rich texts"
+msgstr ""
+
+#: lib/cms/content_types.py:59
+msgid "position"
+msgstr ""
+
+#: lib/cms/content_types.py:68
+msgid "Images"
+msgstr ""
+
+#: lib/cms/content_types.py:74
+msgid "Center"
+msgstr ""
+
+#: lib/cms/content_types.py:75
+msgid "Left"
+msgstr ""
+
+#: lib/cms/content_types.py:76
+msgid "Right"
+msgstr ""
+
+#: lib/cms/content_types.py:119
+msgid "Standard"
+msgstr ""
+
+#: lib/cms/content_types.py:124
+msgid "URL"
+msgstr ""
+
+#: lib/cms/content_types.py:126
+msgid ""
+"Enter the URL of the content that needs to be embedded, example: http://www."
+"youtube.com/watch?v=Nd-vBFJN_2E"
+msgstr ""
+
+#: lib/cms/content_types.py:174
+#, python-format
+msgid "I don't know how to embed %s."
+msgstr ""
+
+#: lib/cms/content_types.py:189 lib/cms/content_types.py:190
+msgid "Embedded content"
+msgstr ""
+
+#: lib/users/base_admin.py:27
+msgid "Personal data"
+msgstr ""
+
+#: lib/users/base_models.py:9
+msgid "first name"
+msgstr ""
+
+#: lib/users/base_models.py:10
+msgid "last name"
+msgstr ""
+
+#: lib/users/base_models.py:45
+msgid "staff status"
+msgstr ""
+
+#: lib/users/base_models.py:45
+msgid "Designates whether the user can log into this admin site."
+msgstr ""
+
+#: lib/users/base_models.py:46
+msgid ""
+"Designates whether this user should be treated as active. Unselect this "
+"instead of deleting accounts."
+msgstr ""
+
+#: lib/users/base_models.py:47
+msgid "date joined"
+msgstr ""
+
+#: lib/users/base_models.py:86 lib/users/models.py:12
+msgid "e-mail"
+msgstr ""
+
+#: lib/users/emails.py:35
+#, python-brace-format
+msgid "Password reset request for {0}"
+msgstr ""
+
+#: lib/users/emails.py:54
+msgid "Thank you for registering"
+msgstr ""
+
+#: lib/users/forms.py:22
+msgid "This user already exists."
+msgstr ""
+
+#: lib/users/forms.py:23 lib/users/forms.py:146
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: lib/users/forms.py:26
+msgid "password"
+msgstr ""
+
+#: lib/users/forms.py:27
+msgid "confirm password"
+msgstr ""
+
+#: lib/users/forms.py:110
+msgid "The password can be changed via <a href=\"password/\">this form.</a>"
+msgstr ""
+
+#: lib/users/forms.py:125
+msgid "Email"
+msgstr ""
+
+#: lib/users/forms.py:150
+msgid "New password confirmation"
+msgstr ""
+
+#: lib/users/mixins.py:38
+msgid "Inloggen"
+msgstr ""
+
+#: lib/users/mixins.py:71
+msgid "login"
+msgstr ""
+
+#: lib/users/templates/users/password_reset.html:6
+msgid "Forgot Password"
+msgstr ""
+
+#: lib/utils/helpers.py:20
+msgid "One column"
+msgstr ""
+
+#: lib/utils/helpers.py:21
+msgid "Two columns"
+msgstr ""
+
+#: lib/utils/helpers.py:22
+msgid "Three columns"
+msgstr ""
+
+#: settings/defaults.py:111
+msgid "English"
+msgstr ""
+
+#: settings/defaults.py:112
+msgid "Persian"
+msgstr ""
+
+#~ msgid "type"
+#~ msgstr "ÙÙØ¹"
+
+#~ msgid "parent"
+#~ msgstr "ÙØ§ÙØ¯"
+
+#~ msgid "Possible email addresses found: %s"
+#~ msgstr "ÛÚ© Ø§ÛÙÛÙ ØªÙ ÙØªÙ ÙÙØ´ØªÙ Ø¨ÙØ¯Û: %s"
+
+#~ msgid "Possible phone numbers found: %s"
+#~ msgstr "ÛÚ© Ø´ÙØ§Ø±Ù ØªÙÙÙ ØªÙ ÙØªÙ ÙÙØ´ØªÙ Ø¨ÙØ¯Û: %s"
+
+#~ msgid "Possible real names found: %s"
+#~ msgstr "ÛÚ© Ø§Ø³Ù ÙØ§ÙØ¹Û ØªÙ ÙØªÙ Ù¾ÛØ¯Ø§ Ø´Ø¯: %s"

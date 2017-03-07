@@ -1,0 +1,4 @@
+A Post can contain an Image
+A Comment can contain an Image
+
+A Post content consisting of an image will be served by an external domain thaqt proxies the origional content (hide ip)							"Users should be able to directly upload images

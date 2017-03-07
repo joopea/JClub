@@ -1,0 +1,60 @@
+{% extends "core/base.html" %}
+{% load i18n block_tags follow_tags %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+    {% include "post/_featured_items.html" %}
+
+    <h1 class="page-title">{% block page_title %}{% if own_wall %}{% trans "Posts on my wall" %}{% else %}{% blocktrans with usernamewall=target_user.username %}Posts on {{ usernamewall }}'s wall{% endblocktrans %}{% endif %}{% endblock page_title %}</h1>
+
+    <div class="wall-options">
+        {% if not own_wall %}{% follow request.user target_user %}{% blocked request.user target_user %}{% endif %}
+        <a class="btn show-all-btn fright"><i class="fa fa-angle-down"></i> {% trans "Expand all posts" %}</a>
+        {% if own_wall %}
+            <a class="btn show-read-btn fright"><i class="fa fa-eye"></i>
+                <span class="inactive">{% trans "Show read posts" %}</span>
+                <span class="active">{% trans "Show unread posts" %}</span>
+            </a>
+        {% endif %}
+    </div>
+
+    <div class="no-read-show-unread-suggestion" style="display: none;">
+        {% trans "There are no unread posts," %} <a class="show-read-btn">{% trans "click here" %}</a> {% trans "to show read posts" %}
+    </div>
+    {% include 'wall/_wall.html' %}
+{% else %}
+    <h1>{% trans "You need to login to see this page" %}</h1>
+{% endif %}
+
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.infinitescroll.min.js"></script>
+    <script type="text/javascript">
+    var $container = $(".posts-container");
+    $container.infinitescroll(
+        {
+            navSelector: ".pagination",
+            nextSelector: ".next",
+            itemSelector: ".post",
+            loading: {
+                finishedMsg: "",
+                img: "{{ STATIC_URL }}img/ajax-loader.gif",
+                msg: null,
+                msgText: ""
+            }
+        },
+        function (elems) {
+            infinite_scroll_loaded(this, elems)
+        }
+    );
+
+    $(function () {
+        if ($('.post:visible').length == 0) {
+            $('.no-read-show-unread-suggestion').show();
+        }
+    });
+
+    </script>
+{% endblock javascript %}

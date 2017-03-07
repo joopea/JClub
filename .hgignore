@@ -1,0 +1,63 @@
+syntax: glob
+
+#local db
+database/
+
+#Mac crap
+.DS_Store
+
+# vim swaps
+*.swp
+
+Procfile
+
+syntax: regexp
+
+# Pycharm
+.idea/*
+
+^emails/
+^docs/
+^env/
+^data_dumps/
+^logs/
+
+# ignore log files
+^[^.]+\.log
+
+# ignore redis dump
+^dump.rdb$
+
+# local settings
+^source/settings/local_settings.py$
+^source/settings/locals.py$
+^source/local_settings.py$
+^source/locals.py$
+# hide test reports
+^source/reports
+
+# local media and static files
+^source/media
+^source/static
+^source/tmp/
+^temp
+^static-compiled/
+^source/.sass-cache/
+
+^media$
+
+#ignore compiled python
+^[^.]+\.pyc
+
+#ignore migration folders
+^source/*migrations*
+
+syntax: glob
+.orig$
+#ignore readme files
+*README*
+
+
+re:^\.project$
+re:^\.pydevproject$
+*.orig

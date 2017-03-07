@@ -1,0 +1,9 @@
+A User can not Share a Post from another User if he/she is Blocked by that User
+A User can not Share a Post from a Community if he/she is Blocked by that Community
+If a User is Deleted all his/her Shared items are UnShared
+A User receives a Notification if his/her post is Shared by another User
+A User can Share a Post from a Community on his/her Wall
+A Post Shared will be put in the User that is sharing his/her Wall
+A Post Shared will be put in the Wall of the Followers of the User that is sharing
+A User receives a Notification if a Post is Shared by another User on his Wall
+A Post Shared will appear on a User's Wall

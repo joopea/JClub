@@ -1,0 +1,23 @@
+A User receives a Notification if he/she is Mentioned in a Post
+A User receives a Notification if he/she is Mentioned in a Comment
+
+A User can Mention a User
+
+If a User is Mentioned in a Post, that Post will be shared on that User's Wall
+					Just as a reminder, a shared post on user's wall will be shown on followers wall
+
+If a User(A) is Blocked by another User(B) that User(A) can Mention him/her but nothing happens	- Cannot mention. blocked user should see an error
+
+
+If a User(a) is Blocked by another User(b) and User(a) Mentiones that User(b) in a Post nothing happens
+							User(a) can't mention user(b) if user(b) blocked user(a). An error should be shown
+If a User(a) is Blocked by another User(b) and User(a) Mentiones that User(b) in a Comment nothing happens
+							User(a) can't mention user(b) if user(b) blocked user(a). An error should be shown
+
+A Post will appear on a User's Wall if that User is Mentioned in that Post
+
+A User receives a Notification if he/she is Mentioned in a Comment
+If a User is Mentioned in a Comment that User receives a Notification
+
+A User receives a Notification if he/she is Mentioned in a Post
+A User sees all Posts on his/her Wall if he/she is Mentioned in that Post

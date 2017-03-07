@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Layout Communitypage:  		 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.community-intro-container {
+	text-align: right;
+	margin-bottom: 3em;
+}
+
+.community-description {
+	white-space: pre-line;
+}
+
+.communities {
+		.communitystamp {
+			font-size: large;
+			float: right;
+		}
+    .description {
+        white-space: pre-line;
+				clear: both;
+    }
+}
+
+.communitystamp {
+	text-decoration: none;
+	text-align: right;
+}
+
+.community-link {
+	text-decoration: none;
+}
+
+.body_fa {
+
+	.communities {
+		text-align: right;
+	}
+	
+	.community-description {
+		text-align: right;
+		direction: rtl;
+		line-height: 1.7;
+	}
+
+	.description {
+		direction: rtl;
+		text-align: right;
+		line-height: 1.7;
+	}
+}

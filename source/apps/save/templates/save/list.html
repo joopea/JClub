@@ -1,0 +1,21 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h1 class="page-title">{% block page_title %}{% trans "Saved Posts" %}{% endblock page_title %}</h1>
+
+    <ul class="saved">
+        {% if object_list|length %}
+            {% for save in object_list %}
+                {% include "post/_post.html" with post=save.post %}
+            {% endfor %}
+        {% else %}
+            <div class="no-read-show-unread-suggestion" style="display:block">
+                {% trans "There are no saved posts." %} <a href="{% url 'wall:user' %}">{% trans "Click here" %}</a> {% trans "to go to your wall." %}
+            </div>
+        {% endif %}
+    </ul>
+
+    {% include "core/_pagination.html" %}
+
+{% endblock content %}

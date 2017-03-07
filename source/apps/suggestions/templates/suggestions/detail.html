@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block page_title %}{% trans "JoopeA; The Free World" %}{% endblock page_title %}
+
+{% block content %}
+
+    <h1 class="site-slogan">{% trans "JoopeA; The Free World" %}</h1>
+    <h1 class="page-title">{% trans "Suggestions" %}</h1>
+
+    {% if suggestions.hottest_community %}
+    <div class="hottest-community">
+        <h1 class="page-title">{% trans "Hottest Community" %}</h1>
+        {% include "community/_community.html" with community=suggestions.hottest_community %}
+    </div>
+    {% endif %}
+
+    <div class="post-footer"><a href="/community/">{% trans "List all communities" %}</a></div>
+
+
+    {% if suggestions.hottest_post %}
+    <div class="hottest-community">
+        <h1 class="page-title">{% trans "Hottest Post" %}</h1>
+        {% include "post/_post.html" with post=suggestions.hottest_post %}
+    </div>
+    {% endif %}
+
+    {% if suggestions.promoted_post %}
+    <div class="hottest-community">
+        <h1 class="page-title">{% trans "Promoted Post" %}</h1>
+        {% include "post/_post.html" with post=suggestions.promoted_post %}
+    </div>
+    {% endif %}
+
+{% endblock content %}

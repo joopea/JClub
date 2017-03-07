@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% block head_title %}{% trans "Login" %} - {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+    <div class="login-form">
+        <h2>{% trans "Welcome to JoopeA" %}</h2>
+        <div><i class="fa fa-ambulance fa-5x" style="color: #ff7440;"></i></div>
+        <h4><span>{% trans "Did your perhaps" %}</span> <a class="forgot-password-link" href="{% url "users:password-reset" %}">{% trans "forgot your password?" %}</a></h4>
+    </div>
+{% endblock %}

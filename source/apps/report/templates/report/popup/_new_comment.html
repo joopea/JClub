@@ -1,0 +1,16 @@
+{% load i18n %}
+{% if form %}
+    <form action="{%  url 'report:comment_create_ajax' pk=comment %}" method="post">
+        {% csrf_token %}
+        <div class="report-popup-container">
+        	<h3>{% trans "Report comment" %}</h3>
+	        {{ form.message.label_tag }}
+	        {{ form.message }}
+
+	        <div class="report-popup-buttons">
+		        <input type="button" value="Cancel" onclick="$.fancybox.close()">
+		        <input type="submit" value="Report" class="btn btn-red">
+	        </div>
+        </div>
+    </form>
+{% endif %}

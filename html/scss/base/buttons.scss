@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Buttons 		 	   			 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+.btn {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: .75em 1em;
+	
+	border: none;
+	
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	font-family: sans-serif;
+	line-height: 1;
+	text-decoration: none;
+
+	background: $turquoise;
+	
+	vertical-align: middle;
+	@include transition(all .2s ease-in-out);
+	cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover {
+    	background: $turquoise-hover;
+    }
+}

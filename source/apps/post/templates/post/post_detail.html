@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block page_title %}{{ post.title }}{% endblock page_title %}
+
+{% block content %}
+    {% if request.user.is_anonymous and not post.community %}
+        <h1>{% trans "You need to login to see this page" %}</h1>
+    {% else %}
+        {% include 'post/_post.html' with show_all_comments=True %}
+    {% endif %}
+{% endblock content %}

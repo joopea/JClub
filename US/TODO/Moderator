@@ -1,0 +1,85 @@
+A Moderator can Create a Community				This is inconsistent with Managers, pdf, "Communities" "Communities are created by website moderators"
+				Only Managers should be able to create/delete/edit communities not moderators
+A User will see all Notifications recieved from a Moderator
+
+Moderators can pick Posts to Promote
+
+Posts tagged for containing [telephone, email, real-names] will be pending Approval by a Moderator						and images
+Comments tagged for containing [telephone, email, real-names] will be pending Approval by a Moderator						and images
+
+A Moderator can Approve a Post
+A Moderator can Approve a Comment
+
+A Moderator can Dis-Approve a Post, this will send a Alert to the User that created that Post, this will also Delete that Post
+A Moderator can Dis-Approve a Comment, this will send a Alert to the User that created that Post, this will also Delete that Post
+
+A Moderator can Block a User from a Community
+A Moderator can Un-Block a User from a Community
+A Moderator can see all Blocked Users per Community
+
+A Moderator can Approve a Reported Post			This will send an Alert to reporter User for false report
+A Moderator can Dis-Approve a Reported Post, this will send an Alert to the User that created that Post, this will Delete that Post
+
+A Moderator can Approve a Reported Comment			This will send an Alert to reporter User for false report
+A Moderator can Dis-Approve a Reported Comment, this will send an Slert to the User that created that Comment, this will Delete that Comment
+
+A Moderator can Send an Alert to a User
+A Moderator can Send an Alert for any Post
+A Moderator can Send an Alert for any Comment
+A Moderator can Delete a Post
+A Moderator can Delete a Comment
+
+Moderators and Managers are able to be in touch with eachother in the site					In the admin panel there will be a room for discussion between admins/moderators/managers
+					the discussion panel is accessible to all those who have access
+
+A Moderator can Block a User from a Community
+A Moderator can UnBlock a User from a Community
+A Moderator can View all Users Blocked per Community
+
+A Moderator can Block a User from a Community
+A Moderator can Un-Block a User from a Community
+A Moderator can Alert a User if that User's Post contains not-allowed information
+A Moderator can Review a Reported Post
+
+A Moderator can Delete a Post
+A Deleted Post by a Moderator will send a Notification to the Post's owner(User)					Not a notification but an Alert
+A Moderator can Approve a Post
+A Post Approved by a Moderator will be Published
+A Moderator can Promote a Post
+
+A Comment is filtered on thelephone numbers, if matched is handed over to a Moderator for Approval
+A Comment is filtered on person names, if matched is handed over to a Moderator for Approval
+A Comment is filtered on email addresses, if matched is handed over to a Moderator for Approval
+A Comment is filtered if it contains picture and will handed over to a Moderator for Approval
+
+A Comment can be Removed by a Moderator, this will send an Alert to the Creator of the Comment
+A Moderator can Approve a Comment
+A Moderator can Review a Reported Comment
+A Moderator can un-report a Reported Comment
+A Moderator can Delete a Comment
+A Moderator can send an Alert to a Creator of a Comment
+
+Moderators receive Posts matched for [telephone/real name/email] for Approval						images also
+Moderators receive Comments matched for [telephone/real name/email] for Approval						images also
+
+A Moderator can Approve a Post, this will Puslish it
+A Moderator can Dis-Approve a Post, this will send an Alert to that User
+
+A Moderator can Approve a Comment, this will Puslish it
+A Moderator can Dis-Approve a Comment, this will send an Alert to that User
+
+Moderators receive Posts that are Reported for Approval				post dis-aproval will send an Alert to that Post Owener and Reporter, Post will be down | Approval will only send an Alert to reporter user that his report is not approved and this alert will not count as an Alert
+Moderators receive Comments that are Reported for Approval				Commnet dis-aproval will send an Alert to that Commnet Owener and Reporter, Commnet will be down | Approval will only send an Alert to reporter user that his report is not approved and this alert will not count as an Alert
+
+
+A Moderator Alerts the User if the Moderator Deletes a Reported Post					The reporter will receive a Notification, but it does not count as number of alerts
+A Moderator Alerts the User if the Moderator Deletes a Reported Comment					The reporter will receive a Notification, but it does not count as number of alerts
+
+A Moderator Alerts the reporter user if his reported post was falsely reported
+A Moderator Alerts the reporter user if his reported comment was falsely reported
+
+A Moderator Alerts the User if the Moderator Deletes a Post
+A Moderator Alerts the User if the Moderator Deletes a Comment
+
+A Moderator can see the Count of Alerts of each User
+A Moderator can Delete an Alert

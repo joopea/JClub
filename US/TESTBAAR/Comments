@@ -1,0 +1,20 @@
+A User Blocked from a Community can still View Comments
+A User Blocked from a Community can not Comment on Posts in that community
+A User cannot create a Comment on a Post on another User's Wall if that User has blocked him/her
+A Comment on a Post is Deleted if that Post is Deleted
+Deleting a User will Delete all his/her Comments made on Posts on his/her Wall, created by that User
+A User can Delete his/her own Comment
+An unregistered User can View a Comment
+A logged off User can View a Comment
+Each User can make a Comment on a Post
+A User can Report a Comment
+A User can leave a Comment on any Post
+The System can Detect SensitiveData (telephone, real name, email) from a Post and send that Post to a Moderator for Approval                                and images
+
+A Comment is filtered on thelephone numbers, if matched is handed over to a Moderator for Approval
+A Comment is filtered on person names, if matched is handed over to a Moderator for Approval
+A Comment is filtered on email addresses, if matched is handed over to a Moderator for Approval
+A Comment is filtered if it contains picture and will handed over to a Moderator for Approval
+
+A Comment can contain text
+A User can Like a Comment

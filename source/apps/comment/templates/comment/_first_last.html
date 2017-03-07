@@ -1,0 +1,12 @@
+{% load i18n %}
+{% for comment in comments.first %}
+    {% include 'comment/_comment.html' %}
+{% endfor %}
+
+{% if remaining %}
+    <span class="btn btn-more-comments" data-comments-more="{% url 'comment:more' pk=post_id %}?s={{ start_id }}&amp;e={{ end_id }}">{% trans "Load more comments" %} ({{ page_size }}{% if remaining > page_size %} {% trans "of" %} {{ remaining }}{% endif %})</span>
+{% endif %}
+
+{% for comment in comments.last %}
+    {% include 'comment/_comment.html' %}
+{% endfor %}

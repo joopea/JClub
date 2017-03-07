@@ -1,0 +1,12 @@
+{% load rules i18n %}{% rules user=request.user community=community comment=comment post=post wall=wall as rules %}
+{% include 'comment/list.html' with comments=post.first_comments %}
+
+<span class="btn btn-more-comments" data-comments-more="{% url 'comment:more' pk=post.pk %}">{% trans "Load more comments (NUMBER HERE)" %}</span>
+
+{% include 'comment/list.html' with comments=post.comments %}
+
+{% if rules.is_allowed_on_wall %}
+<div class="comment-form">
+    {% include "comment/_create.html" %}
+</div>
+{% endif %}

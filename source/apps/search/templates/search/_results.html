@@ -1,0 +1,53 @@
+{% load i18n %}<div id="search_suggestions">
+    <h1 class="search-title">{% trans "Searching for" %} <span style="color: #ff7440">{{ query }}</span></h1>
+    {% if posts %}
+        <h2 class="search-section-title">{% trans "Posts" %}</h2>
+        {% for post in posts %}
+            <div class="search-post">
+                <h3 class="searchresult-title"><a href="{{ post.get_absolute_url }}">{{ post.title|striptags|truncatewords:10|truncatechars:160 }}</a></h3>
+                <p class="searchresult-content">
+                    {{ post.message|striptags|truncatewords:30|truncatechars:160 }}
+                </p>
+                <div>
+                    <span class="searchresult-date">{{ post.created_jalali }}{{ ' by ' }}</span>
+                    {% ifequal post.author.username 'deleted' %}
+                        <span class="">{{ post.author.username }}</span>
+                    {% else %}
+                        <a class="searchresult-author" href="{{ post.author.get_absolute_url }}">{{ post.author.username }}</a>
+                    {% endifequal %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if comments %}
+        <h2 class="search-section-title">{% trans "Comments" %}</h2>
+        {% for comment in comments %}
+            <div class="search-comment">
+                <a href="{{ comment.post.get_absolute_url }}">{{ comment.message|striptags|truncatewords:30|truncatechars:160 }} </a>
+
+                <div>
+                        <span class="searchresult-date">{{ comment.created_jalali }}{{ ' {% trans "by" %} ' }}</span>
+                        {% ifequal comment.author.username 'deleted' %}
+                            <span class="">{{ comment.author.username }}</span>
+                        {% else %}
+                            <a class="searchresult-author" href="{{ post.author.get_absolute_url }}">{{ comment.author.username }}</a>
+                        {% endifequal %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if communities %}
+        <h2 class="search-section-title">{% trans "Communities" %}</h2>
+        {% for community in communities %}
+            <div class="search-comment">
+            <a href="{{ community.get_absolute_url }}">{{ community.name }}</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if not posts and not comments and not communities %}
+    <p class="no-results"> {% trans "Oops! No results found" %} </p>
+    {% endif %}
+</div>

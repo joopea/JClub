@@ -1,0 +1,7 @@
+ROAD MAP
+
+In order of importance:
+
+- Query objects implementation is specific for Django ORM. Should be more generic
+- Design and Create DataSets with features like: Cache and ORM serialisation? Still point of discussion
+- Added Queryset for Haystack SearchQuerysets (see stub from XBW)

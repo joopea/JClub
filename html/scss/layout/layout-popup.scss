@@ -1,0 +1,31 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Popup-Styles 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.new-post-popup {
+	display: none;
+	text-align: right;
+	padding: 0 15px;
+
+	.title {
+		margin-bottom: 0px;
+	}
+
+	.subtitle {
+		margin: 5px 0 10px 0; 
+		font-weight: normal;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #dedede;
+	}
+
+	.post-to-location {
+		overflow: hidden;
+	}
+	
+	.form-field {
+		float: right;
+		label { display: block; }
+	}
+} // .new-post-popup

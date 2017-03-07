@@ -1,0 +1,18 @@
+A User(A) will receive a Notification if a User(B) Shares a Post in this User's(A) Wall
+A User will receive a Notification is he/she receives an Alert from a Moderator/Manager
+A User will receive a Notification if he/she is Followed by another User				duplicated by first item
+A User will receive a Notification if another User leave a comment after him under a post
+
+A User will receive a Notification if a Moderator Deletes his/her Post				This should be Alert
+A User will receive a Notification if a Moderator Deletes his/her Comment				This should be Alert
+
+A User can see Notifications for new Followers
+A User cna see Notifications for Likes to his/her Post
+A User can see Notifications for Likes to his/her Comments
+A User can see Notifications for new Comments
+A User can see Notifications for being Mentioned in a Post
+A User can see Notifications for being Mentioned in a Comment
+A User can see Notifications for his/her Posts being Shared by another User
+A User(A) can see Notifications if another User(B) Shares Posts on this User's(A) Wall
+A User recieves a Notification if he/she is Followed
+

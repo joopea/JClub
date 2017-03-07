@@ -1,0 +1,17 @@
+.new-post-popup {
+  display: none;
+  text-align: right;
+  padding: 0 15px; }
+  .new-post-popup .title {
+    margin-bottom: 0px; }
+  .new-post-popup .subtitle {
+    margin: 5px 0 10px 0;
+    font-weight: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede; }
+  .new-post-popup .post-to-location {
+    overflow: hidden; }
+  .new-post-popup .form-field {
+    float: right; }
+    .new-post-popup .form-field label {
+      display: block; }

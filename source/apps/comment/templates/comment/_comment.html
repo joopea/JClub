@@ -1,0 +1,50 @@
+{% load rules thumbnail i18n %}{% rules user=request.user community=community comment=comment post=post wall=wall as rules %}
+<div class="comment">
+    <div class="comment-content">
+        <div class="comment-details">
+            <span class="comment-username">
+                {% ifequal comment.author.username 'deleted' %}
+                    <span class="author-name">{{ comment.author.username }}</span>
+                {% else %}
+                    <a class="author-name" href="{% url 'wall:detail' pk=comment.author.pk %}">{{ comment.author.username }}</a>
+                {% endifequal %}
+                <span class="avatar-icon" style="background: {{ comment.author.profile_colour }};"></span>
+            </span>
+            <span class="comment-timestamp">{{ comment.created_jalali }}</span>
+        </div>
+        <bdi><p>{{ comment.message|safe }}</p></bdi>
+
+{% if comment.image %}
+    <a class="comment-image" href="{{ comment.image|thumbnail_url:'post_big' }}" target="_blank">
+        <img src="{{ comment.image|thumbnail_url:'post_normal' }}" alt="">
+    </a>
+
+{% endif %}
+    </div>
+    <div class="comment-footer">
+        {% if rules.can_remove_comment %}
+            <span class="delete-button fright" data-remove-comment="{{ comment.id }}">{% trans "Delete" %}</span>
+        {% endif %}
+        {% if rules.can_report_comment %}
+            <span class="report-button fright" data-report-comment="{{ comment.id }}">{% trans "Report" %}</span>
+        {% endif %}
+        {% if rules.can_like_comment %}
+            <a data-like-comment="{{ comment.id }}" href="#" class="footer-button fright{% if rules.has_liked_comment %} is-active{% endif %}">
+                <span class="active">
+                    <i class="fa fa-heart is-liked"></i> {% trans "Unlike" %} (<span class="count">{{ comment.like_count }}</span>)
+                </span>
+                <span class="inactive">
+                   <i class="fa fa-heart"></i> {% trans "Like" %} (<span class="count">{{ comment.like_count }}</span>)
+                </span>
+            </a>
+        {% else %}
+            <div class="footer-button fright">
+                {% if comment.like_count %}
+                    <span><i class="fa fa-heart is-liked"></i> <span class="count">{{ comment.like_count }}</span></span>
+                {% else %}
+                    <span><i class="fa fa-heart"></i> <span class="count">{{ comment.like_count }}</span></span>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+</div>

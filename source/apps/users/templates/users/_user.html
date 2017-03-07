@@ -1,0 +1,11 @@
+{% load i18n block_tags follow_tags %}
+<li class="user-list-item">
+    <span class="comment-username">
+        <a class="author-name" href="{% url "wall:detail" user.id %}">{{ user.username }}</a>
+        <span class="avatar-icon" style="background: {{ user.profile_colour }};"></span>
+    </span>
+    {% blocked request.user user %}
+    {% if show_follow %}
+        {% follow request.user user %}
+    {% endif %}
+</li>

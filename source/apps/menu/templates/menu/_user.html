@@ -1,0 +1,184 @@
+{% load i18n utils cms_tags %}
+
+{% if user.is_authenticated %}
+    <nav id="menu" class="">
+        <ul>
+            <li class="menu-list-item">
+                <span class="menu-link selected">
+                    <i class="icon-menu-item fa fa-circle" style="color: {{ profile.user.profile_colour }};"></i> {% trans "My wall" %} ({{ request.user.username }})
+                </span>
+                <ul>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="{% url 'wall:user' %}" style="color: {{ profile.user.profile_colour }};">
+                            <i class="icon-menu-item fa fa-circle" style="color: {{ profile.user.profile_colour }};"></i> {% trans "My wall" %}
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="{% url 'wall:own' %}">
+                            <i class="icon-menu-item fa fa-user"></i> {% trans "Own posts" %}
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="/{{ LANGUAGE_CODE }}/">
+                            <i class="fa fa-home"></i> {% trans "Return to homepage" %}
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="{% url "users:user-details" %}">
+                            <i class="fa fa-cogs"></i> {% trans "My settings" %}
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a data-logout class="menu-link" href="#">
+                            <i class="fa fa-sign-out"></i> {% trans "Log Out" %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu-list-item">
+                <a class="menu-link" data-create-post href="#">
+                    <i class="icon-menu-item fa fa-pencil-square-o"></i> {% trans "New Post" %}
+                </a>
+            </li>
+
+            <li class="menu-list-item notifications-menu-item">
+                <span class="menu-link{% if profile.new_notifications %} notification-alert{% endif %}">
+                    <i class="icon-menu-item fa fa-bell">
+                        <span class="new-notification"></span>
+                    </i>
+                    {% trans "Notifications" %}
+                </span>
+                <ul>
+                    {% for notification in profile.notifications.items %}
+                        {% include "notifications/_notification_list_item.html" %}
+                    {% endfor %}
+
+                    {% if profile.notifications.items %}
+                        <li>
+                            <a class="menu-detail-link" href="{% url 'notifications:list' %}">{% trans "All notifications" %}</a>
+                        </li>
+
+                    {% else %}
+                        <li>
+                            <p class="empty-state">{% trans "There are no new notifications" %}</p>
+                        </li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="menu-list-item"><a class="menu-link" href="{% url 'save:list' %}"><i
+                    class="icon-menu-item fa fa-star"></i> {% trans "Saved Posts" %}</a></li>
+            <li class="menu-list-item"><a class="menu-link" href="{% url 'suggestions:list' %}"><i
+                    class="icon-menu-item fa fa-thumb-tack"></i> {% trans "Suggestions" %}</a></li>
+            <li class="Spacer"></li>
+            <li class="menu-list-item community-menu-item">
+            <span class="menu-link">
+                <i class="icon-paperclip"></i>
+                <i class="icon-menu-item fa fa-users"></i>
+                {% trans "Communities following" %}
+            </span>
+                <ul>
+                    {% for community in profile.communities %}
+                        {% include 'community/_community_small.html' %}
+                    {% endfor %}
+
+                    {% if not profile.communities %}
+                        <li>
+                            <p class="empty-state">{% trans "You are not following any communties" %}</p>
+                        </li>
+                    {% endif %}
+                   <li>
+                        <a class="menu-detail-link" href="{% url 'community:list' %}">{% trans "Show all communities" %}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-list-item following-menu-item">
+            <span class="menu-link">
+                <i class="icon-menu-item fa fa-user"></i>
+                {% trans "People following" %}
+            </span>
+                <ul>
+                    {% for followee in profile.following %}
+                        <li class="menu-list-item">
+                            <a class="menu-link" href="{% url 'wall:detail' pk=followee.target.id %}">
+                                <i class="fa fa-circle" style="color: {{ followee.target.profile_colour }}"></i> {{ followee.target.username }}
+                            </a>
+                        </li>
+                    {% endfor %}
+
+                    {% if profile.following %}
+                        <li>
+                            <a class="menu-detail-link" href="{% url 'users:user-details' %}#tab3">{% trans "All followers" %}</a>
+                        </li>
+
+                    {% else %}
+                        <li>
+                            <p class="empty-state">{% trans "You are not following any people!" %}"</p>
+                        </li>
+                    {% endif %}
+                </ul>
+            </li>
+            <li class="Spacer"></li>
+            <li class="menu-list-item">
+                <span class="menu-link selected">
+                    <i class="icon-menu-item fa fa-info-circle"></i> {% trans "More information" %}
+                </span>
+                {% render_page_nav %}
+            </li>
+            {% if request.user.is_authenticated %}
+                <li class="menu-list-item">
+                    <a data-logout class="menu-link" href="#">
+                        <i class="fa fa-sign-out"></i> {% trans "Log Out" %}
+                    </a>
+                </li>
+            {% endif %}
+
+        </ul>
+    </nav>
+{% else %}
+    <nav id="menu" class="">
+        <div class="sidebar-home">
+            <h4 class="sidebar-title">{% trans "Why JoopeA Club" %}</h4>
+
+            <p>{% trans "Why choose JoopeA Long Desc" %}
+            </p>
+            <ul>
+              <li class="menu-list-item">
+                  <span class="menu-link">
+                      <i class="icon-menu-item fa fa-info-circle"></i>
+                      {% trans "More information" %}
+                  </span>
+                  {% render_page_nav %}
+              </li>
+            </ul>
+
+            {% if login_form %}
+            <div class="login-form">
+                <h4>{% trans "Login / Signup" %}</h4>
+                {% with login_form as form %}
+                    <form method="{{ method|default:"post" }}" class="{{ form_css_class|default:"default-form" }}"
+                          action="{{ login_form_action|default:"" }}">
+                        {% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+                        {% csrf_token %}
+                        {{ form|render_form }}
+                        <a href="#" data-register class="btn sign-up">{% trans "Sign Up" %}</a>
+                        <input class="btn-submit" type="submit" value="{% trans "Login" %}"/>
+                    </form>
+                {% endwith %}
+            </div>
+            {% endif %}
+
+
+            <ul>
+                <li class="menu-list-item" style="text-align:left;">
+                  <a href="{% url 'community:list' %}">
+                    <span class="menu-link"><i class="icon-menu-item fa fa-users"></i>
+                     {% trans "List of all communities" %}
+                    </span>
+                   </a>
+                 </li>
+            </ul>
+
+        </div>
+    </nav>
+{% endif %}

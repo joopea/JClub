@@ -1,0 +1,18 @@
+{% extends "core/base.html" %}
+{% load feincms_tags i18n %}
+
+{% block page_title %}{{ page.title }}{% endblock page_title %}
+
+{% block content %}
+
+<div class="articles-container">
+    <div class="article">
+        <h2 class="title">{{ page.title }}</h2>
+
+        {% for content in page.content.main %}
+            {% feincms_render_content content request %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

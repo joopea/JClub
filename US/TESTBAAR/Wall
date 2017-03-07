@@ -1,0 +1,28 @@
+A User will see his/her Wall after Login
+A User recieves a Notification if another User shares his/her Post on their Wall
+
+A User can Delete a Comment on his/her Wall, this will remove the Comment if the Post is owned by that User
+A User cannot Delete a Comment on his/her Wall if the Post is not owned by that User						A User can delete comments under posts that are shared on his wall by other User. If user(a) shares a post on user(b) wall, both can delete comments under that post
+
+A User can Share a Post from a Community on his/her Wall
+A User can Share a Post from another User on his/her Wall
+A User can create a Post on his/her Wall
+A User can make a Post on his/her Wall
+A User can make a Post on another User's Wall
+A Post Shared by a User that is being Followed will show the Post in the Wall of the Followers
+
+An Unregistered User cannot view a Wall			another Users' walls. They can see communities walls
+A Not-Logged-In User cannot view a Wall			another Users' walls. They can see communities walls
+A User can create a Comment on a Post on his/her Wall
+
+A User can Delete a Post on his/her Wall, this will remove the Post form that User's Wall
+A User can Delete a Post on his/her Wall, this will remove the Post if that User is its Creator
+
+
+nice to have
+	By the meantime, I find out a very important functionality that we forget it all the time.
+	We forgot "My posts"! There is no where that the user can access his own posts in one place.
+	can you please put this in the functionality and design notes?
+
+
+TESTS

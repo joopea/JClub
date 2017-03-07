@@ -1,0 +1,10 @@
+<ul>
+    {% for page in pages %}
+        <li class="menu-list-item">
+            <a class="menu-link" href="{{ page.get_absolute_url }}">
+                <i class="icon-menu-item fa"></i>
+                {{ page.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

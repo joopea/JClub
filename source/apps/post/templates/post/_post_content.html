@@ -1,0 +1,21 @@
+{% load thumbnail %}
+<div class="post-details">
+    <span class="post-timestamp">
+        <i class="fa fa-clock-o"></i> {{ post.created_jalali }}
+    </span>
+    {% if post.community %}
+    <span class="communitystamp">
+        <bdi><a class="community-link" href="{% url 'wall:community' pk=post.community.pk %}">{{ post.community.name }}</a></bdi>
+        <i class="community-icon"><img src="{{ post.community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
+    </span>
+    {% endif %}
+</div>
+
+<bdi><p>{{ post.message|safe }}</p></bdi>
+
+{% if post.image %}
+    <a class="post-image" href="{{ post.image|thumbnail_url:'post_big' }}" target="_blank">
+        <img src="{{ post.image|thumbnail_url:'post_normal' }}" alt="{{ post.title }}">
+    </a>
+
+{% endif %}

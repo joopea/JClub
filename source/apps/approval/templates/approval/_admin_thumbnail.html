@@ -1,0 +1,6 @@
+{% load thumbnail %}
+{% if image %}
+<a class="post-image" href="{{ image|thumbnail_url:'post_big' }}" target="_blank">
+    <img src="{{ image|thumbnail_url:'post_normal' }}">
+</a>
+{% endif %}

@@ -1,0 +1,812 @@
+{% load i18n staticfiles %}
+{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>
+<html class="no-js">
+<head lang="{{ LANGUAGE_CODE }}" dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1"> -->
+    <!-- <meta content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" name="viewport" /> -->
+
+    <!-- VIEWPORT + SCRIPT -->
+    <!-- Default viewport has a fixed-width; no intitial-scale or device-width. This way, mobile devices show to desktop site, full-size -->
+    <meta id="Viewport" name="viewport" content="width = 768">
+    <script>
+    if (screen.width > 740) {
+        var mvp = document.getElementById('Viewport');
+        mvp.setAttribute('content','width=device-width, initial-scale=1');
+    }
+    </script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ STATIC_URL }}img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="{{ STATIC_URL }}img/favicons/manifest.json">
+    <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00c0ff">
+    <meta name="msapplication-TileImage" content="{{ STATIC_URL }}img/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="{{ STATIC_URL }}img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#00c0ff">
+
+    <title>{% block page_title %}{% trans "JoopeA; The Free World" %}{% endblock page_title %}</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-extern/jquery.mmenu.all.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-extern/jquery.mmenu.widescreen.css" type="text/css" media="all and (min-width: 900px)" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-compiled/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-extern/font-awesome.min.css" type="text/css">
+
+    <!-- FANCY BOX -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}js/fancyboxv2.1.5/jquery.fancybox.css" type="text/css">
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Muli:300,400' type='text/css'>
+
+    <!-- EXTRA -->
+    <link href="{{ STATIC_URL }}css-extern/strength-meter.min.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- PERFECT SCROLLBAR -->
+    <link href="{{ STATIC_URL }}js/perfect-scrollbar/css/perfect-scrollbar.min.css" media="all" rel="stylesheet" type="text/css" />
+    <style>
+        .ps-scrollbar-y-rail {
+            right: auto !important;
+            left: 3px !important;
+        }
+
+    </style>
+
+</head>
+<body class="body_{{ LANGUAGE_CODE }}">
+
+    {% include "menu/_user.html" %}
+
+    <div class="mmenu-wrapper"> <!-- the wrapper -->
+
+        <div class="content">
+            {% block content %}{% endblock content %}
+
+        </div> <!-- END #content -->
+    </div> <!-- END mmenu wrapper -->
+
+    {% include "search/_searchbar.html" %}
+    {% include "menu/_hamburger.html" %}
+
+<script src="{{ STATIC_URL }}js/jquery-1.11.2.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.mmenu.min.all.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.mmenu.navbars.min.js"></script>
+<script src="{{ STATIC_URL }}js/fancyboxv2.1.5/jquery.fancybox.js"></script>
+<script src="{{ STATIC_URL }}js/jquery-viewport-checker/dist/jquery.viewportchecker.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.form.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+<script src="{{ STATIC_URL }}js/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
+{% block javascript %}
+{{ block.super }}
+<script>
+
+var infinite_scroll_loaded = function(container, elems) {
+    $(elems).each(function( i, post) {
+        if (autoload_comments) {
+            $(post).addClass('is-expanded');
+        }
+
+        add_post_viewport_checker(post);
+    })
+};
+
+var mark_post_as_read = function(post_id) {
+    var url = '{% url 'wall:is_read' pk=0 %}'.replace('0', post_id);
+
+    $.post(url, base_body_dict());
+};
+
+var autoload_comments = false;
+
+var add_post_viewport_checker = function (post) {
+    $(post).viewportChecker({
+        classToAdd: 'viewport-seen',
+        repeat: false,
+        callbackFunction: function (el) {
+            //mark the post as read after 4000 ms, if the user navigates this timeout will be cancelled eg. not read
+            if ($(el).is('[data-is-not-read]')) {
+                if ($('[data-own-wall]').attr('data-own-wall') == "true") {
+                    var post_id = $(el).data('is-not-read');
+                    setTimeout(function () {
+                        mark_post_as_read(post_id);
+                    }, 4000);
+                    $(el).removeAttr('data-is-not-read');
+                }
+            }
+
+            if (autoload_comments) {
+                $(el).trigger('showComments');
+            }
+        }
+    });
+};
+
+var base_body_dict = function() {
+    return {csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').attr('value')}
+};
+
+function show_all () {
+    $('.post.visible').trigger('showComments');
+}
+
+$(function () {
+    'use strict';
+
+    var noop = function () {};
+
+    $('.show-all-btn').on('click', function (ev) {
+        var $el = $(ev.target).closest('.show-all-btn');
+        var active = $el.hasClass('is-expanded');
+        if (active) {
+            $('.post').removeClass('is-expanded');
+            $el.removeClass('is-expanded');
+            autoload_comments = false
+        } else {
+            $('.post').addClass('is-expanded').removeClass('viewport-seen');
+            $el.addClass('is-expanded');
+            autoload_comments = true;
+        }
+        show_all()
+        return false;
+    });
+
+    $('.post').each(function(i, post) { add_post_viewport_checker(post); })
+
+    $('[data-is-not-read-notification]').viewportChecker({
+        callbackFunction: function (el) {
+            if ($(el).is('[data-is-not-read-notification]')) {
+                setTimeout(function () {
+                    $(el).trigger('markAsRead');
+                }, 4000);
+            }
+        }
+    });
+
+    var $menu = $('#menu').mmenu({
+        extensions      : [ 'widescreen', 'theme-white', 'effect-slide' ],
+        searchfield     : false,
+        navbars         : true,
+
+        "navbar": {
+            "title": '{% trans "The Free World" %}'
+        }
+    });
+    var mmenu = $menu.data('mmenu');
+
+    $('#menu .mm-panel:first').perfectScrollbar({suppressScrollX: true});
+
+    var $communities_panel = $('#mm-4');
+    var $communities_html = $communities_panel.find('ul:first');
+    $('.community-menu-item').on('click', function () {
+        $.get('{% url 'menu:communities_ajax' %}').done(function (html) {
+            setTimeout(function () {
+                $communities_html.html(html);
+                mmenu.init($communities_panel);
+                mmenu.update();
+            }, 400);
+        });
+    });
+
+    var $following_panel = $('#mm-5');
+    var $following_html = $following_panel.find('ul:first');
+    $('.following-menu-item').on('click', function () {
+        $.get('{% url 'menu:following_ajax' %}').done(function (html) {
+            setTimeout(function () {
+                $following_html.html(html);
+                mmenu.init($following_panel);
+                mmenu.update();
+            }, 400);
+        });
+    });
+
+    var $notifications_panel = $('#mm-3');
+    var $notifications_html = $notifications_panel.find('ul:first');
+    var $notifications_menu_item = $('.notifications-menu-item');
+    $notifications_menu_item.on('click', function () {
+        $.get('{% url "menu:notifications_ajax" %}').done(function (html) {
+            setTimeout(function () {
+                $notifications_html.html(html);
+                mmenu.init($notifications_panel);
+                mmenu.update();
+            }, 400);
+        });
+    });
+
+    //notifications poll
+    var $notifications_menu_item_link = $notifications_menu_item.find('.menu-link:first');
+    setInterval(function () {
+        //only check if there is no new-notifications-alert in place allready
+        if (!$notifications_menu_item_link.hasClass('notification-alert')) {
+            $.get('{% url "menu:notifications_count_ajax" %}').done(function (count) {
+                if (parseInt(count, 10) > 0) {
+                    $notifications_menu_item_link.addClass('notification-alert');
+                } else {
+                    $notifications_menu_item_link.removeClass('notification-alert');
+                }
+            });
+        }
+    }, 15000);//check for notifications every 15 seconds
+
+    $('nav#menu').prepend('<a class="logo-container" href="/{{ LANGUAGE_CODE }}/"><h1 class="logo">{% trans "JoopeA Club" %}</h1></a>');
+
+    var fancyboxSettings = {
+        openEffect: 'none',
+        closeEffect: 'none',
+        minWidth: '550px',
+        maxWidth: '750px',
+        shoeCloseButton: true
+    };
+
+    $(".fancybox-inline").fancybox(fancyboxSettings);
+
+    $(document).ajaxError(function (data) {
+        var errors = arguments;
+        if (arguments[1].statusText === 'INTERNAL SERVER ERROR') {
+            errors = [1,{responseJSON:{error:{__all__:[{
+                code: '500',
+                message: '{% trans "An server error occured!" %}'
+            }]}}}];
+        }
+        messagebox('error', errors);
+    });
+
+    var messagebox = function (type, message) {
+        if (type === 'error') {
+            if (!message || !message[1] || !message[1].responseJSON) return;
+            var errors = message[1].responseJSON.error;
+            message = [];
+            if (errors && errors.__all__) {
+                for (var i=0, l=errors.__all__.length; i<l; ++i) {
+                    if (errors.__all__[i].code === 'user_not_found') {
+                        $('.post-on-wall-name').append('<ul class="errorlist"><li>{% trans "Username not found." %}</li></ul>');
+                    } else {
+                        message.push(errors.__all__[i].message);
+                    }
+                }
+            }
+        } else if (type === 'notification') {
+            message = [message];
+        }
+
+        if (message.length)
+            $('<div class="messagebox '+ type +'">' + message.join('\n') + '</div>').prependTo('.content').delay( 5000 ).fadeOut( 400 );
+    };
+
+    CKEDITOR.editorConfig = function (config) {
+        config.removeDialogTabs = 'image:advanced;image:Link;link:advanced;link:upload';
+        config.linkShowTargetTab = false;
+    };
+
+    function initialiseCKEditor() {
+        $('textarea[data-type=ckeditortype]').each(function(){
+            if($(this).data('processed') == "0" && $(this).attr('id').indexOf('__prefix__') == -1){
+                $(this).data('processed',"1");
+                $($(this).data('external-plugin-resources')).each(function(){
+                    CKEDITOR.plugins.addExternal(this[0], this[1], this[2]);
+                });
+                var id = $(this).attr('id');
+                CKEDITOR.replace(id, $.extend({}, $(this).data('config')));
+
+                CKEDITOR.on('instanceReady', function(ev) {
+                    ev.editor.on('paste', function(evt) {
+                        evt.data['html'] = '<!--class="Mso"-->'+evt.data['html'];
+                    }, null, null, 9);
+                });
+
+                var ltrEditor = function ltrEditor (id) {
+                    var interval = setInterval(function () {
+                        if (CKEDITOR.instances[id].document) {
+                            clearInterval(interval);
+                            var handle = function (ev) {
+                                var text = CKEDITOR.instances[id].document.$.body.innerText;
+
+                                if (ev.type === 'paste') {
+                                    var pastedText = undefined;
+                                    if (window.clipboardData && window.clipboardData.getData) {
+                                        pastedText = window.clipboardData.getData('Text');
+                                    } else if (ev.clipboardData && ev.clipboardData.getData) {
+                                        pastedText = ev.clipboardData.getData('text/plain');
+                                    }
+                                    text += pastedText;
+                                }
+
+                                var direction = 'ltr';
+                                if (isUnicode(text)) {
+                                    direction = 'rtl';
+                                }
+                                CKEDITOR.instances[id].document.$.dir = direction;
+                            };
+                            CKEDITOR.instances[id].document.$.onkeydown= handle;
+                            CKEDITOR.instances[id].document.$.body.onpaste = handle;
+                        }
+                    }, 200);
+
+                };
+                ltrEditor(id)
+            }
+        });
+    }
+
+    function isUnicode(str) {
+        // range of chars = \u0600 - \u06FF, \uFB8A, \u067E, \u0686, \u06AF
+        var persianChars = [1662,1670, 1711, 64394];
+        for (var j= 0,l=str.length; j<l; ++j) {
+            if ((str.charCodeAt(j) >= 1536 && str.charCodeAt(j) <= 1791) || str.charCodeAt(j) in persianChars) return true
+        }
+    }
+
+    function autoDirection (context) {
+        context = context || $('body');
+        var dir = $('input[type=text], textarea', context);
+        dir.keyup(function(ev) {
+            var value = $(ev.target).val();
+            var direction = 'ltr';
+            if (isUnicode(value)) direction = 'rtl';
+            $(this).css('direction', direction);
+        });
+    }
+    autoDirection();
+
+    var get_data_from_selector = function (selector, data) {
+        var selector_path, name, part, i, l;
+        selector_path = selector.replace('[', '').replace(']', '').split('-').slice(1);
+
+        name = selector_path.shift();
+        for (i= 0, l=selector_path.length; i<l; ++i) {
+            part = selector_path[i];
+            name += part.charAt(0).toUpperCase() + part.slice(1);
+        }
+        return data[name];
+    };
+
+    //mutually exclusive security questions
+    function setup_mutex () {
+        var $id_security_question_1 = $('#id_security_question_1');
+        var $id_security_question_2 = $('#id_security_question_2');
+
+        var options = [];
+        //copy options
+        $id_security_question_1.find('option').each(function () {
+            var $el = $(this);
+            options.push(
+                [
+                    $el.attr('value'),
+                    $el.clone()
+                ]
+            );
+        });
+
+        function getSelected ($list) {
+            var $el = $list.find(':selected');
+            return [$el.attr('value'), $el];
+        }
+
+        $id_security_question_1.on('change', function () {
+            var selected1 = getSelected($id_security_question_1);
+            var selected2 = getSelected($id_security_question_2);
+
+            //clear all options in number 2
+            $id_security_question_2.children().remove();
+
+            //re-add all options to number 2
+            options.forEach(function (option) {
+                var $el;
+                //only if the option is not the current one selected in number 1
+                if (option[0] !== selected1[0]) {
+                    //clone the option
+                    $el = option[1].clone();
+                    //set it selected if it was
+                    if (option[0] === selected2[0]) {
+                        $el.attr('selected', true);
+                    }
+                    $id_security_question_2.append($el);
+                }
+            });
+
+        });
+
+        $id_security_question_2.on('change', function () {
+            var selected1 = getSelected($id_security_question_1);
+            var selected2 = getSelected($id_security_question_2);
+
+            //clear all options in number 1
+            $id_security_question_1.children().remove();
+
+            //re-add all options to number 1
+            options.forEach(function (option) {
+                var $el;
+                //only if the option is not the current one selected in number 1
+                if (option[0] !== selected2[0]) {
+                    //clone the option
+                    $el = option[1].clone();
+                    //set it selected if it was
+                    if (option[0] === selected1[0]) {
+                        $el.attr('selected', true);
+                    }
+                    $id_security_question_1.append($el);
+                }
+            });
+
+        });
+
+    }
+
+    var action = function (opts) {
+        var throttle = false;
+        return function (ev) {
+            var $el, id, active, url;
+            throttle = true;
+            ev.preventDefault();
+
+            $el = $(ev.target).closest(opts.selector);
+            id = get_data_from_selector(opts.selector, $el.data());
+            if (opts.popup) {
+                //GET the form with ajax
+                $.get(opts.url.replace('0', id)).done(function (response) {
+                    //create the form
+                    var $form = $(response.data.form);
+                    //use ajaxForms to submit and handle the form
+                    $form.ajaxForm(
+                        $.extend(
+                            {},
+                            {
+                                success: function (response, status, xhr) {
+                                    throttle = false;
+                                    $('.errorlist').remove();
+                                    $('.post-popup-form-submit-button').attr('disabled', false);
+                                    (opts.success || noop)(response, $el, id, active, url, opts);
+                                },
+                                error: function (response) {
+                                    throttle = false;
+                                    $('.post-popup-form-submit-button').attr('disabled', false);
+                                    if (response.responseJSON && response.responseJSON.error) {
+                                        $.validator.validate(response.responseJSON.error, $form);
+                                    }
+                                },
+                                beforeSerialize: function($form, options) {
+                                    Object.keys(CKEDITOR.instances).forEach(function (key) {
+                                        CKEDITOR.instances[key].updateElement();
+                                    });
+                                },
+                                beforeSubmit: function () {
+                                    $('.post-popup-form-submit-button').attr('disabled', true);
+                                }
+                            },
+                            opts.ajaxform_opts || {}
+                        )
+                    );
+                    //use the html to create a fancybox and show that
+                    $.fancybox($form, $.extend({}, fancyboxSettings, opts.fancybox_opts || {}));
+                    $('.fancybox-inner').perfectScrollbar({suppressScrollX: true});
+                    //start the CKEditor for the new content
+                    initialiseCKEditor();
+                    autoDirection($form);
+                    //mutually exclusive security questions
+                    setup_mutex();
+                });
+            } else {
+                active = $el.hasClass('is-active');
+                url = opts.url;
+                if (active) {
+                    url = opts.active_url;
+                }
+
+                var data = {};
+
+                if (opts.method != 'GET') {
+                    data = {
+                        csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').attr('value')
+                    }
+                }
+
+                var real_selector = opts.selector.replace('[', '').replace(']', '');
+                real_selector = '[' + real_selector + '=' + id + ']';
+                $.ajax({
+                    method: opts.method || 'POST',
+                    url: url.replace('0', id).replace('name', $el.data('name')),
+                    data: data,
+                    success: function (data) {
+                        throttle = false;
+                        $(real_selector).toggleClass('is-active');
+                        (opts.success || noop)(data, $el, id, active, url, opts);
+                    },
+                    error: function () {
+                        throttle = false;
+                    }
+                });
+            }
+
+        }
+    };
+
+    var update_count = function(data, $el) {
+        $('.count', $el).html(data['data']['count']);
+    };
+
+
+    var Search = {};
+    Search.is_delayed = false;
+    Search.last_query = '';
+    Search.delayed_search = function() {
+        Search.is_delayed = false;
+
+        if (Search.last_search == $('#search-input').val()) {
+            return;
+        }
+
+        Search.do_search();
+    };
+    Search.do_search = function() {
+        var search_val = $('#search-input').val();
+
+        if (search_val.length < 3) {
+            return Search.close_search();
+        }
+
+        if (Search.is_delayed) {
+            return false;
+        }
+
+        Search.is_delayed = setTimeout(function() {
+            Search.delayed_search();
+        }, 333);
+
+        Search.last_search = search_val;
+
+        var data = {'q': search_val};
+
+        if ($('#search-wall-id').prop('checked')) {
+            data['wall_type'] = $('#search-wall-type').val();
+            data['wall_id'] = $('#search-wall-id').val();
+        }
+
+        $(document).off('click', Search.close_search);
+
+        $.get(
+            $('#search-form').attr('action'),
+            data
+        ).done(function(response) {
+            $('.searchresult-wrapper').html(response);
+            $(document).on('click', Search.close_search);
+        });
+    };
+    Search.close_search = function() {
+        $(document).off('click', Search.close_search);
+        $('.searchresult-wrapper').html('');
+    };
+
+    var toggle_comments = function (ev) {
+        ev.stopPropagation();
+        ev.preventDefault();
+        var post = $(ev.target).closest('.post');
+
+        if (post.hasClass('comments-loaded')) {
+            post.toggleClass('is-expanded');
+        }
+        else {
+            post.addClass('is-expanded');
+
+            post.trigger('showComments');
+        }
+    };
+
+    $('body')
+        .on('click', '[data-create-post]', action({
+            selector: '[data-create-post]',
+            url: '{% url 'post:create_ajax' %}',
+            popup: true,
+            success: function (data, $el, id, active, url, opts, $form) {
+                if (data.data.approval) {
+                    messagebox('notification', data.data.approval);
+                }
+                $.fancybox.close();
+            }
+        }))
+        .on('click', '[data-star-post]', action({
+            selector: '[data-star-post]',
+            url: '{% url 'save:save_ajax' pk=0 %}',
+            active_url: '{% url 'save:unsave_ajax' pk=0 %}'
+        }))
+        .on('click', '[data-remove-post]', action({
+            selector: '[data-remove-post]',
+            url: '{% url 'post:delete_ajax' pk=0 %}',
+            popup: true,
+            success: function (data, $el) {
+                if (data.data.valid === true) {
+                    $el.closest('.post').remove();
+                }
+                $.fancybox.close();
+            }
+        }))
+        .on('click', '[data-remove-comment]', action({
+            selector: '[data-remove-comment]',
+            url: '{% url 'comment:delete_ajax' pk=0 %}',
+            popup: true,
+            success: function (data, $el) {
+                if (data.data.valid === true) {
+                    $('.comment-post-button .count', $el.closest('.post')).html(data.data.count);
+                    $el.closest('.comment').remove();
+                }
+                $.fancybox.close();
+            }
+        }))
+        .on('click', '[data-report-post]', action({
+            selector: '[data-report-post]',
+            url: '{% url 'report:post_create_ajax' pk=0 %}',
+            popup: true,
+            success: function (data) {
+                if (data.data.post && data.success) {
+                    messagebox('notification', '{% trans "Thank you for reporting." %}');
+                    $.fancybox.close();
+                }
+            }
+        }))
+        .on('click', '[data-report-comment]', action({
+            selector: '[data-report-comment]',
+            url: '{% url 'report:comment_create_ajax' pk=0 %}',
+            popup: true,
+            success: function (data) {
+                if (data.data.comment && data.success) {
+                    messagebox('notification', '{% trans "Thank you for reporting." %}');
+                    $.fancybox.close();
+                }
+            }
+        }))
+        .on('click', '[data-share-post]', action({
+            selector: '[data-share-post]',
+            url: '{% url 'share:create_ajax' pk=0 %}',
+            success: update_count
+        }))
+        .on('click', '[data-like-post]', action({
+            selector: '[data-like-post]',
+            url: '{% url 'like:like_post_ajax' pk=0 %}',
+            active_url: '{% url 'like:unlike_post_ajax' pk=0 %}',
+            success: update_count
+        }))
+        .on('click', '[data-like-comment]', action({
+            selector: '[data-like-comment]',
+            url: '{% url 'like:like_comment_ajax' pk=0 %}',
+            active_url: '{% url 'like:unlike_comment_ajax' pk=0 %}',
+            success: update_count
+        }))
+        .on('click', '[data-comments-toggle]', toggle_comments)
+        .on('click', '[data-follow-user]', action({
+            selector: '[data-follow-user]',
+            url: '{% url 'follow:follow_user_ajax' pk=0 %}',
+            active_url: '{% url 'follow:unfollow_user_ajax' pk=0 %}'
+        }))
+        .on('click', '[data-follow-community]', action({
+            selector: '[data-follow-community]',
+            url: '{% url 'follow:follow_community_ajax' pk=0 %}',
+            active_url: '{% url 'follow:unfollow_community_ajax' pk=0 %}'
+        }))
+        .on('markAsRead', '[data-is-not-read-notification]', action({
+            selector: '[data-is-not-read-notification]',
+            url: '{% url 'notifications:is_read' pk=0 %}'
+        }))
+        .on('click', '[data-block-user]', action({
+            selector: '[data-block-user]',
+            url: '{% url 'block:block_user_ajax' pk=0 %}',
+            active_url: '{% url 'block:unblock_user_ajax' pk=0 %}'
+        }))
+        .on('click', '[data-register]', action({
+            selector: '[data-register]',
+            url: '{% url 'users:register_ajax' %}',
+            popup: true,
+            success: function (data) {
+                if (data.success) {
+                    location.reload()
+                }
+            }
+        }))
+        .on('click', '.show-read-btn', function () {
+            var $postcontainer = $('.posts-container');
+            $postcontainer.toggleClass('show-all-posts');
+            $('.btn.show-read-btn').toggleClass('is-active');
+            if (!$postcontainer.hasClass('show-all-posts') && $('.post:visible').length == 0) {
+                $('.no-read-show-unread-suggestion').show();
+            } else {
+                $('.no-read-show-unread-suggestion').hide();
+            }
+        })
+{#        .on('click', '[data-login]', action({#}
+{#            selector: '[data-login]',#}
+{#            url: '{% url 'users:login_ajax' %}',#}
+{#            popup: true,#}
+{#            success: function (data) {#}
+{#                if (data.success) {#}
+{#                    location.reload()#}
+{#                }#}
+{#            }#}
+{#        }))#}
+        .on('click', '[data-logout]', function (ev) {
+            var $form = $("<form action='{% url 'users:logout' %}' method='post'>{% csrf_token %}</form>");
+
+            ev.preventDefault();
+            ev.stopPropagation();
+
+            var $body = $('body');
+            $body.animate({opacity: 0.3});
+            $form.appendTo($body).submit();
+        })
+        .on('click', '[data-comment]', (function () {
+                var throttle = false;
+                return function (ev) {
+                    throttle = true;
+                    var $form = $(ev.target).closest('form');
+                    $form.ajaxForm({
+                        success: function (response) {
+                            throttle = false;
+                            var $commentForm = $form.parents('.comment-form');
+                            $commentForm.before($(response.data.comment));
+                            var $realCommentForm = $('form', $commentForm).first();
+                            $realCommentForm.trigger('reset');
+                            // Update comment count
+                            $('.comment-post-button .count', $(ev.target).closest('.post')).html(response.data.count);
+
+                            if (response.data.approval) {
+                                messagebox('notification', response.data.approval);
+                            }
+
+                        },
+                        error: function (response) {
+                            throttle = false;
+                            if (response.responseJSON && response.responseJSON.error) {
+                                $.validator.validate(response.responseJSON.error, $form);
+                            }
+                        }
+                    });
+                }
+            })()
+        )
+        .on('click', '[data-comments-more]', function (ev) {
+            var $target = $(ev.target);
+            $.get($target.data('comments-more')).done(function (response) {
+                if (response.data) {
+                    if (response.data.comments) $target.before(response.data.comments);
+                    if (response.data.more) $target.data('comments-more', response.data.more);
+                    else $target.remove();
+                }
+            });
+        }).on('keyup', '#search-input', function(ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+
+            Search.do_search();
+        }).on('click', '#search-wall-id', function(ev) {
+            Search.do_search();
+        }).on('showComments', '.post', function(ev) {
+            var post = $(ev.target);
+            if (!post.hasClass('comments-loaded')) {
+                post.addClass('comments-loaded');
+                $.get(post.data('comments-load')).done(function(response) {
+                    $('.post-comments .comments', post).html(response.data.comments);
+                })
+            }
+        });
+
+});
+</script>
+<script src="{{ STATIC_URL }}ckeditor/ckeditor/ckeditor.js"></script>
+<script src="{{ STATIC_URL }}ckeditor/ckeditor-init.js"></script>
+<script src="{{ STATIC_URL }}js/joopea-form-validator.js"></script>
+{% endblock javascript %}
+{% csrf_token %}
+</body>
+</html>

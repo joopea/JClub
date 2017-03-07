@@ -1,0 +1,9 @@
+<span class="notification-type {{ content.subject | lower }}">
+    <i class="fa"></i>
+</span>
+<span class="notification-content">
+    <a href="{% url "wall:detail" content.author.pk %}">{{ content.author }}</a> {{ content.get_subject_display }} <a href="{{ content.get_absolute_url }}">{{ content.get_target_title }}</a>
+    <span class="post-timestamp">
+        <i class="fa fa-clock-o"></i> {{ content.created_jalali }}
+    </span>
+</span>

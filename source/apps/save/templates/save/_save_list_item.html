@@ -1,0 +1,16 @@
+<li class="menu-list-item notification-item">
+    <span class="notification-type {{ notification.subject }} comment">
+        <i class="fa"></i>
+    </span>
+    <span class="notification-content">
+        TODO finish-me
+        notifications/_notification_list_item.html
+
+        {# <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>#}
+
+        <a href="{% url 'wall:detail' pk=notification.author_id %}">{{ notification.author_name }}</a>
+
+        {{ notification.get_description }}
+
+    </span>
+</li>

@@ -1,0 +1,8 @@
+{% load i18n %}{% if form %}
+    <form action="{%  url 'share:create_ajax' pk=post %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="button" value='{% trans "Cancel" %}' onclick="$.fancybox.close()">
+        <input type="submit" value='{% trans "Share" %}'>
+    </form>
+{% endif %}

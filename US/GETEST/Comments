@@ -1,0 +1,9 @@
+The System can Detect SensitiveData (telephone, real name, email) from a Post and send that Post to a Moderator for Approval                                and images
+
+A Comment is filtered on thelephone numbers, if matched is handed over to a Moderator for Approval
+A Comment is filtered on person names, if matched is handed over to a Moderator for Approval
+A Comment is filtered on email addresses, if matched is handed over to a Moderator for Approval
+A Comment is filtered if it contains picture and will handed over to a Moderator for Approval
+
+A Comment can contain text
+A User can Like a Comment

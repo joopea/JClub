@@ -1,0 +1,13 @@
+{% load i18n %}
+{% for community in communities %}
+    {% include 'community/_community_small.html' %}
+{% endfor %}
+
+{% if not communities %}
+    <li>
+        <p class="empty-state">{% trans "You are not following any communties" %}</p>
+    </li>
+{% endif %}
+<li>
+    <a class="menu-detail-link" href="{% url 'community:list' %}">{% trans 'Show all communities' %}</a>
+</li>

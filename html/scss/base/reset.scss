@@ -1,0 +1,18 @@
+/* RESET */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, em, img, strong,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Make HTML 5 elements display block-level for consistent styling */
+header, nav, article, footer, address { 
+    display: block; 
+}

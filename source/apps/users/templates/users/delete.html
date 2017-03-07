@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% block head_title %}{% trans "Password Reset" %} - {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+    <h2>{% trans "Delete Account" %}</h2>
+
+    <p>{% blocktrans %}If you do delete your profile, all of the following will be deleted:
+
+    - your personal wall
+    - your posts
+    - your comments, likes and shares on other users walls
+
+    * your posts and comments in communities will be remain under the name of 'unknown'
+    {% endblocktrans %}</p>
+
+
+    <span>{% blocktrans %}Are you sure you want to delete your account? We would hate to see you leave!{% endblocktrans %}</span>
+
+
+    {% include "forms/form.html" with form=form form_css_class='confirm-form' submit_name="Delete profile" %}
+{% endblock %}

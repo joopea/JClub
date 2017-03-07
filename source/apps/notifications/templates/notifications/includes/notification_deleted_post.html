@@ -1,0 +1,10 @@
+{% load i18n %}
+<span class="notification-type warning {{ content.subject | lower }}">
+    <i class="fa"></i>
+</span>
+<span class="notification-content">
+     {% trans "A moderator" %} {{ content.get_subject_display }}: {{ content.original }}
+     <span class="post-timestamp">
+         <i class="fa fa-clock-o"></i> {{ content.created_jalali }}
+     </span>
+</span>

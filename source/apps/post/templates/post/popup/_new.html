@@ -1,0 +1,80 @@
+{% load i18n %}{% if form %}
+    <form class="form-container" action="{%  url 'post:create_ajax' %}" method="post">
+        <div class="new-post-popup" id="new-post-popup">
+            <h1 class="title">{% trans "Create a post" %}</h1>
+            <h3 class="form-subtitle">{% trans "Socially connect with the other people" %}</h3>
+            <div class="post-to-location">
+                <div class="form-field">
+                    <label for="wall-selector-field" class="form-label">{% trans "Where do you want to post?" %}"</label>
+                    <select id="wall-selector-field" name="wall-selector" class="wall-selector">
+                        <option value="own">{% trans "My own wall" %}</option>
+                        <option value="community">{% trans "Community wall" %}</option>
+                        <option value="other">{% trans "Other users wall" %}</option>
+                    </select>
+                </div>
+                <div class="community-option form-field">
+                    <label class="form-label">{% trans "Select community" %}</label>
+                    {{ form.community }}
+                </div>
+                <div class="wall-option form-field">
+                    <div>
+                        <label for="wall-field" class="form-label post-on-wall-name">{% trans "Type in the name of the member" %}</label>
+                        <input id="wall-field" type="text" name="wall">
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="form-field post-title-field">
+                <label class="form-label">{% trans "Post title" %}</label>
+                <span class="tooltip">{% trans "The title can contain 160 characters" %}</span>
+                {{ form.title }}
+            </div>
+
+            <br>
+
+            <div class="form-field post-content">
+                <label class="form-label">{% trans "Post message" %}</label>
+                {{ form.message }}
+            </div>
+            <span class="tooltip">{% trans "To @mention another member you have to add @ infront of their ID. E.g. if you want to mention Aban-11 you have to write '@Aban-11'."%}</span>
+
+            <br>
+
+            {% csrf_token %}
+            <div class="form-field image-upload">
+                <label class="form-label">{% trans "Image" %}</label>
+                <span class="tooltip">{% trans "If you want to add an image to your post you can enter a URL or select one from your pc." %}"</span>
+                <input type="hidden" name="image" />
+                <div id="image_container" class="mutually-exclusive-widget" style="display:inline-block">
+                    <div class="file-select">
+                        <input checked="" name="image_radio" id="image_radio_file_popup" type="radio"> <label for="image_radio_file_popup" class="image-label">{% trans "Select image from PC" %}</label>
+                        <input id="id_image_0" name="image_0" type="file">
+                    </div>
+                    <div class="file-upload-url">
+                        <input name="image_radio" id="image_radio_url_popup" type="radio"> <label for="image_radio_url_popup" class="image-label">{% trans "Upload image from URL" %}</label>
+                        <input id="id_image_1" name="image_1" type="url" placeholder="Image URL">
+                    </div>
+                </div>
+            </div>
+            <input class="btn comment-submit post-popup-form-submit-button" type="submit" value='{% trans "Post" %}' required="">
+        </div>
+        <script>
+            var $communityOption = $('.community-option').hide();
+            var $wallOption = $('.wall-option').hide();
+            $('.wall-selector').change(function (ev) {
+                var val = $(ev.target).find(':selected').val();
+                $communityOption.hide();
+                $wallOption.hide();
+
+                if (val === 'community') {
+                    $communityOption.show();
+                } else if (val === 'other') {
+                    $wallOption.show();
+                }
+            });
+
+        </script>
+    </form>
+{% endif %}

@@ -1,0 +1,5 @@
+A Post can contain a Link
+A Comment can contain a Link
+
+The Link-Relay will proxy the Link thereby protecting the User's IP-address, and conceiling its origin before navigating to that link
+A Post content consisting of a link will be served by an external domain that serves as a RedirectService

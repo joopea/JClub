@@ -1,0 +1,1 @@
+.active{display:none}.inactive{display:inline-block}.is-active .inactive{display:none}.is-active .active{display:inline-block}

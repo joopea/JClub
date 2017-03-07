@@ -1,0 +1,219 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">Home</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+
+        <h2>{{ subject }} {% trans "Report" %}</h2>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <h2>{% trans "Like Comment" %}</h2>
+                    </td>
+                    <td>
+                        <h2>{% trans "Like Post" %}</h2>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>{% trans "Number" %}</h3>
+                    </td>
+                    <td>
+                        <span>{{ comment_count }}</span>
+                    </td>
+                    <td>
+                        <span>{{ post_count }}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>{% trans "Growth rate per day (last 30 days)" %}"</h3>
+                    </td>
+                    <td>
+                        <span>{{ comment_growth_rate_per_day }}</span>
+                    </td>
+                    <td>
+                        <span>{{ post_growth_rate_per_day }}</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>{% trans "Number per community" %}</h3>
+                    </td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "Community" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text">{% trans "# new Likes" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in comment_count_per_community %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.total }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "Community" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text">{% trans "# new Likes" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in post_count_per_community %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ item.name }}</td>
+                                    <td>{{ item.total }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>{% trans "Growth rate per community (last 30 days)" %}</h3>
+                    </td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "community" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th>
+                                        <div class="text">{% trans "growth rate" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for community in post_growth_rate_per_day_per_community %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ community.name }}</td>
+                                    <td>{{ community.growth_rate }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "community" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th>
+                                        <div class="text">{% trans "growth rate" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for community in comment_growth_rate_per_day_per_community %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ community.name }}</td>
+                                    <td>{{ community.growth_rate }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h3>{% trans "New by day (last 30 days)" %}"</h3>
+                    </td>
+                    <td>
+                        <table id="result_list">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "Day" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text">{% trans "# new Comment Likes" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in comment_growth_by_day %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ item.date_trunc }}</td>
+                                    <td>{{ item.count }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                    <td>
+                        <table id="result_list">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="text">{% trans "Day" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="text">{% trans "# new Post Likes" %}</div>
+                                        <div class="clear"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in post_growth_by_day %}
+                                <tr class="row{% if forloop.counter|divisibleby:2 %}1{% else %}2{% endif %}">
+                                    <td>{{ item.date_trunc }}</td>
+                                    <td>{{ item.count }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+    </div>
+{% endblock %}

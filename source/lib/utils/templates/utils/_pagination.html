@@ -1,0 +1,26 @@
+{% load append_to_get %}
+{% if is_paginated %}
+    <ul class="result-nav pagination" style="display: none">
+        {% if has_previous %}
+        <li class="result-nav__item"><a href="{% add_get page=page_obj.previous_page_number %}" class="result-nav__link">&lt;</a></li>
+        {% endif %}
+        {% if show_first %}
+        <li class="result-nav__item"><a href="{% add_get page=1 %}" class="result-nav__link">&laquo;</a></li>
+        {% endif %}
+
+        {% for one_page in page_numbers %}
+            {% ifequal one_page page %}
+                <li class="result-nav__item"><a href="{% add_get page=page %}" class="result-nav__link is-active">{{ page }}</a></li>
+            {% else %}
+                <li class="result-nav__item"><a href="{% add_get page=one_page %}" class="result-nav__link">{{ one_page }}</a></li>
+            {% endifequal %}
+        {% endfor %}
+
+        {% if show_last %}
+            <li class="result-nav__item"><a href="{% add_get page=pages %}" class="result-nav__link">&raquo;</a></li>
+        {% endif %}
+        {% if has_next %}
+            <li class="result-nav__item"><a href="{% add_get page=page_obj.next_page_number %}" class="next result-nav__link">&gt;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

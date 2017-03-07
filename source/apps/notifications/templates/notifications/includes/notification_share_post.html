@@ -1,0 +1,9 @@
+<span class="notification-type {{ content.subject | lower }}_fix">{# popup blockers match the class-name share_post eg. added a _fix postfix to the classname to prevent that #}
+    <i class="fa"></i>
+</span>
+<span class="notification-content">
+     <a href="{% url "wall:detail" content.author.pk %}">{{ content.author }}</a> {{ content.get_subject_display }} <a href="{{ content.get_absolute_url }}">{{ content.get_target_title }}</a>
+     <span class="post-timestamp">
+         <i class="fa fa-clock-o"></i> {{ content.created_jalali }}
+     </span>
+</span>

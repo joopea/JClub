@@ -1,0 +1,6 @@
+repo: 3a5cff88f403d047b804a9d6c9f1aac864e88b17
+node: 7a434178af5bccc1d0b0b77b1298d79607ce52da
+branch: translations
+latesttag: StartAdminDomain
+latesttagdistance: 197
+changessincelatesttag: 242

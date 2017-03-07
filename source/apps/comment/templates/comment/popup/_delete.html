@@ -1,0 +1,9 @@
+{% load i18n %}
+{% if form %}
+    <form class="delete-popup" action="{%  url 'comment:delete_ajax' pk=view.kwargs.pk %}" method="post">
+        {% csrf_token %}
+
+        <h3>{% trans "Delete comment" %}</h3>
+        {{ form.as_p }}
+    </form>
+{% endif %}

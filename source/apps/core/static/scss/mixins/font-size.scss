@@ -1,0 +1,5 @@
+// Including the @font-size(x) mixin will output the desired size in REM and PX fallback
+@mixin font-size($rem) {
+  font-size: ($rem*10)+px;
+  font-size: ($rem)+rem;
+}

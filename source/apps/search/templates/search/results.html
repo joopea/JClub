@@ -1,0 +1,42 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block page_title %}Search - {{ query }}{% endblock page_title %}
+
+{% block content %}
+<div id="search_suggestions">
+    <h1 class="search-title page-title">{% trans "Searching for" %} <span style="color:#ff7440;">{{ query }}</span></h1>
+    {% if posts %}
+        <h1 class="search-section-title page-title">{% trans "Posts" %}</h1>
+        {% for post in posts %}
+                {% include 'post/_post.html' %}
+        {% endfor %}
+    {% endif %}
+
+    {% if comments %}
+        <h1 class="search-section-title page-title">{% trans "Comments" %}</h1>
+        {% for comment in comments %}
+            <div class="post is-expanded">
+                <div class="post-header">
+                    <a href="{% url 'post:detail' pk=comment.post.pk %}"><h2 class="post-title">{{ comment.post.title }}</h2></a>
+                </div>
+                <div class="post-comments">
+                    {% include 'comment/_comment.html' %}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if communities %}
+        <h1 class="search-section-title page-title">{% trans "Communities" %}</h1>
+        {% for community in communities %}
+		<i class="fa fa-plus-square" style="color:#e6e6e6;"></i>
+            <h2> <a href="{{ community.get_absolute_url }}">{{ community.name }}</a></h2>
+
+        {% endfor %}
+    {% endif %}
+
+    {% if not posts and not comments and not communities %}
+    <p class="no-results"> {% trans "Opps! No results found" %} </p>
+    {% endif %}
+</div>{% endblock content %}

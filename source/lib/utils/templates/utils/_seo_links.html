@@ -1,0 +1,4 @@
+{% for href, lang_code, relation_type in links %}
+    <link rel="{{ relation_type }}" href="{{ href }}" hreflang="{{ lang_code }}" />
+{% endfor %}
+

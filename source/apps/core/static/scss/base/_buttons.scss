@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Buttons 		 	   			 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+.btn,
+button,
+.btn-submit,
+input[type="submit"],
+input[type="button"] {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: .75em 1em;
+
+	border: none;
+
+	color: #fff;
+	font-size: 1em;
+	text-align: center;
+	font-family: $main-font, $persian-main-font, $fallback-font ;
+	direction: rtl;
+	line-height: 1;
+	text-decoration: none;
+
+	background: $turquoise;
+
+	vertical-align: middle;
+	@include transition(all .2s ease-in-out);
+	cursor: pointer;
+    -webkit-appearance: none;
+
+    &:hover { background: $turquoise-hover; }
+
+    &.btn-red { background: #b00b13;}
+
+    &.comment-submit {
+		float: right;
+		width: 20%;
+		margin-top: 20px;
+		clear: both;
+	}
+} // .btn
+
+.btn-delete {
+	background: #d50000;
+
+	&:hover { background: #9A0000; }
+}
+
+.btn-more-comments {
+	margin: 15px 0;
+	width: 100%;
+
+	text-transform: uppercase;
+
+	background: #c2c2c2;
+
+	&:hover { background: #a8a8a8; }
+} // .btn-more-comments

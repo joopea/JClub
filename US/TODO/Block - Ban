@@ -1,0 +1,3 @@
+
+@JOEP (ask for info):
+    add unique constraint on block for unique together field, using manual sql

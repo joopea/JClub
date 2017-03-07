@@ -1,0 +1,37 @@
+{% load rules i18n %}{% rules user=request.user community=community comment=comment post=post wall=wall as rules %}
+<div
+    class="post {% if is_expanded %} is-expanded{% endif %}"
+    id="post{{ post.id }}"
+    {% if own_wall %}
+        {% if post.is_read %}
+            data-is-read="{{ post.id }}"
+        {% else %}
+            data-is-not-read="{{ post.id }}"
+        {% endif %}
+    {% endif %}
+    data-comments-load="{% url 'comment:first_and_last' pk=post.pk %}"
+>
+    <div class="post-header">
+        {% include "post/_post_header.html" %}
+    </div>
+    <div class="post-content">
+        {% include "post/_post_content.html" %}
+    </div>
+    <div class="post-footer">
+        {% include "post/_post_footer.html" %}
+    </div>
+    <div class="post-comments">
+        <div class="comments">
+            {% if show_all_comments %}
+                {% for comment in post.comments %}
+                    {% include 'comment/_comment.html' %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        {% if rules.is_allowed_on_wall %}
+            <div class="comment-form">
+                {% include "comment/_create.html" %}
+            </div>
+        {% endif %}
+    </div>
+</div> <!-- END post -->

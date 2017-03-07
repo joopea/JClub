@@ -1,0 +1,9 @@
+{% load thumbnail %}
+<li class="menu-list-item">
+    <a class="menu-link" href="{% url 'wall:community' pk=community.pk %}">
+        <span class="communitystamp">
+            <i class="community-icon"><img src="{{ community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
+            {{ community.name }}
+        </span>
+    </a>
+</li>

@@ -1,0 +1,50 @@
+/*----- Tabs -----*/
+.tabs {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+ 
+/*----- Tab Links -----*/
+
+.tab-links {
+
+	li {
+		float: right;
+		list-style: none;
+
+		&.active a,
+		&.active a:hover {
+        	background: #f3f3f3;
+	        text-decoration: none;
+	        border-bottom: 3px solid $joopea-blue;
+		}
+	} // li
+ 
+ 	a {
+        padding: 9px 15px; 
+        display: inline-block;
+        background: #f3f3f3;
+        text-decoration: none;
+        transition: all linear 0.15s;
+        border-bottom: 3px solid #f3f3f3;
+
+        &:hover { border-bottom: 3px solid $joopea-blue; }
+	}
+	
+	&:after {
+	    display:block;
+	    clear:both;
+	    content:'';
+	}
+} // .tab-links
+ 
+.tab-content {
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    text-align: right;
+}
+
+.tab {  display: none; }
+.tab.active {  display: block; }

@@ -1,0 +1,63 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Search-Styles 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.searchbar {
+	position: fixed;
+	bottom: 0;
+	left: 25%; // Sidebar width
+	right: 0;
+	padding: 15px 30px;
+	min-width: 700px;
+
+	background: rgba(232, 232, 232, 0.66);
+	z-index: 5;
+
+	@media #{$tablet} { left: 0; }
+
+	.search-input {
+		float: left;
+		width: 85%;
+		padding: 10px;
+		background: #fff;
+		border: none;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		@include font-size(1.4);
+		color: #333;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+		cursor: text;
+	}
+
+	.search-submit {
+		float: left;
+		width: 15%;
+		padding: 10px;
+		border: none;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+		background: $turquoise;
+
+		@include font-size(1.4);
+		font-family: FontAwesome;
+		color: #fff;
+
+		-webkit-appearance: none;
+		cursor: pointer;
+		@include transition(background .2s ease-in-out);
+
+		&:hover { 
+			background: $turquoise-hover;
+			@include transition(background .2s ease-in-out);
+		}
+	}
+}

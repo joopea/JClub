@@ -1,0 +1,17 @@
+{% load i18n %}<div class="searchbar-wrapper">
+	<div class="searchresult-wrapper">
+
+	</div>
+	<form class="searchbar" id="search-form" action="{% url 'search:search' %}">
+	    <i class="magnifier-icon"></i>
+	    <input class="search-input" type="text" name="q" id="search-input" placeholder='{% trans "Search name, post etc" %}' autocomplete="off">
+
+	    <input class="search-submit" type="submit" value='&#xf002; &nbsp; {% trans "Search" %}' required="">
+        {% if search_on_wall %}
+	        <div class="search-wall-checkbox">
+	            <input type="hidden" name="wall_type" id="search-wall-type" value="{{ search_on_wall.wall_type }}" />
+	            <input type="checkbox" name="wall_id" id="search-wall-id" value="{{ search_on_wall.wall_id }}"><label for="search-wall-id">{% trans "Search on this wall" %}</label>
+	        </div>
+        {% endif %}
+	</form>
+</div>

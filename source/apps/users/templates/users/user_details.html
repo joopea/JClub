@@ -1,0 +1,192 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+
+{% block page_title %}{% trans "Account Settings" %}{% endblock page_title %}
+
+{% block content %}
+	<div class="container clearfix">
+
+        <div id="content">
+            <h1 class="page-title">{% trans "Account Settings" %}</h1>
+            <div class="wall-options">
+                <a href="{% url "wall:user" %}" class="btn show-read-btn fright"> {% trans "Back to my wall!" %}</a>
+            </div>
+
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="is-open"><a href="#tab1">{% trans "Profile Settings" %}</a></li>
+                    <li><a href="#tab2">{% trans "Followers" %}</a></li>
+                    <li><a href="#tab3">{% trans "Following" %}</a></li>
+                    <li><a href="#tab4">{% trans "Blocked users" %}</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab is-open">
+                        <h2 class="form-title">{% trans "Your Account" %}</h2>
+                        {# {% include "forms/form.html" with form=form form_css_class=form_css_class submit_name="Save" %} --> #}
+
+                        <form method="post" class="user-detail-form form-container" action="">
+                            {% csrf_token %}
+                            <div class="form-field charfield textinput profile_colour">
+                                <h2 class="section-title">{% trans "Profile Color" %}</h2>
+                                <span class="tooltip">{% trans "You can select a color for your profile icon." %}</span>
+                                {{ form.profile_colour }}
+                                <div class="colorwheel"></div>
+                            </div>
+
+                            {# <div class="other-fields"> #}
+                                {# {{ form.language }} #}
+                            {# </div> #}
+                            <div class="question-fields">
+                                <h2 class="section-title">{% trans "Security Questions" %}</h2>
+                                <span class="tooltip">{% trans "Your currect security questions are" %}: {{ request.user.security_question_1 }} {% trans "and" %} {{ request.user.security_question_2 }}</span>
+                                <span class="tooltip">{% trans "To reset your security question, please answer two pre-defined security questions below." %}</span>
+                                <div class="form-question1">
+                                    <div class="form-field modelchoicefield select security_question_1">
+                                        <label class="form-label" for="id_security_question_1">{% trans "Security question 1" %}</label>
+                                        {{ form.security_question_1 }}
+                                    </div>
+
+                                    <div class="form-field charfield textinput security_answer_1">
+                                        <label class="form-label" for="id_security_answer_1">{% trans "Security answer 1" %}</label>
+                                        {{ form.security_answer_1 }}
+                                    </div>
+                                </div>
+                                <div class="form-question2">
+                                    <div class="form-field modelchoicefield select security_question_2">
+                                        <label class="form-label" for="id_security_question_2">{% trans "Security question 2" %}</label>
+                                        {{ form.security_question_2 }}
+                                    </div>
+                                    <div class="form-field charfield textinput security_answer_2">
+                                        <label class="form-label" for="id_security_answer_2">{% trans "Security answer 2" %}</label>
+                                        {{ form.security_answer_2}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="password-fields">
+                                <h2 class="section-title">{% trans "Password" %}</h2>
+                                <span class="tooltip">{% trans "Please use a secure password (a combination of upper and lowercase letters and numbers)" %}</span>
+
+                                <div class="form-field current-password">
+                                    {{ form.current_password.errors }}
+{#                                    {% if form.current_password.errors|length > 1 %}#}
+{#                                        {{ form.current_password.errors|first }}#}
+{#                                    {% endif %}#}
+                                    <label class="form-label" for="id_current_password">{% trans "Current password" %}</label>
+
+                                    {{ form.current_password }}
+                                </div>
+                                <div class="form-field charfield passwordinput password1">
+                                    <label class="form-label" for="id_password1">{% trans "New password" %}</label>
+
+                                    {{ form.password1 }}
+                                    <div class="pwstrength_viewport_progress"></div>
+                                </div>
+                                <div class="form-field charfield passwordinput password2">
+                                    <label class="form-label" for="id_password2">{% trans "Confirm new password" %}</label>
+                                    {{ form.password2 }}
+                                </div>
+                            </div>
+                            <div class="form-footer">
+                                <input class="btn-submit" type="submit" value='{% trans "Save" %}'>
+                            </div>
+                            <div class="form-footer">
+                                <p>{% trans 'Some text about removing your account, deleting everything etc' %}</p>
+                                <a href="{% url "users:delete" %}" class="btn btn-delete">{% trans "Delete Profile" %}</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="tab2" class="tab">
+                        <h2>{% trans "Your followers" %} ({{ follower_count }})</h2>
+                        <ul class="users-list">
+                            {% for user in followers %}
+                                {% include "users/_user.html" with show_follow=True %}
+                            {% endfor %}
+                        </ul>
+                        <div class="form-footer">
+                            <a href="#" onClick="window.location.reload()" class="btn btn-block">{% trans "Update" %}</a>
+                        </div>
+                    </div>
+
+                    <div id="tab3" class="tab">
+                        <h2>{% trans "Users you are following" %} ({{ following_count }}) </h2>
+                        <ul class="users-list">
+                            {% for user in following %}
+                                {% include "users/_user.html" with show_follow=True %}
+                            {% endfor %}
+                        </ul>
+                        <div class="form-footer">
+                            <a href="#" onClick="window.location.reload()" class="btn btn-block">{% trans "Update" %}</a>
+                        </div>
+                    </div>
+
+                    <div id="tab4" class="tab">
+                        <h2>{% trans "Blocked users" %} ({{ blocked_count }})</h2>
+                        <ul class="users-list">
+                            {% for user in blocked %}
+                                {% include "users/_user.html" with show_follow=False %}
+                            {% endfor %}
+                        </ul>
+                        <div class="form-footer">
+                            <a href="#" onClick="window.location.reload()" class="btn btn-block">{% trans "Update" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- END #content -->
+    </div>
+{% endblock content %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script type="text/javascript" src="/static/js/pwstrength.js"></script>
+    <script src="/static/widgets/colorpicker/colorwheel.js" type="text/javascript"></script>
+    {# See https://github.com/jweir/colorwheel #}
+
+    <script>
+        $(function() {
+            jQuery('.tabs .tab-links a').on('click', function(e)  {
+                var currentAttrValue = jQuery(this).attr('href');
+
+                // Show/Hide Tabs
+                jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+                // Change/remove current tab to active
+                jQuery(this).parent('li').addClass('is-open').siblings().removeClass('is-open');
+
+                e.preventDefault();
+            });
+
+            if (location.hash) {
+                $('[href="' + location.hash + '"]').click();
+            }
+
+        });
+    </script>
+    <script>
+        jQuery(document).ready(function () {
+            "use strict";
+            var options = {};
+            options.ui = {
+                showVerdictsInsideProgressBar: true,
+                viewports: {
+                    progress: ".pwstrength_viewport_progress"
+                }
+            };
+            options.common = {
+                debug: true,
+                onLoad: function () {
+                    $('#messages').text('Start typing password');
+                }
+            };
+            $('#id_password1').pwstrength(options);
+        });
+    </script>
+
+    <script>
+        $('.profile_colour').append('<div class=colorwheel></div>');
+        var cw = Raphael.colorwheel($(".colorwheel")[0], 150);
+        cw.input($("#id_profile_colour")[0]);
+    </script>
+{% endblock javascript %}

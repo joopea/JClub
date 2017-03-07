@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+{% load i18n %}
+{% block page_title %}{% trans "Home" %}{% endblock page_title %}
+
+{% block content %}
+
+{% csrf_token %}
+
+{% if object_list %}
+    object_list:
+    <dl>
+        {% for list_item in object_list %}
+            <dd>{% autoescape off %}{{ list_item }}{% endautoescape %}</dd>
+        {% endfor %}
+    </dl>
+{% endif %}
+
+{% if object %}
+    object:
+    <dl>
+        {% autoescape off %}{{ object }}{% endautoescape %}
+    </dl>
+{% endif %}
+
+{% if form %}
+    form:
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value='{% trans "SUBMIT" %}' />
+    </form>
+{% endif %}
+
+{% include "core/_pagination.html" %}
+
+{% endblock content %}

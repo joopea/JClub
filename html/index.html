@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- <meta content="width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no" name="viewport" /> -->
+    
+    <!-- VIEWPORT + SCRIPT -->
+    <!-- Default viewport has a fixed-width; no intitial-scale or device-width. This way, mobile devices show to desktop site, full-size -->
+    <meta id="Viewport" name="viewport" content="width = 768">
+    <script>
+    if (screen.width > 740) {
+        var mvp = document.getElementById('Viewport');
+        mvp.setAttribute('content','width=device-width, initial-scale=1');
+    }
+    </script>
+
+    <link rel="stylesheet" href="css-extern/jquery.mmenu.all.css">
+    <link href="css-extern/jquery.mmenu.widescreen.css" type="text/css" rel="stylesheet" media="all and (min-width: 900px)" />
+    <link rel="stylesheet" href="css-compiled/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css-extern/font-awesome.min.css" type="text/css">
+
+    <!-- FANCY BOX -->
+    <link rel="stylesheet" href="js/fancyboxv2.1.5/jquery.fancybox.css" type="text/css">
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <nav id="menu" class="">
+        <ul>
+            <li class="menu-list-item is-active">
+                <span class="menu-link">
+                    <i class="icon-menu-item fa fa-circle" style="color: #b00b13;"></i> My wall
+                </span>
+                <ul>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <i class="icon-menu-item fa fa-circle" style="color: #b00b13;"></i> My wall
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <i class="fa fa-cogs"></i> My settings
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <i class="fa fa-sign-out"></i> Log out of JoopeA
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-list-item"><a class="menu-link fancybox-inline" href="#new-post-popup"><i class="icon-menu-item fa fa-pencil-square-o"></i> New Post</a> </li>
+            <li class="menu-list-item">
+                <!-- Add 'notification-alert' class if there are new notifications -->
+                <span class="menu-link notification-alert" href="">
+                    <i class="icon-menu-item fa fa-bell">
+                        <span class="new-notification"></span>
+                    </i> 
+                    Notifications
+                </span>
+                <ul>
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type comment">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type liked">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type mentioned">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type following">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type shared">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type warning">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+
+                    <li class="menu-list-item notification-item">
+                        <span class="notification-type attention">
+                            <i class="fa"></i>
+                        </span>
+                        <span class="notification-content">
+                            <a href="">Fruitysmoothy4456</a> commented on your post <a href="#">'My dad likes cars, fruits and houses but I am a long sentence check me</a>
+                    
+                        </span>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-list-item"><a class="menu-link" href=""><i class="icon-menu-item fa fa-star"></i> Saved Posts</a></li>
+            <li class="menu-list-item"><a class="menu-link" href=""><i class="icon-menu-item fa fa-thumb-tack"></i> Suggestions</a></li>
+            <li class="Spacer"></li>
+            <li class="menu-list-item communities">
+                <span class="menu-link" href="">
+                    <i class="icon-paperclip"></i>
+                    <i class="icon-menu-item fa fa-users"></i> 
+                    Communities following
+                </span>
+                <ul>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <span class="communitystamp">
+                                <i class="community-icon"><img src="img/community-icon-book.png"></i> Queer Couples
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <span class="communitystamp">
+                                <i class="community-icon"><img src="img/community-icon-book.png"></i> Older Queer Couples
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <span class="communitystamp">
+                                <i class="community-icon"><img src="img/community-icon-book.png"></i> Something Something
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-list-item">
+                        <a class="menu-link" href="#">
+                            <span class="communitystamp">
+                                <i class="community-icon"><img src="img/community-icon-book.png"></i> Queer Couples
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-list-item"><a class="menu-link" href=""><i class="icon-menu-item fa fa-user-plus"></i> People following</a></li>
+            <li class="Spacer"></li>
+            <li class="menu-list-item"><a class="menu-link" href=""><i class="icon-menu-item fa fa-info-circle"></i> More information</a></li>
+        </ul>
+    </nav>
+
+    <div> <!-- the wrapper -->
+        <div class="searchbar">
+        <i class="magnifier-icon"></i>
+            <input class="search-input" type="text" name="" id="" placeholder="Search name, post etc">
+            <input class="search-submit" type="submit" value="&#xf002; &nbsp; Search" required="">   
+        </div>
+
+        <div id="content-wrapper">
+            <div class="content">
+                <div class="featured-items">
+
+                    <div class="featured-item">
+                        <h3 class="title">Hottest Post <i class="fa fa-fire"></i></h3>
+                            <a href="#">My dad had a green car but I only like purple cars how do...</a>
+                    </div>
+
+                    <div class="featured-item">
+                        <h3 class="title">Promoted Post <i class="fa fa-bookmark"></i></h3>
+                            <a href="#">My dad had a green car but I only like purple cars how do...</a>
+                    </div>
+
+                    <div class="featured-item community">
+                        <h3 class="title">Hottest Community</h3>
+                            <a href="">
+                                <span class="communitystamp">
+                                    Queer Couples
+                                    <i class="community-icon"><img src="img/community-icon-book.png"></i>
+                                </span>
+                            </a>
+                    </div>
+                </div>
+
+                <h1 class="page-title">Posts on my wall</h1>
+                <div class="wall-options">
+                    <a class="btn show-read-btn fright"><i class="fa fa-eye"></i> Show read posts</a>
+                    <a class="btn show-all-btn fright"><i class="fa fa-angle-down"></i> Expand all posts</a>
+                </div>
+
+                <div class="posts-container">
+                    <div class="post">
+                        <div class="post-header">
+                            <a class="star-post-button post-button is-starred">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="remove-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="report-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <h2 class="post-title">My dad is very negative all day which sometimes, but not all the time, causes two lines for a title. Isn’t that something?</h2>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-details">
+                                <span class="post-timestamp">
+                                    <i class="fa fa-clock-o"></i> 4 december 3015, 4:56pm
+                                </span>
+                                <span class="communitystamp">
+                                    Queer Couples
+                                    <i class="community-icon"><img src="img/community-icon-book.png"></i>
+                                </span>
+                                
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                        </div>
+                        <div class="post-footer">
+                            <a href="#" class="footer-button share fleft">
+                                <i class="fa fa-share"></i> Share
+                            </a>
+                            <a href="#" class="footer-button is-liked fleft">
+                                <i class="fa fa-heart"></i> Like (4444)
+                            </a>
+                            <a href="#" class="footer-button comment fleft">
+                                <i class="fa fa-comments"></i> Comments (4444)
+                            </a>
+                            <div href="#" class="footer-button account fright">
+                                <a href="#">Fruitysmoothy4456</a>
+                            </div>
+                            <a href="#" class="footer-button follow fright">
+                                <i class="fa fa-user-plus"></i> Follow
+                            </a>
+                        </div>
+                    </div> <!-- END post -->
+
+                    <div class="post" id="post3">
+                        <div class="post-header">
+                            <a class="star-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="remove-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="report-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <h2 class="post-title">My dad is cool! </h2>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-details">
+                                <span class="post-timestamp">
+                                    <i class="fa fa-clock-o"></i> 4 december 3015, 4:56pm
+                                </span>
+                                <span class="communitystamp">
+                                    Queer Couples
+                                    <i class="community-icon"><img src="img/community-icon-book.png"></i>
+                                </span>
+                                
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                        </div>
+                        <div class="post-footer">
+                            <a href="#" class="footer-button share fleft">
+                                <i class="fa fa-share"></i> Share
+                            </a>
+                            <a href="#" class="footer-button is-liked fleft">
+                                <i class="fa fa-heart"></i> Unlike (4444)
+                            </a>
+                            <a href="#" class="footer-button comment fleft">
+                                <i class="fa fa-comments"></i> Comments (4444)
+                            </a>
+                            <div href="#" class="footer-button account fright">
+                                <a href="#">Fruitysmoothy4456</a>
+                            </div>
+                            <a href="#" class="footer-button follow fright">
+                                <i class="fa fa-user-plus"></i> Follow
+                            </a>
+                        </div>
+
+                        <div class="post-comments">
+                            <div class="comment">
+                                <div class="comment-content">
+                                    <div class="comment-details">
+                                        <span class="comment-username"><a href="#">AppleHuise7733</a><span class="avatar-icon" style="background: red;"></span></span>
+                                        <span class="comment-timestamp">22 years ago</span>
+                                    </div>
+                                    <p>
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+                                    </p>
+                                </div>
+                                <div class="comment-footer">
+                                    <a class="delete-button fright" href="">Delete</a>
+                                    <a class="report-button fright" href="">Report</a>
+                                    <a href="#" class="footer-button is-liked fright">
+                                        <i class="fa fa-heart"></i> Unlike (4444)
+                                    </a>
+                                </div>
+                            </div> <!-- END comment -->
+
+                            <div class="comment">
+                                <div class="comment-content">
+                                    <div class="comment-details">
+                                        <span class="comment-username"><a href="#">AppleHuise7733</a><span class="avatar-icon" style="background: green;"></span></span>
+                                        <span class="comment-timestamp">22 years ago</span>
+                                    </div>
+                                    <p>
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+                                    </p>
+                                </div>
+                                <div class="comment-footer">
+                                    <a class="delete-button fright" href="">Delete</a>
+                                    <a class="report-button fright" href="">Report</a>
+                                    <a href="#" class="footer-button fright">
+                                        <i class="fa fa-heart"></i> Like (4444)
+                                    </a>
+                                </div>
+                            </div> <!-- END comment -->
+                            <div class="comment-form">
+                                <span class="user-avatar"></span>
+                                <div class="textarea-container">
+                                    <span class="speechbubble"></span>
+                                    <textarea class="comment-field-textarea" placeholder="Type a comment"></textarea>
+                                </div>
+                                <input class="btn comment-submit" type="submit" value="Post" required="">   
+                            </div>
+                        </div> <!-- END post-comments -->
+                    </div> <!-- END post -->
+
+                    <div class="post fadeInBlock">
+                        <div class="post-header">
+                            <a class="star-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-star fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="remove-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a class="report-post-button post-button">
+                                <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-exclamation-triangle fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <h2 class="post-title">My dad is cool! </h2>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-details">
+                                <span class="post-timestamp">
+                                    <i class="fa fa-clock-o"></i> 4 december 3015, 4:56pm
+                                </span>
+                                <span class="communitystamp">
+                                    Queer Couples
+                                    <i class="community-icon"><img src="img/community-icon-book.png"></i>
+                                </span>
+                                
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blandit sit amet non magna. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                            </p>
+                        </div>
+                        <div class="post-footer">
+                            <a href="#" class="footer-button share fleft">
+                                <i class="fa fa-share"></i> Share
+                            </a>
+                            <a href="#" class="footer-button is-liked fleft">
+                                <i class="fa fa-heart"></i> Unlike (4444)
+                            </a>
+                            <a href="#post3" class="footer-button comment fleft">
+                                <i class="fa fa-comments"></i> Comments (4444)
+                            </a>
+                            <div href="#" class="footer-button account fright">
+                                <a href="#">Fruitysmoothy4456</a>
+                            </div>
+                            <a href="#" class="footer-button follow fright">
+                                <i class="fa fa-user-plus"></i> Follow
+                            </a>
+                        </div>
+
+                        <div class="post-comments">
+                            <div class="comment">
+                                <div class="comment-content">
+                                    <div class="comment-details">
+                                        <span class="comment-username"><a href="#">AppleHuise7733</a><span class="avatar-icon" style="background: red;"></span></span>
+                                        <span class="comment-timestamp">22 years ago</span>
+                                    </div>
+                                    <p>
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+                                    </p>
+                                </div>
+                                <div class="comment-footer">
+                                    <a class="delete-button fright" href="">Delete</a>
+                                    <a class="report-button fright" href="">Report</a>
+                                    <a href="#" class="footer-button is-liked fright">
+                                        <i class="fa fa-heart"></i> Unlike (4444)
+                                    </a>
+                                </div>
+                            </div> <!-- END comment -->
+
+                            <div class="comment">
+                                <div class="comment-content">
+                                    <div class="comment-details">
+                                        <span class="comment-username"><a href="#">AppleHuise7733</a><span class="avatar-icon" style="background: green;"></span></span>
+                                        <span class="comment-timestamp">22 years ago</span>
+                                    </div>
+                                    <p>
+                                        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.
+                                    </p>
+                                </div>
+                                <div class="comment-footer">
+                                    <a class="delete-button fright" href="">Delete</a>
+                                    <a class="report-button fright" href="">Report</a>
+                                    <a href="#" class="footer-button fright">
+                                        <i class="fa fa-heart"></i> Like (4444)
+                                    </a>
+                                </div>
+                            </div> <!-- END comment -->
+                            <div class="comment-form">
+                                <span class="user-avatar"></span>
+                                <div class="textarea-container">
+                                    <span class="speechbubble"></span>
+                                    <textarea class="comment-field-textarea" placeholder="Type a comment"></textarea>
+                                </div>
+                                <input class="btn comment-submit" type="submit" value="Post" required="">   
+                            </div>
+                        </div> <!-- END post-comments -->
+                    </div> <!-- END post -->
+
+                </div> <!-- END post-container -->
+            </div>
+        </div> <!-- END #content -->
+
+    </div> <!-- END mmenu wrapper -->
+    <a class="hamburger-menu mm-slideout" href="#menu">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="new-post-popup" id="new-post-popup">
+        <h1 class="title">Create a post</h1>
+        <h3 class="subtitle">Socially connect with the other LGBT people</h3>
+        <div class="post-to-location">
+            <div class="form-field">
+                <label>Where do you want to post?</label>
+                <select>
+                    <option>Community wall</option>
+                    <option>My own wall</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Where do you want to post?</label>
+                <select>
+                    <option>Community wall</option>
+                    <option>My own wall</option>
+                </select>
+            </div>
+            <div class="form-field">
+                <label>Where do you want to post?</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="form-field post-title-field">
+            <input type="text">
+        </div>
+        <div class="form-field post-content">
+            <textarea></textarea>
+            <span class="more-info-desc">How to @mention someone id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.at i.</span>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.mmenu.min.all.js"></script>
+    <script src="js/jquery.mmenu.navbars.min.js"></script>
+    <script src="js/fancyboxv2.1.5/jquery.fancybox.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#menu')
+                .mmenu({
+                    extensions		: [ 'widescreen', 'theme-white', 'effect-slide' ],
+                    searchfield		: false,
+                    navbars         : true,
+
+                    "navbar": {
+                        "title": "The Free World",
+                    },
+                });
+
+
+
+            var VarName = '<a class="logo-container" href="#"><h1 class="logo">JoopeA</h1></a>';
+            $('nav#menu').prepend(VarName);
+
+            $(".fancybox-inline").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                minWidth: '550px',
+                maxWidth: '750px'
+            });
+        });
+    </script>
+    <script>
+        $('.show-all-btn').on('click', function(ev) {
+            $('.post').toggleClass("is-expanded"); //you can list several class names 
+            $(this).toggleClass("is-expanded"); //you can list several class names 
+            ev.preventDefault();
+        });
+
+        $('.footer-button.comment').on('click', function(ev) {
+            $(ev.target).closest('.post').toggleClass("is-expanded"); //you can list several class names 
+            ev.preventDefault();
+        });
+    </script>
+    <script>
+        /*!
+         * Auto Direction. (RTL To LTR)
+         * SiamakMokhtri(@sia_mac) at Fiction(@fictionteam) Under Licence MIT.
+         * Created at April 2014.
+         */
+        function isUnicode(str) {
+            var letters = [];
+            for (var i = 0; i <= str.length; i++) {
+                letters[i] = str.substring((i - 1), i);
+                if (letters[i].charCodeAt() > 255) { return true; }
+            }
+            return false;
+        }
+        var dir = $('input[type=text], textarea');
+        dir.keyup(function(e) {
+            if (isUnicode(dir.val())) {
+                $(this).css('direction', 'rtl');
+            }
+            else {
+                $(this).css('direction', 'ltr');
+            }
+        }); 
+    </script>
+
+    <!-- This code might need refactoring as it keeps checking all the already shown items -->
+    <script>
+    function fadeBlocksIn() {
+        $('.fadeInBlock').each(function (i) {
+            var top_of_object = $(this).position().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            bottom_of_window = bottom_of_window - 50;
+
+            if (top_of_object < bottom_of_window) {
+                $(this).animate({ 'opacity': '1' }, 500);
+            }
+        });
+    }
+
+    $(function() {
+        fadeBlocksIn();
+
+        $(window).scroll(function() {
+            fadeBlocksIn();
+        });
+    });
+    </script>
+</body>
+</html>

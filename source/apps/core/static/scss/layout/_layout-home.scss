@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////
+////								 ///////////////////////////////////////////
+///  Layout-home 	   				 ///////////////////////////////////////////
+//								     ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+.sidebar-home {
+	@include font-size(1.6);
+	text-align: right;
+
+	.sidebar-title { margin: 0 0 5px 0; }
+
+	.login-form { margin: 15px 0 4em 0; }
+
+	.form-field {
+		margin-bottom: 20px;
+
+		overflow: hidden;
+
+		label { display: block; }
+
+		&:last-child { margin-bottom: 50px; }
+	}
+
+	input[type=text],
+	input[type=password] {
+		padding: 10px;
+		width: 100%;
+
+		border: 1px solid $joopea-blue;
+
+		text-align: right;
+	}
+
+	.forgot-password {
+		display: block;
+		float: left;
+		margin: 5px 0;
+	}
+
+	.btn.sign-up,
+	.btn.login {
+		width: 49%;
+
+		background: $joopea-blue;
+	}
+
+	#menu & .menu-link { text-align: left; }
+} // .sidebar-home
+
+.hottest-community {
+	margin-bottom: 20px;
+
+	overflow: hidden;
+
+	.communitystamp {
+		float: right;
+		margin-bottom: 15px;
+	}
+
+	.image-container {
+		max-height: 300px;
+		width: 100%;
+		margin-bottom: 1em;
+
+		@include border-radius(10px);
+
+		overflow: hidden;
+		clear: both;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	} // .image-container
+} // .hottest-community
