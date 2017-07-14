@@ -13,7 +13,7 @@ MarkupSafe==0.23
 
 ##### Unquote me for development deployments, however this will break on any computer that does not have mysql_config
 ##### installed, so it doesnt work on normal environments
-# MySQL-python==1.2.5
+MySQL-python==1.2.5
 
 #FeinCMS
 FeinCMS==1.11.0

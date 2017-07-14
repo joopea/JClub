@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'apps.report',
     'apps.approval',
     'apps.shorturl',
+    'apps.language',
 
     'lib.cms',
     'lib.utils',
@@ -62,6 +63,7 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'apps.core.middleware.JsonExceptionMiddleware',
     'apps.core.middleware.ForceDefaultLanguageMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.http.ConditionalGetMiddleware',
     # 'django.middleware.transaction.TransactionMiddleware',
@@ -69,7 +71,6 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'djangosecure.middleware.SecurityMiddleware',
     'apps.core.middleware.UserRolesDomainSeparation',
 ]
@@ -105,7 +106,7 @@ CACHES = {
 
 # Localization
 TIME_ZONE = 'Europe/Amsterdam'
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
     ('en', _('English')),
