@@ -19,7 +19,7 @@ class UserAdmin(AsSULoginMixin, BaseUserAdmin):
 
     inlines = [AlertsInline]
 
-    list_display = (BaseUserAdmin.username_field, 'is_staff', 'is_superuser', 'show_alerts', )
+    list_display = (BaseUserAdmin.username_field, 'is_staff', 'is_superuser', 'show_alerts', 'language')
 
     fieldsets = (
         (None, {
