@@ -5,7 +5,7 @@ TEMPLATE_DEBUG = DEBUG
 THUMBNAIL_DEBUG = DEBUG
 
 SECRET_KEY = "HXJZZSe.Z5*uWDrJkQ9hBr+UkcAn~8ynr@RW`[JUf,paB7zM/sv&NE}'Qg6SwQD;"
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
 
 MONITOR_URL_PATH = '^status\.txt/?$'
 
@@ -18,15 +18,15 @@ DATABASES = {
         'NAME': 'joopea_development',
         'USER': 'joopea',
         'PASSWORD': 'PzQptGXb8anpm',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '3306',
-        'STORAGE_ENGINE': 'MyISAM',  # 'InnoDB'
+        'STORAGE_ENGINE': 'MyISAM',  'InnoDB'
         'OPTIONS': {
             'init_command': 'SET '
-                            'storage_engine=MyISAM,'
+                            'storage_engine=InnoDB,'
                             'collation_connection=utf8_bin,'
                             'NAMES utf8,'
-                            'character_set_connection=utf8,'
+                            'character_set_connection=utf8#,'
                             'SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
         }
     }
