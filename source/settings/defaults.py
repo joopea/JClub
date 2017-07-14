@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'apps.report',
     'apps.approval',
     'apps.shorturl',
+    'apps.language',
 
     'lib.cms',
     'lib.utils',
@@ -105,7 +106,7 @@ CACHES = {
 
 # Localization
 TIME_ZONE = 'Europe/Amsterdam'
-LANGUAGE_CODE = 'fa'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
     ('en', _('English')),
