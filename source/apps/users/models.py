@@ -20,7 +20,7 @@ class User(AbstractBaseUser):
 
     username = models.CharField(_('Username'), max_length=255, unique=True)
     profile_colour = models.CharField(_('Profile Color'), max_length=16)
-    language = models.ForeignKey('language.Language', limit_choices_to={'status':True}, default=settings.LANGUAGE_CODE, to_field='name')
+    language = models.ForeignKey('language.Language', limit_choices_to={'status': 'act'}, to_field='name')
 
     security_question_1 = models.CharField(_('security question 1'), max_length=255, help_text=_("Recovering your password is only possible with a security question. Make sure to remember your answer."))
     security_question_2 = models.CharField(_('security question 2'), max_length=255)
