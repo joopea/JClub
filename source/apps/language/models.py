@@ -24,7 +24,7 @@ from lib.utils.managers import ActiveManager
 
 
 class Language(models.Model):
-    name = models.CharField(_('name'), max_length=15)
+    name = models.CharField(_('name'), max_length=15, unique=True)
     initial = models.CharField(max_length=3)
     status = models.BooleanField(_('active'), default=False)
 
