@@ -16,6 +16,8 @@ class Page(create_base_model(models.Model)):
 
     title = models.CharField(_("Title"), max_length=255)
     slug = models.SlugField(_('URL slug'), unique=True)
+    language = models.ForeignKey('language.Language', limit_choices_to={'status': 'act'},
+                                 to_field='name')
 
     class Meta:
         ordering = ('title', )

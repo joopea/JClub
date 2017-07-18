@@ -10,14 +10,14 @@ class PageAdmin(ItemEditor):
     inlines = []
 
     raw_id_fields = ()
-    list_display = ['title']
+    list_display = ['title', 'language']
     prepopulated_fields = {'slug': ('title',), }
     search_fields = ['title']
 
     fieldsets = (
         ('General', {
             'classes': ('grp-collapse grp-open',),
-            'fields': ('title', 'slug')
+            'fields': ('title', 'slug', 'language')
         }),
         FEINCMS_CONTENT_FIELDSET,
     )
