@@ -6,7 +6,7 @@ from .models import Community
 
 
 class CommunityAdmin(SortableAdmin):
-    list_display = ['name', 'description', 'get_post_count', 'created']
+    list_display = ['name', 'description', 'get_post_count', 'created', 'language']
     search_fields = ['name', 'description']
 
     def get_post_count(self, obj):
