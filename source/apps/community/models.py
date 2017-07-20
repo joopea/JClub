@@ -2,6 +2,7 @@ from adminsortable.models import SortableMixin
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from lib.behaviours.models.withupdates import WithUpdates
 from lib.behaviours.models.withimage import WithImage, WithIcon
@@ -14,7 +15,7 @@ class Community(WithImage, WithIcon, WithUpdates, SortableMixin, models.Model):
     description = models.TextField(_('Description'), max_length=2048, default='', db_index=True)
 
     position = models.IntegerField(default=0, db_index=True, editable=False)
-    language = models.ForeignKey('language.Language', limit_choices_to={'status': 'act'}, to_field='name')
+    language = models.ForeignKey('language.Language', default=settings.LANGUAGE_CODE, to_field='name')
 
     def __unicode__(self):
         return unicode(self.name)
