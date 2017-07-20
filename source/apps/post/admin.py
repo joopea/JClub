@@ -6,11 +6,11 @@ from apps.post.models import Post
 
 class PostAdmin(ImprovedRawIdFields):
     date_hierarchy = 'created'
-    list_display = ['title', 'community', 'author', 'created', 'published', 'share_count', 'like_count', 'comment_count']
+    list_display = ['title', 'community', 'author', 'created', 'published', 'share_count', 'like_count', 'comment_count', 'language']
     search_fields = ['title', 'community__name', 'author__username', 'message']
     list_filter = ['created', 'published']
     raw_id_fields = ['author', 'community']
-    fields = ['title', 'image', 'author', 'community', 'message']
+    fields = ['title', 'image', 'author', 'community', 'message', 'language']
 
     def get_queryset(self, request):
         return self.model.all_objects.get_queryset()

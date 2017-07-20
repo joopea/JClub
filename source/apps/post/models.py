@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django.conf import settings
 
 from apps.like.models import LikeAble
 from lib.behaviours.models.withurl import WithAbsoluteUrl
@@ -29,6 +30,8 @@ class Post(WithUpdates, WithRichTextContent, PublishAble, WithArchivableAuthor, 
 
     needs_approval = False
     dis_approval_reasons = ''
+
+    language = models.ForeignKey('language.Language', default=settings.LANGUAGE_CODE, to_field='name')
 
     def __unicode__(self):
         return 'Community: %s - %s' % (unicode(self.community), unicode(self.title[:20]))
