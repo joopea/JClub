@@ -65,6 +65,15 @@
                     {{ form.password2 }}
                 </div>
             </div>
+            <div class="language">
+                <h2 class="section-title">{% trans "Language" %}</h2>
+                <span class="tooltip">{% trans "Please pick your primary language" %}</span>
+                <div class="form-field modelchoicefield select language">
+                        <label class="form-label" for="language">{% trans "Language" %}</label>
+                        {{ form.language }}
+                    </div>
+                <div class="suggestions"></div>
+            </div>
             <div class="terms-fiels">
                 <h2 class="selection-title">
                     {% trans "Privacy policy and terms of use" %}

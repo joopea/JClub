@@ -7,6 +7,7 @@ from form_utils.forms import BetterForm
 from apps.users.queries import UserDataView, UsernameDataView, SecurityQuestionDataView, UsernameVariationDataView, UsernameDataView, SecurityQuestionDataView, \
     UserDataView
 from apps.users.models import Username
+from apps.language.models import Language
 
 from lib.users.forms import BaseLoginForm, BaseUserCreationForm, SetPasswordForm as BaseSetPasswordForm
 
@@ -61,6 +62,8 @@ class UserRegistrationForm(BaseUserCreationForm):
 
     security_answer_1 = forms.CharField(label=_('Security answer 1'), max_length=255)
     security_answer_2 = forms.CharField(label=_('Security answer 2'), max_length=255)
+
+    language = forms.ModelChoiceField(label=_('Security question 1'), queryset=Language.objects.filter(status='act'))
 
     privacy_policy = forms.BooleanField(label=_('Privacy policy'))
     terms_of_use = forms.BooleanField(label=_('Terms of use'))
