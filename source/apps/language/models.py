@@ -13,7 +13,7 @@ class Language(models.Model):
         (DEACTIVATED, 'Deactivated'),
     )
     name = models.CharField(_('name'), max_length=15, unique=True)
-    initial = models.CharField(max_length=3)
+    initial = models.CharField(max_length=3, unique=True)
     status = models.CharField(
         max_length=5,
         choices=LANGUAGE_STATUS,
