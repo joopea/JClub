@@ -28,4 +28,4 @@ def _reverse(language_code, current_view, func_name):
 
 def switch_language_url(language, request_path, fall_back='/'):
     current_view, func_name = _get_current_view(request_path)
-    return _reverse(language, current_view, func_name)
+    return _reverse(language.initial, current_view, func_name)
