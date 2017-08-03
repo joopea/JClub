@@ -15,7 +15,7 @@ class Community(WithImage, WithIcon, WithUpdates, SortableMixin, models.Model):
     description = models.TextField(_('Description'), max_length=2048, default='', db_index=True)
 
     position = models.IntegerField(default=0, db_index=True, editable=False)
-    language = models.ForeignKey('language.Language', default=settings.LANGUAGE_CODE, to_field='name')
+    language = models.ForeignKey('language.Language', default=settings.LANGUAGE_CODE, to_field='initial')
 
     def __unicode__(self):
         return unicode(self.name)
