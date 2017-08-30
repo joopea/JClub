@@ -87,6 +87,15 @@
                                     {{ form.password2 }}
                                 </div>
                             </div>
+                            <div class="language">
+                                <h2 class="section-title">{% trans "Language" %}</h2>
+                                <span class="tooltip">{% trans "Please select your primary language" %}</span>
+
+                                <div class="form-field modelchoicefield select language">
+                                    <label class="form-label" for="language">{% trans "Language" %}</label>
+                                    {{ form.language }}
+                                </div>
+                            </div>
                             <div class="form-footer">
                                 <input class="btn-submit" type="submit" value='{% trans "Save" %}'>
                             </div>

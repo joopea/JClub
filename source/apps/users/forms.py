@@ -63,7 +63,7 @@ class UserRegistrationForm(BaseUserCreationForm):
     security_answer_1 = forms.CharField(label=_('Security answer 1'), max_length=255)
     security_answer_2 = forms.CharField(label=_('Security answer 2'), max_length=255)
 
-    language = forms.ModelChoiceField(label=_('Security question 1'), queryset=Language.objects.filter(status='act'))
+    language = forms.ModelChoiceField(label=_('Language'), queryset=Language.objects.filter(status='act'))
 
     privacy_policy = forms.BooleanField(label=_('Privacy policy'))
     terms_of_use = forms.BooleanField(label=_('Terms of use'))
@@ -141,6 +141,8 @@ class UserChangeForm(UserRegistrationForm):
     security_answer_1 = forms.CharField(label=_('Security answer 1'), max_length=255, required=False)
     security_answer_2 = forms.CharField(label=_('Security answer 2'), max_length=255, required=False)
 
+    language = forms.ModelChoiceField(label=_('Language'), queryset=Language.objects.filter(status='act'))
+
     privacy_policy = None
     terms_of_use = None
 
@@ -160,6 +162,8 @@ class UserChangeForm(UserRegistrationForm):
         question_2 = self.get_security_question_2()
         answer_2 = self.get_security_answer_2()
 
+        user.language = self.get_language()
+
         if self.check_if_questions_set(question, answer, question_2, answer_2):
             user.security_question_1 = question
             user.security_answer_1 = make_password(answer)
@@ -167,7 +171,7 @@ class UserChangeForm(UserRegistrationForm):
             user.security_question_2 = question_2
             user.security_answer_2 = make_password(answer_2)
 
-        user.save()
+        user.save(force_update=True)
 
         return user
 
@@ -186,6 +190,9 @@ class UserChangeForm(UserRegistrationForm):
     def get_security_answer_2(self):
         answer = self.cleaned_data.get('security_answer_2')
         return answer if not answer == u'' else None
+
+    def get_language(self):
+        return self.cleaned_data.get('language', translation.get_language())
 
     def clean(self):
         question = self.get_security_question_1()
