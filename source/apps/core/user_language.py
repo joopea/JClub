@@ -10,8 +10,9 @@ class UserLanguageMiddleware(LocaleMiddleware):
     response_redirect_class = HttpResponseRedirect
 
     def process_request(self, request):
-        language = User.objects.get(username=request.user.username).language_id
-        if language is None:
+        try:
+            language = User.objects.get(username=request.user.username).language_id
+        except:
             language = settings.LANGUAGE_CODE
         translation.activate(language)
         request.LANGUAGE_CODE = translation.get_language()
