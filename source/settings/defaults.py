@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     # 'django.middleware.locale.LocaleMiddleware',
-    'apps.core.user_language.UserLanguageMiddleware',
+    'apps.core.middleware.UserLanguageMiddleware',
     'djangosecure.middleware.SecurityMiddleware',
     'apps.core.middleware.UserRolesDomainSeparation',
 ]

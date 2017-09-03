@@ -5,12 +5,11 @@ from django.http import JsonResponse
 from django.core.exceptions import PermissionDenied
 from django.contrib.sessions.middleware import SessionMiddleware
 from .exceptions import JsonResponseException
+from django.http import HttpResponseRedirect
+from django.utils import translation
+from apps.users.models import User
+from django.middleware.locale import LocaleMiddleware
 
-# import the logging library
-# import logging
-
-# Get an instance of a logger
-# logger = logging.getLogger(__name__)
 
 
 
@@ -29,25 +28,18 @@ class ForceDefaultLanguageMiddleware(object):
             del request.META['HTTP_ACCEPT_LANGUAGE']
 
 
-# class UserLanguageMiddleware(object):
-#     """
-#     get language from user model
-#     """
-#
-#     def process_request(self, request):
-#         user = request.user
-#         logger.warn(user)
-#         if user.is_authenticated():
-#         # Do something for authenticated users.
-#         #         request.META['HTTP_ACCEPT_LANGUAGE'] = user.language_id
-#             from django.utils import translation
-#             user_language = 'fa'
-#             translation.activate(user_language)
-#             request.session[translation.LANGUAGE_SESSION_KEY] = user_language
-#         else:
-#             logger.warn('Do nothing')
-#
-#
+class UserLanguageMiddleware(LocaleMiddleware):
+
+    response_redirect_class = HttpResponseRedirect
+
+    def process_request(self, request):
+        try:
+            language = User.objects.get(username=request.user.username).language_id
+        except:
+            language = settings.LANGUAGE_CODE
+        translation.activate(language)
+        request.LANGUAGE_CODE = translation.get_language()
+
 
 class SessionExcludedURLsMiddleware(SessionMiddleware):
     def process_request(self, request):
