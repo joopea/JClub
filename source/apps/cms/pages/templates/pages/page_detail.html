@@ -4,15 +4,23 @@
 {% block page_title %}{{ page.title }}{% endblock page_title %}
 
 {% block content %}
+    {% if page.valid_language %}
+        <div class="articles-container">
+            <div class="article">
+                <h2 class="title">{{ page.title }}</h2>
 
-<div class="articles-container">
-    <div class="article">
-        <h2 class="title">{{ page.title }}</h2>
+                {% for content in page.content.main %}
+                    {% feincms_render_content content request %}
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <div class="articles-container">
+            <div class="article">
+                <h2 class="title">{{ page.title }}</h2>
 
-        {% for content in page.content.main %}
-            {% feincms_render_content content request %}
-        {% endfor %}
-    </div>
-</div>
-
+                {% trans 'Page is unavailable' %}
+            </div>
+        </div>
+    {% endif %}
 {% endblock content %}
