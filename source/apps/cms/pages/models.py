@@ -7,6 +7,7 @@ from feincms.models import create_base_model
 from lib.cms.content_types import RichTextContent
 
 from apps.cms.pages.content_types import RichTextImageContent
+from apps.language.models import Language
 from django.conf import settings
 
 
@@ -29,6 +30,10 @@ class Page(create_base_model(models.Model)):
 
     def get_absolute_url(self):
         return reverse("pages:detail", kwargs={'slug': self.slug})
+
+    def valid_language(self):
+        active_langs = Language.objects.filter(status='act')
+        return self.language in active_langs
 
 
 # Register the FeinCMS templates
