@@ -28,3 +28,7 @@ class Community(WithImage, WithIcon, WithUpdates, SortableMixin, models.Model):
 
     def get_absolute_url(self):
         return reverse('wall:community', kwargs={'pk': self.pk})
+    
+    def valid_language(self):
+        active_langs = Language.objects.filter(status='act')
+        return self.language in active_langs

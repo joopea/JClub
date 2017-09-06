@@ -7,13 +7,15 @@
 
     <ul class="communities">
         {% for community in object_list %}
-            <span class="communitystamp">
-                <a class="community-link" href="{% url 'wall:community' pk=community.pk %}">{{ community.name }}</a>
-                <i class="community-icon"><img src="{{ community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
-            </span>
-            <div class="description">
-                <p>{{ community.description }}</p>
-            </div>
+            {% if community.valid_language %}
+                <span class="communitystamp">
+                    <a class="community-link" href="{% url 'wall:community' pk=community.pk %}">{{ community.name }}</a>
+                    <i class="community-icon"><img src="{{ community.icon|thumbnail_url:'community_icon_double' }}" width="16" height="16"></i>
+                </span>
+                <div class="description">
+                    <p>{{ community.description }}</p>
+                </div>
+            {% endif %}
         {% endfor %}
     </ul>
 
